@@ -1,0 +1,340 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ArtLib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP32F3.BAT" with contents
+[
+@echo off
+CL /I . /E /C ..\ArtLib\L_BltInc.cpp >.\L_BltInc.i
+]
+Creating command line "C:\WINDOWS\TEMP\RSP32F3.BAT"
+Creating temporary file "C:\WINDOWS\TEMP\RSP32F4.TMP" with contents
+[
+/MTd /W3 /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/ArtLib.pch" /Yu"L_Inc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Projects\Monopoly_PC\Artlib\candataf.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Blt.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Blt16.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Blt24.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Blt32.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_BltWarp.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Button.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Chunk.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Data.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_DirIni.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Error.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Fonts.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Grafix.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Init.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_JoyPad.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Keybrd.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Main.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Matrix.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Memory.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Midi.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_MMX.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Mouse.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Print.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Queue.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Rend0D.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Rend2D.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Seqncr.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Sound.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Speed.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Sprite.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Timers.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_UIMsg.cpp"
+"C:\Projects\Monopoly_PC\ArtLib\L_Video.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP32F4.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP32F5.TMP" with contents
+[
+/MTd /W3 /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Projects\Monopoly_PC\Artlib\l_can.cpp"
+"C:\Projects\Monopoly_PC\Artlib\l_canf.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP32F5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP32F6.TMP" with contents
+[
+/MTd /W3 /GX /ZI /Od /I "." /I "..\artlib\pc3d" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/ArtLib.pch" /Yu"L_Inc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP32F6.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP32F7.TMP" with contents
+[
+/MTd /W3 /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/ArtLib.pch" /Yc"L_Inc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Projects\Monopoly_PC\ArtLib\L_Header.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP32F7.TMP" 
+Extra preprocessing step to make L_BltInc.i...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+L_BltInc.cpp
+Creating temporary file "C:\WINDOWS\TEMP\RSP3305.TMP" with contents
+[
+/out:"Debug\ArtLib.lib" 
+.\Debug\candataf.obj
+.\Debug\L_Blt.obj
+.\Debug\L_Blt16.obj
+.\Debug\L_Blt24.obj
+.\Debug\L_Blt32.obj
+.\Debug\L_BltWarp.obj
+.\Debug\L_Button.obj
+.\Debug\l_can.obj
+.\Debug\l_canf.obj
+.\Debug\L_Chunk.obj
+.\Debug\L_Data.obj
+.\Debug\L_DirIni.obj
+.\Debug\L_Error.obj
+.\Debug\L_Fonts.obj
+.\Debug\L_Grafix.obj
+.\Debug\L_Header.obj
+.\Debug\L_Init.obj
+.\Debug\L_JoyPad.obj
+.\Debug\L_Keybrd.obj
+.\Debug\L_Main.obj
+.\Debug\L_Matrix.obj
+.\Debug\L_Memory.obj
+.\Debug\L_Midi.obj
+.\Debug\L_MMX.obj
+.\Debug\L_Mouse.obj
+.\Debug\L_Print.obj
+.\Debug\L_Queue.obj
+.\Debug\L_Rend0D.obj
+.\Debug\L_Rend2D.obj
+.\Debug\L_Rend3D.obj
+.\Debug\L_Seqncr.obj
+.\Debug\L_Sound.obj
+.\Debug\L_Speed.obj
+.\Debug\L_Sprite.obj
+.\Debug\L_Timers.obj
+.\Debug\L_UIMsg.obj
+.\Debug\L_Video.obj
+]
+Creating command line "link.exe -lib @C:\WINDOWS\TEMP\RSP3305.TMP"
+<h3>Output Window</h3>
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MTd /W3 /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/ArtLib.pch" /Yc"L_Inc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+   "C:\Projects\Monopoly_PC\ArtLib\L_Header.cpp"
+
+L_Header.cpp
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MTd /W3 /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/ArtLib.pch" /Yu"L_Inc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+   "C:\Projects\Monopoly_PC\Artlib\candataf.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Blt.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Blt16.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Blt24.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Blt32.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_BltWarp.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Button.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Chunk.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Data.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_DirIni.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Error.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Fonts.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Grafix.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Init.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_JoyPad.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Keybrd.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Main.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Matrix.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Memory.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Midi.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_MMX.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Mouse.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Print.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Queue.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Rend0D.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Rend2D.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Seqncr.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Sound.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Speed.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Sprite.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Timers.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_UIMsg.cpp"
+   "C:\Projects\Monopoly_PC\ArtLib\L_Video.cpp"
+
+candataf.cpp
+L_Blt.cpp
+L_Blt16.cpp
+Now compiling LI_BLT_Copy8To16SolidUnityRaw
+Now compiling LI_BLT_Copy8To24SolidUnityRaw
+Now compiling LI_BLT_Copy8To32SolidUnityRaw
+Now compiling LI_BLT_Copy16To16SolidUnityRaw
+Now compiling LI_BLT_Copy24To24SolidUnityRaw
+Now compiling LI_BLT_Copy32To32SolidUnityRaw
+Now compiling LI_BLT_Copy8To16SolidColourKeyUnityRaw
+Now compiling LI_BLT_Copy8To24SolidColourKeyUnityRaw
+Now compiling LI_BLT_Copy8To32SolidColourKeyUnityRaw
+Now compiling LI_BLT_Copy16To16SolidColourKeyUnityRaw
+Now compiling LI_BLT_Copy24To24SolidColourKeyUnityRaw
+Now compiling LI_BLT_Copy32To32SolidColourKeyUnityRaw
+Now compiling LI_BLT_Copy8To16AlphaUnityRaw
+Now compiling LI_BLT_Copy8To24AlphaUnityRaw
+Now compiling LI_BLT_Copy8To32AlphaUnityRaw
+Now compiling LI_BLT_Copy16To16AlphaUnityRaw
+Now compiling LI_BLT_Copy24To24AlphaUnityRaw
+Now compiling LI_BLT_Copy32To32AlphaUnityRaw
+Now compiling LI_BLT_Copy8To16SolidStretchRaw
+Now compiling LI_BLT_Copy8To24SolidStretchRaw
+Now compiling LI_BLT_Copy8To32SolidStretchRaw
+Now compiling LI_BLT_Copy16To16SolidStretchRaw
+Now compiling LI_BLT_Copy24To24SolidStretchRaw
+Now compiling LI_BLT_Copy32To32SolidStretchRaw
+Now compiling LI_BLT_Copy8To16SolidColourKeyStretchRaw
+Now compiling LI_BLT_Copy8To24SolidColourKeyStretchRaw
+Now compiling LI_BLT_Copy8To32SolidColourKeyStretchRaw
+Now compiling LI_BLT_Copy16To16SolidColourKeyStretchRaw
+Now compiling LI_BLT_Copy24To24SolidColourKeyStretchRaw
+Now compiling LI_BLT_Copy32To32SolidColourKeyStretchRaw
+Now compiling LI_BLT_Copy8To16AlphaStretchRaw
+Now compiling LI_BLT_Copy8To24AlphaStretchRaw
+Now compiling LI_BLT_Copy8To32AlphaStretchRaw
+Now compiling LI_BLT_Copy16To16AlphaStretchRaw
+Now compiling LI_BLT_Copy24To24AlphaStretchRaw
+Now compiling LI_BLT_Copy32To32AlphaStretchRaw
+Now compiling LI_BLT_Copy8To16HolesUnityRaw
+Now compiling LI_BLT_Copy8To24HolesUnityRaw
+Now compiling LI_BLT_Copy8To32HolesUnityRaw
+Now compiling LI_BLT_Copy8To16HolesStretchRaw
+Now compiling LI_BLT_Copy8To24HolesStretchRaw
+Now compiling LI_BLT_Copy8To32HolesStretchRaw
+Now compiling LI_BLT_Fill16Raw
+Now compiling LI_BLT_Fill24Raw
+Now compiling LI_BLT_Fill32Raw
+L_Blt24.cpp
+L_Blt32.cpp
+L_BltWarp.cpp
+L_Button.cpp
+L_Chunk.cpp
+L_Data.cpp
+C:\Projects\Monopoly_PC\ArtLib\L_Data.cpp(5597) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Data.cpp(8006) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Data.cpp(8124) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Data.cpp(8131) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+L_DirIni.cpp
+L_Error.cpp
+L_Fonts.cpp
+L_Grafix.cpp
+L_Init.cpp
+L_JoyPad.cpp
+L_Keybrd.cpp
+L_Main.cpp
+L_Matrix.cpp
+L_Memory.cpp
+L_Midi.cpp
+Generating Code...
+Compiling...
+L_MMX.cpp
+L_Mouse.cpp
+L_Print.cpp
+L_Queue.cpp
+L_Rend0D.cpp
+L_Rend2D.cpp
+L_Seqncr.cpp
+L_Sound.cpp
+L_Speed.cpp
+L_Sprite.cpp
+L_Timers.cpp
+L_UIMsg.cpp
+L_Video.cpp
+Generating Code...
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MTd /W3 /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fo"Debug/" /Fd"Debug/" /FD /c 
+   "C:\Projects\Monopoly_PC\Artlib\l_can.cpp"
+   "C:\Projects\Monopoly_PC\Artlib\l_canf.cpp"
+
+l_can.cpp
+l_canf.cpp
+Generating Code...
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MTd /W3 /GX /ZI /Od /I "." /I "..\artlib\pc3d" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/ArtLib.pch" /Yu"L_Inc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+   "C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp"
+
+L_Rend3D.cpp
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(586) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(703) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(2048) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(2071) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(2074) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(2075) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(2462) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_PC\ArtLib\L_Rend3D.cpp(2686) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_pc\pc3d\memmanager.h(145) : see declaration of 'new'
+Creating library...
+Microsoft (R) Library Manager Version 6.00.8168
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+"/out:Debug\ArtLib.lib" 
+.\Debug\candataf.obj 
+.\Debug\L_Blt.obj 
+.\Debug\L_Blt16.obj 
+.\Debug\L_Blt24.obj 
+.\Debug\L_Blt32.obj 
+.\Debug\L_BltWarp.obj 
+.\Debug\L_Button.obj 
+.\Debug\l_can.obj 
+.\Debug\l_canf.obj 
+.\Debug\L_Chunk.obj 
+.\Debug\L_Data.obj 
+.\Debug\L_DirIni.obj 
+.\Debug\L_Error.obj 
+.\Debug\L_Fonts.obj 
+.\Debug\L_Grafix.obj 
+.\Debug\L_Header.obj 
+.\Debug\L_Init.obj 
+.\Debug\L_JoyPad.obj 
+.\Debug\L_Keybrd.obj 
+.\Debug\L_Main.obj 
+.\Debug\L_Matrix.obj 
+.\Debug\L_Memory.obj 
+.\Debug\L_Midi.obj 
+.\Debug\L_MMX.obj 
+.\Debug\L_Mouse.obj 
+.\Debug\L_Print.obj 
+.\Debug\L_Queue.obj 
+.\Debug\L_Rend0D.obj 
+.\Debug\L_Rend2D.obj 
+.\Debug\L_Rend3D.obj 
+.\Debug\L_Seqncr.obj 
+.\Debug\L_Sound.obj 
+.\Debug\L_Speed.obj 
+.\Debug\L_Sprite.obj 
+.\Debug\L_Timers.obj 
+.\Debug\L_UIMsg.obj 
+.\Debug\L_Video.obj 
+
+
+
+<h3>Results</h3>
+ArtLib.lib - 0 error(s), 12 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,61 @@
+Démarrer
+
+Bienvenue sur l'Aide rapide de Monopoly !  Monopoly peut se jouer de 1 à 6 joueurs dont un au moins doit être réel. Les autres peuvent être des adversaires virtuels (Intelligence Artificielle ou IA), des personnes connectées sur un réseau d'ordinateurs, ou bien des personnes jouant sur votre ordinateur. Pour démarrer la partie, chaque joueur doit entrer son nom et choisir un pion. Au fur et à mesure que vous entrez les joueurs, vous pouvez voir leurs noms s'afficher dans une étiquette au bas de l'écran. Lorsque deux joueurs au moins ont été ajoutés, cliquez sur Commencer. Si vous voulez faire une partie rapide ou changer les règles, cliquez sur Règles personnalisées. Note : si vous jouez en réseau, seul l'hôte peut changer les règles.
+
+Ecran principal
+
+En bas de l'écran principal se trouvent les étiquettes affichant les noms des joueurs, leurs pions et la somme d'argent qu'ils possèdent. Cliquez sur l'étiquette du joueur dont vous souhaitez voir les détails. Juste au dessus, dans une zone colorée, se trouvent les titres de toutes les propriétés possibles. La couleur de l'arrière-plan représente le joueur et les propriétés mises en relief sont les siennes. La boîte au milieu montre le joueur dont c'est le tour de jouer et le montant des dés qu'il a jetés. En haut de la zone inférieure se trouvent les boutons de contrôle utiles tout au long du jeu.
+
+En haut de l'écran principal se trouve le plateau de jeu de Monopoly, sur lequel se déplacent les pions et où vous pouvez voir les propriétés que chaque joueur possède grâce à une barre de couleur sur la bordure du plateau.
+ 
+Ecran de situation
+
+Si vous cliquez sur Situation à droite de l'écran principal, de nombreux détails sur la situation du jeu seront à votre disposition. Dans le coin gauche en haut de l'écran, vous pourrez voir le plateau de jeu s'afficher et vous aurez la possibilité de continuer à observer le jeu et à jouer tout en étant sur cet écran. A la place des titres de propriétés, vous verrez des boutons dans la partie inférieure de gauche, vous permettant de choisir Situation du joueur, Situation des titres, ou Situation de la Banque. Dans chacune de ces catégories, vous pouvez trier les articles en cliquant sur les boutons dans la partie inférieure droite. Au dessus, chaque joueur aura une zone affichant tout ce qu'il possède.
+ 
+Echange
+
+Si vous cliquez sur Echange à gauche de l'écran principal, on vous demandera tout d'abord avec quel joueur vous souhaitez échanger, et ensuite le plateau de jeu s'affichera en haut, au centre. Vous êtes à gauche, avec, affichés, toutes vos propriétés du moment, votre argent et vos actifs. Pour proposer quelque chose, cliquez, et cela apparaîtra dans la zone centrale. Pour demander quelque chose, cliquez sur les articles de l'autre joueur et ils se déplaceront vers la zone centrale.Lorsque vous avez mis au point un échange, cliquez sur Proposer. L'autre joueur, qu'il soit local, virtuel ou en réseau, doit alors cliquer sur Accepter, Rejeter ou Faire une contre-proposition. Dans ce dernier cas, il sera autorisé à éditer l'échange existant et proposer un nouvel échange.
+ 
+Pour proposer ou demander le loyer futur ou une immunité de loyer sur une propriété, cliquez Créer nouveau et spécifiez votre propriété et le nombre de fois. On vous demandera d'abord qui doit posséder le futur ou l'immunité, et ensuite la propriété et le nombre de fois. Une fois que le futur ou l'immunité a été mis(e) en place, il / elle peut faire l'objet d'un échange comme tout autre article. 
+
+Enchères
+
+Si vous arrivez sur une propriété que personne ne possède et que vous ne souhaitez pas acheter, des enchères peuvent être organisées et le montant versé à la Banque. Cliquez sur les billets dans la caisse pour augmenter votre offre. Note :  le délai accordé par M. Monopoly pour les enchères peut être décidé au début du jeu dans les règles personnalisées.
+
+Jeu en réseau
+
+Pour organiser un jeu en réseau, que ce soit sur un réseau local, sur Internet ou en utilisant la zone de jeu Microsoft, suivez les instructions données dans Jouer un jeu en ligne lorsque vous commencez une partie de Monopoly. Pour plus de détails, référez-vous au dossier Aide complète.
+
+Discussion en réseau
+
+L'option Discussion en réseau peut être ouverte ou fermée à tout moment en appuyant sur la touche tabulation. La boîte de discussion principale peut être agrandie ou rétrécie grâce à la poignée dans le coin droit en bas. Elle peut être déplacée en cliquant sur n'importe quelle surface vide de la barre du haut. Les boutons de la barre du haut sont les suivants :
+
+Carrés colorés - le / les joueur(s) à qui le message est destiné
+Arc-en-ciel - tous les joueurs
+Marteau - option discussion Marche/Arrêt, les options sont :
+        transparence de l'arrière-plan
+        transparence du texte
+        taille de la police de caractères
+Page de texte - ouvre le dialogue avec des messages rapides, pré-traduits. Les catégories sont :
+        salutations
+        réponses courantes
+        jouabilité et vitesse 
+        échange	
+        commentaires positifs
+        commentaires négatifs	
+Flèche - ouvre / ferme le menu déroulant de la boîte de dialogue
+	
+FAQ - questions posées fréquemment
+
+Qu'est-ce qu'une immunité ?
+Si vous possédez une propriété, vous pouvez offrir à n'importe quel autre joueur une immunité de loyer pour un nombre de fois qu'il arrive sur votre propriété. Cliquez sur Créer nouvelle immunité et suivez les instructions.
+Qu'est-ce qu'un futur ?
+Si vous possédez une propriété, vous pouvez offrir à un autre joueur le loyer de cette propriété quand un autre joueur arrive dessus. Vous pouvez spécifier le nombre de fois où cela s'applique. Cliquez sur Créer nouveau futur et suivez les instructions.
+Comment échanger ?
+Si vous êtes à l'origine de l'échange, vous êtes à gauche. Cliquez sur vos possessions pour les proposer. Cliquez sur les possessions de l'autre joueur que vous voulez en échange. Puis cliquez sur Proposer.
+Comment accélérer le jeu ?
+Aller dans Menus / Options, fermez des options telles que filtrant bilinéaire, éparpillement graphique, éclairage etc.
+Comment jouer sur Internet ?
+Nous vous recommandons d'utiliser la zone de jeu Microsoft (gratuit).  Cliquez sur Jouer un jeu en ligne et suivez les instructions données au début du jeu pour établir la connexion avec un autre joueur. Chaque joueur doit avoir une copie du CD Monopoly dans leur lecteur de CD-ROM.
+
+Pour des nouvelles de dernière minute, veuillez lire le fichier LisezMoi sur le CD.

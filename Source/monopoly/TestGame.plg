@@ -1,0 +1,625 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TheGame - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPB196.TMP" with contents
+[
+/MTd /W3 /Gm /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D DIRECTDRAW_VERSION=0x0600 /FR"Debug/" /Fp"TheGame.pch" /Yu"GameInc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Projects\Monopoly_TEST\monopoly\Ai.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Ai_load.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Ai_trade.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Ai_util.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Debugart.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\display.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Lang.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Main.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Mdef.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Mess.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Rule.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\TexInfo.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Tickler.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\trade.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDAuct.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDBoard.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDChat.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDIBar.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDOpts.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Udpenny.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDPieces.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\udpsel.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDSound.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDStats.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDTrade.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\UDUtils.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Unility.cpp"
+"C:\Projects\Monopoly_TEST\monopoly\Userifce.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB196.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB197.TMP" with contents
+[
+/MTd /W3 /Gm /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D DIRECTDRAW_VERSION=0x0600 /FR"Debug/" /Fp"TheGame.pch" /Yc"GameInc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Projects\Monopoly_TEST\monopoly\GameInc.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB197.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB198.TMP" with contents
+[
+libcmtd.lib imagehlp.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib vfw32.lib msacm32.lib dxguid.lib dsound.lib ddraw.lib dplayx.lib oldnames.lib ../Bink/BinkW32.lib /subsystem:windows /profile /map:"TheGame.map" /debug /machine:I386 /nodefaultlib /out:"Monopoly.exe" 
+.\Debug\Ai.obj
+.\Debug\Ai_load.obj
+.\Debug\Ai_trade.obj
+.\Debug\Ai_util.obj
+.\Debug\Debugart.obj
+.\Debug\display.obj
+.\Debug\GameInc.obj
+.\Debug\Lang.obj
+.\Debug\Main.obj
+.\Debug\Mdef.obj
+.\Debug\Mess.obj
+.\Debug\Rule.obj
+.\Debug\TexInfo.obj
+.\Debug\Tickler.obj
+.\Debug\trade.obj
+.\Debug\UDAuct.obj
+.\Debug\UDBoard.obj
+.\Debug\UDChat.obj
+.\Debug\UDIBar.obj
+.\Debug\UDOpts.obj
+.\Debug\Udpenny.obj
+.\Debug\UDPieces.obj
+.\Debug\udpsel.obj
+.\Debug\UDSound.obj
+.\Debug\UDStats.obj
+.\Debug\UDTrade.obj
+.\Debug\UDUtils.obj
+.\Debug\Unility.obj
+.\Debug\Userifce.obj
+.\Debug\Resource.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB198.TMP"
+<h3>Output Window</h3>
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MTd /W3 /Gm /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D DIRECTDRAW_VERSION=0x0600 /FR"Debug/" /Fp"TheGame.pch" /Yc"GameInc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+   "C:\Projects\Monopoly_TEST\monopoly\GameInc.cpp"
+
+GameInc.cpp
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MTd /W3 /Gm /GX /ZI /Od /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D DIRECTDRAW_VERSION=0x0600 /FR"Debug/" /Fp"TheGame.pch" /Yu"GameInc.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+   "C:\Projects\Monopoly_TEST\monopoly\Ai.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Ai_load.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Ai_trade.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Ai_util.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Debugart.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\display.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Lang.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Main.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Mdef.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Mess.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Rule.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\TexInfo.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Tickler.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\trade.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDAuct.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDBoard.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDChat.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDIBar.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDOpts.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Udpenny.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDPieces.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\udpsel.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDSound.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDStats.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDTrade.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\UDUtils.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Unility.cpp"
+   "C:\Projects\Monopoly_TEST\monopoly\Userifce.cpp"
+
+Ai.cpp
+Ai_load.cpp
+Ai_trade.cpp
+Ai_util.cpp
+Debugart.cpp
+display.cpp
+C:\Projects\Monopoly_TEST\monopoly\display.cpp(182) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_test\pc3d\memmanager.h(145) : see declaration of 'new'
+Lang.cpp
+Main.cpp
+Mdef.cpp
+Mess.cpp
+Rule.cpp
+TexInfo.cpp
+Tickler.cpp
+trade.cpp
+UDAuct.cpp
+UDBoard.cpp
+UDChat.cpp
+UDIBar.cpp
+UDOpts.cpp
+C:\Projects\Monopoly_TEST\monopoly\UDOpts.cpp(821) : warning C4101: 'dwHeight' : unreferenced local variable
+C:\Projects\Monopoly_TEST\monopoly\UDOpts.cpp(821) : warning C4101: 'dwWidth' : unreferenced local variable
+C:\Projects\Monopoly_TEST\monopoly\UDOpts.cpp(821) : warning C4101: 'dwBPP' : unreferenced local variable
+Udpenny.cpp
+Generating Code...
+Compiling...
+UDPieces.cpp
+udpsel.cpp
+UDSound.cpp
+UDStats.cpp
+UDTrade.cpp
+UDUtils.cpp
+C:\Projects\Monopoly_TEST\monopoly\UDUtils.cpp(709) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_test\pc3d\memmanager.h(145) : see declaration of 'new'
+C:\Projects\Monopoly_TEST\monopoly\UDUtils.cpp(1890) : warning C4291: 'void *__cdecl operator new(unsigned int,const char *,unsigned long)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        c:\projects\monopoly_test\pc3d\memmanager.h(145) : see declaration of 'new'
+Unility.cpp
+Userifce.cpp
+Generating Code...
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8168
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+libcmtd.lib imagehlp.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib vfw32.lib msacm32.lib dxguid.lib dsound.lib ddraw.lib dplayx.lib oldnames.lib ../Bink/BinkW32.lib /subsystem:windows /profile "/map:TheGame.map" /debug /machine:I386 /nodefaultlib "/out:Monopoly.exe" 
+.\Debug\Ai.obj 
+.\Debug\Ai_load.obj 
+.\Debug\Ai_trade.obj 
+.\Debug\Ai_util.obj 
+.\Debug\Debugart.obj 
+.\Debug\display.obj 
+.\Debug\GameInc.obj 
+.\Debug\Lang.obj 
+.\Debug\Main.obj 
+.\Debug\Mdef.obj 
+.\Debug\Mess.obj 
+.\Debug\Rule.obj 
+.\Debug\TexInfo.obj 
+.\Debug\Tickler.obj 
+.\Debug\trade.obj 
+.\Debug\UDAuct.obj 
+.\Debug\UDBoard.obj 
+.\Debug\UDChat.obj 
+.\Debug\UDIBar.obj 
+.\Debug\UDOpts.obj 
+.\Debug\Udpenny.obj 
+.\Debug\UDPieces.obj 
+.\Debug\udpsel.obj 
+.\Debug\UDSound.obj 
+.\Debug\UDStats.obj 
+.\Debug\UDTrade.obj 
+.\Debug\UDUtils.obj 
+.\Debug\Unility.obj 
+.\Debug\Userifce.obj 
+.\Debug\Resource.res 
+UDPieces.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+display.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "public: void __thiscall MemManager::DeAlloc(void *)" (?DeAlloc@MemManager@@QAEXPAX@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+udpsel.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+UDUtils.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+Userifce.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+display.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+UDBoard.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+UDChat.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+UDOpts.obj : error LNK2001: unresolved external symbol "class MemManager  g_MemoryManager" (?g_MemoryManager@@3VMemManager@@A)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl DEBUGAssert(char *,char *,unsigned long)" (?DEBUGAssert@@YAHPAD0K@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl DEBUGAssert(char *,char *,unsigned long)" (?DEBUGAssert@@YAHPAD0K@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "int __cdecl DEBUGAssert(char *,char *,unsigned long)" (?DEBUGAssert@@YAHPAD0K@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl DEBUGAssert(char *,char *,unsigned long)" (?DEBUGAssert@@YAHPAD0K@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl DEBUGAssert(char *,char *,unsigned long)" (?DEBUGAssert@@YAHPAD0K@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "int __cdecl DEBUGAssert(char *,char *,unsigned long)" (?DEBUGAssert@@YAHPAD0K@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl DEBUGAssert(char *,char *,unsigned long)" (?DEBUGAssert@@YAHPAD0K@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "public: static class DDrawWnd *  pc3D::m_pMainWnd" (?m_pMainWnd@pc3D@@2PAVDDrawWnd@@A)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: static class DDrawWnd *  pc3D::m_pMainWnd" (?m_pMainWnd@pc3D@@2PAVDDrawWnd@@A)
+display.obj : error LNK2001: unresolved external symbol "public: static class DDrawWnd *  pc3D::m_pMainWnd" (?m_pMainWnd@pc3D@@2PAVDDrawWnd@@A)
+UDBoard.obj : error LNK2001: unresolved external symbol "public: static class DDrawWnd *  pc3D::m_pMainWnd" (?m_pMainWnd@pc3D@@2PAVDDrawWnd@@A)
+UDChat.obj : error LNK2001: unresolved external symbol "public: static class DDrawWnd *  pc3D::m_pMainWnd" (?m_pMainWnd@pc3D@@2PAVDDrawWnd@@A)
+UDOpts.obj : error LNK2001: unresolved external symbol "public: static class DDrawWnd *  pc3D::m_pMainWnd" (?m_pMainWnd@pc3D@@2PAVDDrawWnd@@A)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetBackgroundSurface(unsigned char,class Surface *,int)" (?LE_REND3D_SetBackgroundSurface@@YAHEPAVSurface@@H@Z)
+display.obj : error LNK2001: unresolved external symbol "public: __thiscall Surface::Surface(char const *,int,int)" (??0Surface@@QAE@PBDHH@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: __thiscall Surface::Surface(char const *,int,int)" (??0Surface@@QAE@PBDHH@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "void __cdecl PrintDebugString(char const *,...)" (?PrintDebugString@@YAXPBDZZ)
+UDUtils.obj : error LNK2001: unresolved external symbol "void __cdecl PrintDebugString(char const *,...)" (?PrintDebugString@@YAXPBDZZ)
+display.obj : error LNK2001: unresolved external symbol "void __cdecl PrintDebugString(char const *,...)" (?PrintDebugString@@YAXPBDZZ)
+UDBoard.obj : error LNK2001: unresolved external symbol "void __cdecl PrintDebugString(char const *,...)" (?PrintDebugString@@YAXPBDZZ)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl PrintDebugString(char const *,...)" (?PrintDebugString@@YAXPBDZZ)
+UDPieces.obj : error LNK2001: unresolved external symbol "void __cdecl PrintDebugString(char const *,...)" (?PrintDebugString@@YAXPBDZZ)
+display.obj : error LNK2001: unresolved external symbol "int  g_HMD_UseDefaultShadingMode" (?g_HMD_UseDefaultShadingMode@@3HA)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_AddMouseSubSequenceTheWorks(unsigned long,unsigned short,short,short,int)" (?LE_SEQNCR_AddMouseSubSequenceTheWorks@@YAHKGFFH@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_AddMouseSubSequenceTheWorks(unsigned long,unsigned short,short,short,int)" (?LE_SEQNCR_AddMouseSubSequenceTheWorks@@YAHKGFFH@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_AddMouseSubSequenceTheWorks(unsigned long,unsigned short,short,short,int)" (?LE_SEQNCR_AddMouseSubSequenceTheWorks@@YAHKGFFH@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_AddMouseSubSequenceTheWorks(unsigned long,unsigned short,short,short,int)" (?LE_SEQNCR_AddMouseSubSequenceTheWorks@@YAHKGFFH@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+display.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+Main.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreate(short,short,unsigned short)" (?LE_GRAFIX_ObjectCreate@@YAKFFG@Z)
+display.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetItalic(int)" (?LE_FONTS_SetItalic@@YAXH@Z)
+Lang.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetItalic(int)" (?LE_FONTS_SetItalic@@YAXH@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetItalic(int)" (?LE_FONTS_SetItalic@@YAXH@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetItalic(int)" (?LE_FONTS_SetItalic@@YAXH@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetWeight(int)" (?LE_FONTS_SetWeight@@YAXH@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetWeight(int)" (?LE_FONTS_SetWeight@@YAXH@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetWeight(int)" (?LE_FONTS_SetWeight@@YAXH@Z)
+display.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetWeight(int)" (?LE_FONTS_SetWeight@@YAXH@Z)
+Lang.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetWeight(int)" (?LE_FONTS_SetWeight@@YAXH@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetWeight(int)" (?LE_FONTS_SetWeight@@YAXH@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetWeight(int)" (?LE_FONTS_SetWeight@@YAXH@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+display.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+Lang.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSize(int)" (?LE_FONTS_SetSize@@YAXH@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_FONTS_SetFont(char *,char *)" (?LE_FONTS_SetFont@@YAHPAD0@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "int __cdecl LE_FONTS_SetFont(char *,char *)" (?LE_FONTS_SetFont@@YAHPAD0@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_FONTS_SetFont(char *,char *)" (?LE_FONTS_SetFont@@YAHPAD0@Z)
+display.obj : error LNK2001: unresolved external symbol "public: void * __thiscall MemManager::Alloc(unsigned int,char const *,unsigned long)" (?Alloc@MemManager@@QAEPAXIPBDK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "public: void * __thiscall MemManager::Alloc(unsigned int,char const *,unsigned long)" (?Alloc@MemManager@@QAEPAXIPBDK@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: void * __thiscall MemManager::Alloc(unsigned int,char const *,unsigned long)" (?Alloc@MemManager@@QAEPAXIPBDK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_FreeRuntimeDataID(unsigned long)" (?LE_DATA_FreeRuntimeDataID@@YAHK@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "void __cdecl LE_SEQNCR_DoUpdateCycle(unsigned long)" (?LE_SEQNCR_DoUpdateCycle@@YAXK@Z)
+display.obj : error LNK2001: unresolved external symbol "void __cdecl LE_SEQNCR_DoUpdateCycle(unsigned long)" (?LE_SEQNCR_DoUpdateCycle@@YAXK@Z)
+Main.obj : error LNK2001: unresolved external symbol "void __cdecl LE_SEQNCR_DoUpdateCycle(unsigned long)" (?LE_SEQNCR_DoUpdateCycle@@YAXK@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_SEQNCR_DoUpdateCycle(unsigned long)" (?LE_SEQNCR_DoUpdateCycle@@YAXK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_SEQNCR_DoUpdateCycle(unsigned long)" (?LE_SEQNCR_DoUpdateCycle@@YAXK@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ExecuteCommands(void)" (?LE_SEQNCR_ExecuteCommands@@YAHXZ)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ExecuteCommands(void)" (?LE_SEQNCR_ExecuteCommands@@YAHXZ)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ExecuteCommands(void)" (?LE_SEQNCR_ExecuteCommands@@YAHXZ)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ExecuteCommands(void)" (?LE_SEQNCR_ExecuteCommands@@YAHXZ)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_CollectCommands(void)" (?LE_SEQNCR_CollectCommands@@YAHXZ)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_CollectCommands(void)" (?LE_SEQNCR_CollectCommands@@YAHXZ)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_CollectCommands(void)" (?LE_SEQNCR_CollectCommands@@YAHXZ)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_CollectCommands(void)" (?LE_SEQNCR_CollectCommands@@YAHXZ)
+display.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_TIMER_Delay(unsigned long)" (?LE_TIMER_Delay@@YAKK@Z)
+Main.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_TIMER_Delay(unsigned long)" (?LE_TIMER_Delay@@YAKK@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND2D_MoveCamera(unsigned char,long,long,float)" (?LE_REND2D_MoveCamera@@YAHEJJM@Z)
+display.obj : error LNK2001: unresolved external symbol "int  LE_GRAFIX_VirtualScreenWidthInPixels" (?LE_GRAFIX_VirtualScreenWidthInPixels@@3HA)
+Main.obj : error LNK2001: unresolved external symbol "int  LE_GRAFIX_VirtualScreenWidthInPixels" (?LE_GRAFIX_VirtualScreenWidthInPixels@@3HA)
+UDIBar.obj : error LNK2001: unresolved external symbol "int  LE_GRAFIX_VirtualScreenWidthInPixels" (?LE_GRAFIX_VirtualScreenWidthInPixels@@3HA)
+UDOpts.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+UDPieces.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+UDSound.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+display.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+Main.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+UDBoard.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+UDIBar.obj : error LNK2001: unresolved external symbol "unsigned long volatile  LE_TIME_TickCount" (?LE_TIME_TickCount@@3KC)
+UDTrade.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_StartXY@@YAHKGJJ@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_MoveXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_MoveXY@@YAHKGJJ@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_MoveXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_MoveXY@@YAHKGJJ@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_MoveXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_MoveXY@@YAHKGJJ@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_MoveXY(unsigned long,unsigned short,long,long)" (?LE_SEQNCR_MoveXY@@YAHKGJJ@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ForceRedraw(unsigned long,unsigned short)" (?LE_SEQNCR_ForceRedraw@@YAHKG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ForceRedraw(unsigned long,unsigned short)" (?LE_SEQNCR_ForceRedraw@@YAHKG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ForceRedraw(unsigned long,unsigned short)" (?LE_SEQNCR_ForceRedraw@@YAHKG@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ForceRedraw(unsigned long,unsigned short)" (?LE_SEQNCR_ForceRedraw@@YAHKG@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ForceRedraw(unsigned long,unsigned short)" (?LE_SEQNCR_ForceRedraw@@YAHKG@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ForceRedraw(unsigned long,unsigned short)" (?LE_SEQNCR_ForceRedraw@@YAHKG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_ForceRedraw(unsigned long,unsigned short)" (?LE_SEQNCR_ForceRedraw@@YAHKG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+display.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+Lang.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+Main.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_Print(unsigned long,short,short,unsigned long,unsigned short *)" (?LE_FONTS_Print@@YAXKFFKPAG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+display.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+Lang.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringWidth(unsigned short *)" (?LE_FONTS_GetStringWidth@@YAFPAG@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+display.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+Lang.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "short __cdecl LE_FONTS_GetStringHeight(unsigned short *)" (?LE_FONTS_GetStringHeight@@YAFPAG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+display.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ColorArea(unsigned long,short,short,short,short,unsigned long)" (?LE_GRAFIX_ColorArea@@YAXKFFFFK@Z)
+UDSound.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+display.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Stop(unsigned long,unsigned short)" (?LE_SEQNCR_Stop@@YAHKG@Z)
+display.obj : error LNK2001: unresolved external symbol _DDRAW_SetINIMode
+GameInc.obj : error LNK2001: unresolved external symbol "struct _D3DMATRIX const  IDENTITYMATRIX" (?IDENTITYMATRIX@@3U_D3DMATRIX@@B)
+UDPieces.obj : error LNK2001: unresolved external symbol "struct _D3DMATRIX const  IDENTITYMATRIX" (?IDENTITYMATRIX@@3U_D3DMATRIX@@B)
+UDUtils.obj : error LNK2001: unresolved external symbol "struct _D3DMATRIX const  IDENTITYMATRIX" (?IDENTITYMATRIX@@3U_D3DMATRIX@@B)
+Lang.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_RemoveDataGroup(unsigned short)" (?LE_DATA_RemoveDataGroup@@YAHG@Z)
+Lang.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_DATA_GetCurrentSize(unsigned long)" (?LE_DATA_GetCurrentSize@@YAKK@Z)
+Lang.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_Use(unsigned long)" (?LE_DATA_Use@@YAPAXK@Z)
+Main.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_Use(unsigned long)" (?LE_DATA_Use@@YAPAXK@Z)
+Rule.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_Use(unsigned long)" (?LE_DATA_Use@@YAPAXK@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_Use(unsigned long)" (?LE_DATA_Use@@YAPAXK@Z)
+Lang.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_InitDatafile(char *,unsigned short,unsigned short,struct LE_DIRINI_PathListStruct *)" (?LE_DATA_InitDatafile@@YAHPADGGPAULE_DIRINI_PathListStruct@@@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_InitDatafile(char *,unsigned short,unsigned short,struct LE_DIRINI_PathListStruct *)" (?LE_DATA_InitDatafile@@YAHPADGGPAULE_DIRINI_PathListStruct@@@Z)
+Lang.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_DATA_GetIndexedItemId(unsigned long,unsigned long)" (?LE_DATA_GetIndexedItemId@@YAKKK@Z)
+Main.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_DATA_GetIndexedItemId(unsigned long,unsigned long)" (?LE_DATA_GetIndexedItemId@@YAKKK@Z)
+Rule.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_DATA_GetIndexedItemId(unsigned long,unsigned long)" (?LE_DATA_GetIndexedItemId@@YAKKK@Z)
+Lang.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_ResetCharacteristics(void)" (?LE_FONTS_ResetCharacteristics@@YAXXZ)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_ResetCharacteristics(void)" (?LE_FONTS_ResetCharacteristics@@YAXXZ)
+udpsel.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_ResetCharacteristics(void)" (?LE_FONTS_ResetCharacteristics@@YAXXZ)
+Main.obj : error LNK2001: unresolved external symbol "unsigned short volatile * volatile  LE_Timers" (?LE_Timers@@3RCGC)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned short volatile * volatile  LE_Timers" (?LE_Timers@@3RCGC)
+Main.obj : error LNK2001: unresolved external symbol "unsigned char *  LE_TimerSendUIMessage" (?LE_TimerSendUIMessage@@3PAEA)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned char *  LE_TimerSendUIMessage" (?LE_TimerSendUIMessage@@3PAEA)
+Main.obj : error LNK2001: unresolved external symbol "unsigned short *  LE_TimerRestartCount" (?LE_TimerRestartCount@@3PAGA)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned short *  LE_TimerRestartCount" (?LE_TimerRestartCount@@3PAGA)
+Main.obj : error LNK2001: unresolved external symbol "unsigned char *  LE_TimerSpeeds" (?LE_TimerSpeeds@@3PAEA)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned char *  LE_TimerSpeeds" (?LE_TimerSpeeds@@3PAEA)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_InitialiseMouseGroupingSequence(unsigned char,unsigned short)" (?LE_SEQNCR_InitialiseMouseGroupingSequence@@YAHEG@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetDefaultLoaderOptionsForStartSequence(int,enum LE_SEQNCR_DataDisposalOptionsEnum,int)" (?LE_SEQNCR_SetDefaultLoaderOptionsForStartSequence@@YAHHW4LE_SEQNCR_DataDisposalOptionsEnum@@H@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetDefaultRenderSlotSetForStartSequence(unsigned char)" (?LE_SEQNCR_SetDefaultRenderSlotSetForStartSequence@@YAHE@Z)
+Main.obj : error LNK2001: unresolved external symbol "signed char  LE_MOUSE_RenderSlotToUseForWorldCoordinates" (?LE_MOUSE_RenderSlotToUseForWorldCoordinates@@3CA)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND0D_InstallInRenderSlot(unsigned char)" (?LE_REND0D_InstallInRenderSlot@@YAHE@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_InstallInRenderSlot(unsigned char,struct tagRECT,struct IDirectDrawSurface4 *,struct IDirectDrawSurface4 *,unsigned char)" (?LE_REND3D_InstallInRenderSlot@@YAHEUtagRECT@@PAUIDirectDrawSurface4@@1E@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND2D_InstallInRenderSlot(unsigned char,struct tagPOINT,float,float,struct tagRECT,long,unsigned char,struct IDirectDrawSurface4 *,struct IDirectDrawSurface4 *,unsigned char)" (?LE_REND2D_InstallInRenderSlot@@YAHEUtagPOINT@@MMUtagRECT@@JEPAUIDirectDrawSurface4@@2E@Z)
+Main.obj : error LNK2001: unresolved external symbol "struct tagRECT  LE_GRAFIX_ScreenSourceRect" (?LE_GRAFIX_ScreenSourceRect@@3UtagRECT@@A)
+Main.obj : error LNK2001: unresolved external symbol "struct IDirectDrawSurface4 *  LE_GRAFIX_DDWorkingSurfaceN" (?LE_GRAFIX_DDWorkingSurfaceN@@3PAUIDirectDrawSurface4@@A)
+Main.obj : error LNK2001: unresolved external symbol "struct IDirectDrawSurface4 *  LE_GRAFIX_DDPrimarySurfaceN" (?LE_GRAFIX_DDPrimarySurfaceN@@3PAUIDirectDrawSurface4@@A)
+Main.obj : error LNK2001: unresolved external symbol "int  LE_GRAFIX_VirtualScreenHeightInPixels" (?LE_GRAFIX_VirtualScreenHeightInPixels@@3HA)
+Main.obj : error LNK2001: unresolved external symbol "unsigned char volatile * volatile  LE_KEYBRD_KeysPressed" (?LE_KEYBRD_KeysPressed@@3RCEC)
+Main.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_DATA_RemoveRef(unsigned long)" (?LE_DATA_RemoveRef@@YAGK@Z)
+Rule.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_DATA_RemoveRef(unsigned long)" (?LE_DATA_RemoveRef@@YAGK@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_DATA_RemoveRef(unsigned long)" (?LE_DATA_RemoveRef@@YAGK@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_DATA_RemoveRef(unsigned long)" (?LE_DATA_RemoveRef@@YAGK@Z)
+Main.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_DATA_GetRef(unsigned long)" (?LE_DATA_GetRef@@YAGK@Z)
+Rule.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_DATA_GetRef(unsigned long)" (?LE_DATA_GetRef@@YAGK@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StopAllRP(unsigned char,unsigned short)" (?LE_SEQNCR_StopAllRP@@YAHEG@Z)
+Main.obj : error LNK2001: unresolved external symbol "void __cdecl LE_SEQNCR_RemoveMouseGroupingSequence(void)" (?LE_SEQNCR_RemoveMouseGroupingSequence@@YAXXZ)
+Main.obj : error LNK2001: unresolved external symbol "void __cdecl LE_ERROR_DebugMsg(char *,int)" (?LE_ERROR_DebugMsg@@YAXPADH@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_ERROR_DebugMsg(char *,int)" (?LE_ERROR_DebugMsg@@YAXPADH@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "void __cdecl LE_ERROR_DebugMsg(char *,int)" (?LE_ERROR_DebugMsg@@YAXPADH@Z)
+Main.obj : error LNK2001: unresolved external symbol "char *  LE_ERROR_DebugMessageBuffer" (?LE_ERROR_DebugMessageBuffer@@3PADA)
+Udpenny.obj : error LNK2001: unresolved external symbol "char *  LE_ERROR_DebugMessageBuffer" (?LE_ERROR_DebugMessageBuffer@@3PADA)
+UDPieces.obj : error LNK2001: unresolved external symbol "char *  LE_ERROR_DebugMessageBuffer" (?LE_ERROR_DebugMessageBuffer@@3PADA)
+Main.obj : error LNK2001: unresolved external symbol "int  LE_MAIN_ApplicationActive" (?LE_MAIN_ApplicationActive@@3HA)
+Main.obj : error LNK2001: unresolved external symbol "void __cdecl LE_QUEUE_FreeStorageAssociatedWithMessage(struct LE_QUEUE_MessageStruct *)" (?LE_QUEUE_FreeStorageAssociatedWithMessage@@YAXPAULE_QUEUE_MessageStruct@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "void __cdecl LE_QUEUE_FreeStorageAssociatedWithMessage(struct LE_QUEUE_MessageStruct *)" (?LE_QUEUE_FreeStorageAssociatedWithMessage@@YAXPAULE_QUEUE_MessageStruct@@@Z)
+Main.obj : error LNK2001: unresolved external symbol "int __cdecl LE_UIMSG_ReceiveEvent(struct LE_QUEUE_MessageStruct *)" (?LE_UIMSG_ReceiveEvent@@YAHPAULE_QUEUE_MessageStruct@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "int __cdecl LE_UIMSG_ReceiveEvent(struct LE_QUEUE_MessageStruct *)" (?LE_UIMSG_ReceiveEvent@@YAHPAULE_QUEUE_MessageStruct@@@Z)
+Mess.obj : error LNK2001: unresolved external symbol "struct HINSTANCE__ *  LE_MAIN_Hinst" (?LE_MAIN_Hinst@@3PAUHINSTANCE__@@A)
+UDChat.obj : error LNK2001: unresolved external symbol "struct HINSTANCE__ *  LE_MAIN_Hinst" (?LE_MAIN_Hinst@@3PAUHINSTANCE__@@A)
+Mess.obj : error LNK2001: unresolved external symbol "struct HWND__ *  LE_MAIN_HwndMainWindow" (?LE_MAIN_HwndMainWindow@@3PAUHWND__@@A)
+UDChat.obj : error LNK2001: unresolved external symbol "struct HWND__ *  LE_MAIN_HwndMainWindow" (?LE_MAIN_HwndMainWindow@@3PAUHWND__@@A)
+Rule.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_DATA_AddRef(unsigned long)" (?LE_DATA_AddRef@@YAGK@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+UDSound.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_Start(unsigned long,unsigned short)" (?LE_SEQNCR_Start@@YAHKG@Z)
+UDSound.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_GetInfo(unsigned long,unsigned short,int,struct LE_SEQNCR_RuntimeInfoStruct *,struct LE_SEQNCR_Runtime2DInfoStruct *,struct LE_SEQNCR_Runtime3DInfoStruct *,struct LE_SEQNCR_RuntimeVideoInfoStruct *,struct LE_SOUND_AudioStreamStruct *)" (?LE_SEQNCR_GetInfo@@YAHKGHPAULE_SEQNCR_RuntimeInfoStruct@@PAULE_SEQNCR_Runtime2DInfoStruct@@PAULE_SEQNCR_Runtime3DInfoStruct@@PAULE_SEQNCR_RuntimeVideoInfoStruct@@PAULE_SOUND_AudioStreamStruct@@@Z)
+UDAuct.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_GetInfo(unsigned long,unsigned short,int,struct LE_SEQNCR_RuntimeInfoStruct *,struct LE_SEQNCR_Runtime2DInfoStruct *,struct LE_SEQNCR_Runtime3DInfoStruct *,struct LE_SEQNCR_RuntimeVideoInfoStruct *,struct LE_SOUND_AudioStreamStruct *)" (?LE_SEQNCR_GetInfo@@YAHKGHPAULE_SEQNCR_RuntimeInfoStruct@@PAULE_SEQNCR_Runtime2DInfoStruct@@PAULE_SEQNCR_Runtime3DInfoStruct@@PAULE_SEQNCR_RuntimeVideoInfoStruct@@PAULE_SOUND_AudioStreamStruct@@@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_GetInfo(unsigned long,unsigned short,int,struct LE_SEQNCR_RuntimeInfoStruct *,struct LE_SEQNCR_Runtime2DInfoStruct *,struct LE_SEQNCR_Runtime3DInfoStruct *,struct LE_SEQNCR_RuntimeVideoInfoStruct *,struct LE_SOUND_AudioStreamStruct *)" (?LE_SEQNCR_GetInfo@@YAHKGHPAULE_SEQNCR_RuntimeInfoStruct@@PAULE_SEQNCR_Runtime2DInfoStruct@@PAULE_SEQNCR_Runtime3DInfoStruct@@PAULE_SEQNCR_RuntimeVideoInfoStruct@@PAULE_SOUND_AudioStreamStruct@@@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_GetInfo(unsigned long,unsigned short,int,struct LE_SEQNCR_RuntimeInfoStruct *,struct LE_SEQNCR_Runtime2DInfoStruct *,struct LE_SEQNCR_Runtime3DInfoStruct *,struct LE_SEQNCR_RuntimeVideoInfoStruct *,struct LE_SOUND_AudioStreamStruct *)" (?LE_SEQNCR_GetInfo@@YAHKGHPAULE_SEQNCR_RuntimeInfoStruct@@PAULE_SEQNCR_Runtime2DInfoStruct@@PAULE_SEQNCR_Runtime3DInfoStruct@@PAULE_SEQNCR_RuntimeVideoInfoStruct@@PAULE_SOUND_AudioStreamStruct@@@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_GetInfo(unsigned long,unsigned short,int,struct LE_SEQNCR_RuntimeInfoStruct *,struct LE_SEQNCR_Runtime2DInfoStruct *,struct LE_SEQNCR_Runtime3DInfoStruct *,struct LE_SEQNCR_RuntimeVideoInfoStruct *,struct LE_SOUND_AudioStreamStruct *)" (?LE_SEQNCR_GetInfo@@YAHKGHPAULE_SEQNCR_RuntimeInfoStruct@@PAULE_SEQNCR_Runtime2DInfoStruct@@PAULE_SEQNCR_Runtime3DInfoStruct@@PAULE_SEQNCR_RuntimeVideoInfoStruct@@PAULE_SOUND_AudioStreamStruct@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_MakeLight(unsigned char,int)" (?LE_REND3D_MakeLight@@YAHEH@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetAmbient(unsigned char,struct _D3DVECTOR *)" (?LE_REND3D_SetAmbient@@YAHEPAU_D3DVECTOR@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "void __cdecl LE_REND3D_SetClippingPlanes(unsigned char,float,float)" (?LE_REND3D_SetClippingPlanes@@YAXEMM@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "void __cdecl LE_REND3D_ClearBeforeRender(unsigned char,int)" (?LE_REND3D_ClearBeforeRender@@YAXEH@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetViewportRect(unsigned char,struct tagRECT const &)" (?LE_REND3D_SetViewportRect@@YAHEABUtagRECT@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_DeleteLight(unsigned char,int)" (?LE_REND3D_DeleteLight@@YAHEH@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightPhi(unsigned char,int,float)" (?LE_REND3D_SetLightPhi@@YAHEHM@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightTheta(unsigned char,int,float)" (?LE_REND3D_SetLightTheta@@YAHEHM@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightFalloff(unsigned char,int,float)" (?LE_REND3D_SetLightFalloff@@YAHEHM@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightRange(unsigned char,int,float)" (?LE_REND3D_SetLightRange@@YAHEHM@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightAttenuation(unsigned char,int,struct _D3DVECTOR *)" (?LE_REND3D_SetLightAttenuation@@YAHEHPAU_D3DVECTOR@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightPosition(unsigned char,int,struct _D3DVECTOR *)" (?LE_REND3D_SetLightPosition@@YAHEHPAU_D3DVECTOR@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightFlags(unsigned char,int,unsigned long)" (?LE_REND3D_SetLightFlags@@YAHEHK@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightDirection(unsigned char,int,struct _D3DVECTOR *)" (?LE_REND3D_SetLightDirection@@YAHEHPAU_D3DVECTOR@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightColor(unsigned char,int,class ColourValue const &)" (?LE_REND3D_SetLightColor@@YAHEHABVColourValue@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_REND3D_SetLightType(unsigned char,int,enum _D3DLIGHTTYPE)" (?LE_REND3D_SetLightType@@YAHEHW4_D3DLIGHTTYPE@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetCamera3D(struct _D3DVECTOR *,struct _D3DVECTOR *,struct _D3DVECTOR *,float,float,float,unsigned char)" (?LE_SEQNCR_SetCamera3D@@YAHPAU_D3DVECTOR@@00MMME@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "struct _D3DVECTOR  __cdecl LE_REND3D_GetUpwardVector(unsigned char)" (?LE_REND3D_GetUpwardVector@@YA?AU_D3DVECTOR@@E@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "struct _D3DVECTOR  __cdecl LE_REND3D_GetForwardVector(unsigned char)" (?LE_REND3D_GetForwardVector@@YA?AU_D3DVECTOR@@E@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "struct _D3DVECTOR  __cdecl LE_REND3D_GetLocation(unsigned char)" (?LE_REND3D_GetLocation@@YA?AU_D3DVECTOR@@E@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_UseRef(unsigned long)" (?LE_DATA_UseRef@@YAPAXK@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_UseRef(unsigned long)" (?LE_DATA_UseRef@@YAPAXK@Z)
+UDSound.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_UseRef(unsigned long)" (?LE_DATA_UseRef@@YAPAXK@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_UseRef(unsigned long)" (?LE_DATA_UseRef@@YAPAXK@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartRySTxz(unsigned long,unsigned short,float,float,float,float)" (?LE_SEQNCR_StartRySTxz@@YAHKGMMMM@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartRySTxz(unsigned long,unsigned short,float,float,float,float)" (?LE_SEQNCR_StartRySTxz@@YAHKGMMMM@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_MoveTheWorks(unsigned long,unsigned short,unsigned long,unsigned short,int,int,int,unsigned char,void *)" (?LE_SEQNCR_MoveTheWorks@@YAHKGKGHHHEPAX@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_MoveTheWorks(unsigned long,unsigned short,unsigned long,unsigned short,int,int,int,unsigned char,void *)" (?LE_SEQNCR_MoveTheWorks@@YAHKGKGHHHEPAX@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "void __cdecl LE_MATRIX_3D_SetScale(float,struct _D3DMATRIX *)" (?LE_MATRIX_3D_SetScale@@YAXMPAU_D3DMATRIX@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartCXYSlot(unsigned long,unsigned short,unsigned long,unsigned short,int,long,long,unsigned char)" (?LE_SEQNCR_StartCXYSlot@@YAHKGKGHJJE@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetViewport(struct tagRECT *,unsigned char)" (?LE_SEQNCR_SetViewport@@YAHPAUtagRECT@@E@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "int __cdecl LE_KEYBRD_CheckPressed(enum LE_KEYBRD_ScanCodesEnum)" (?LE_KEYBRD_CheckPressed@@YAHW4LE_KEYBRD_ScanCodesEnum@@@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_KEYBRD_CheckPressed(enum LE_KEYBRD_ScanCodesEnum)" (?LE_KEYBRD_CheckPressed@@YAHW4LE_KEYBRD_ScanCodesEnum@@@Z)
+UDBoard.obj : error LNK2001: unresolved external symbol "char volatile * volatile  LE_MOUSE_MousePressed" (?LE_MOUSE_MousePressed@@3RCDC)
+UDIBar.obj : error LNK2001: unresolved external symbol "char volatile * volatile  LE_MOUSE_MousePressed" (?LE_MOUSE_MousePressed@@3RCDC)
+UDBoard.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowObject(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowObject@@YAXKFFK@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_InvalidateRect(struct tagRECT *)" (?LE_GRAFIX_InvalidateRect@@YAXPAUtagRECT@@@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_InvalidateRect(struct tagRECT *)" (?LE_GRAFIX_InvalidateRect@@YAXPAUtagRECT@@@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_GetSettings(unsigned short)" (?LE_FONTS_GetSettings@@YAXG@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_GetSettings(unsigned short)" (?LE_FONTS_GetSettings@@YAXG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_GetSettings(unsigned short)" (?LE_FONTS_GetSettings@@YAXG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_GetSettings(unsigned short)" (?LE_FONTS_GetSettings@@YAXG@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSettings(unsigned short)" (?LE_FONTS_SetSettings@@YAXG@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSettings(unsigned short)" (?LE_FONTS_SetSettings@@YAXG@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetSettings(unsigned short)" (?LE_FONTS_SetSettings@@YAXG@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LI_KEYBRD_UpdateKeybrd(unsigned int,unsigned int,long)" (?LI_KEYBRD_UpdateKeybrd@@YAXIIJ@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ChangeObjectAlpha(unsigned long,short)" (?LE_GRAFIX_ChangeObjectAlpha@@YAXKF@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "struct tagLOGFONTA * __cdecl LE_FONTS_GetLogfont(void)" (?LE_FONTS_GetLogfont@@YAPAUtagLOGFONTA@@XZ)
+UDChat.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_AddMouseSubSequence(unsigned long)" (?LE_SEQNCR_AddMouseSubSequence@@YAHK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB@@YAXKFFK@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB@@YAXKFFK@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB@@YAXKFFK@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB@@YAXKFFK@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB@@YAXKFFK@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "short volatile  LE_MOUSE_MouseY" (?LE_MOUSE_MouseY@@3FC)
+UDTrade.obj : error LNK2001: unresolved external symbol "short volatile  LE_MOUSE_MouseY" (?LE_MOUSE_MouseY@@3FC)
+UDChat.obj : error LNK2001: unresolved external symbol "short volatile  LE_MOUSE_MouseX" (?LE_MOUSE_MouseX@@3FC)
+UDTrade.obj : error LNK2001: unresolved external symbol "short volatile  LE_MOUSE_MouseX" (?LE_MOUSE_MouseX@@3FC)
+UDChat.obj : error LNK2001: unresolved external symbol "void __cdecl ReportDDError(long,char const *,unsigned long)" (?ReportDDError@@YAXJPBDK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "void __cdecl ReportDDError(long,char const *,unsigned long)" (?ReportDDError@@YAXJPBDK@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "void __cdecl ReportDDError(long,char const *,unsigned long)" (?ReportDDError@@YAXJPBDK@Z)
+UDChat.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_GRAFIX_ObjectCreateAlpha(short,short,unsigned short,short)" (?LE_GRAFIX_ObjectCreateAlpha@@YAKFFGF@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "short __cdecl LE_GRAFIX_TCBwidth(unsigned long)" (?LE_GRAFIX_TCBwidth@@YAFK@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "short __cdecl LE_GRAFIX_TCBheight(unsigned long)" (?LE_GRAFIX_TCBheight@@YAFK@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetUnderline(int)" (?LE_FONTS_SetUnderline@@YAXH@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_FONTS_SetUnderline(int)" (?LE_FONTS_SetUnderline@@YAXH@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_GRAFIX_ReturnObjectHeight(unsigned long)" (?LE_GRAFIX_ReturnObjectHeight@@YAGK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_GRAFIX_ReturnObjectHeight(unsigned long)" (?LE_GRAFIX_ReturnObjectHeight@@YAGK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_GRAFIX_ReturnObjectHeight(unsigned long)" (?LE_GRAFIX_ReturnObjectHeight@@YAGK@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_GRAFIX_ReturnObjectWidth(unsigned long)" (?LE_GRAFIX_ReturnObjectWidth@@YAGK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_GRAFIX_ReturnObjectWidth(unsigned long)" (?LE_GRAFIX_ReturnObjectWidth@@YAGK@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_GRAFIX_ReturnObjectWidth(unsigned long)" (?LE_GRAFIX_ReturnObjectWidth@@YAGK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "unsigned short __cdecl LE_GRAFIX_ReturnObjectWidth(unsigned long)" (?LE_GRAFIX_ReturnObjectWidth@@YAGK@Z)
+UDSound.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetEndingAction(unsigned long,unsigned short,enum LE_SEQNCR_EndingActionEnum)" (?LE_SEQNCR_SetEndingAction@@YAHKGW4LE_SEQNCR_EndingActionEnum@@@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetEndingAction(unsigned long,unsigned short,enum LE_SEQNCR_EndingActionEnum)" (?LE_SEQNCR_SetEndingAction@@YAHKGW4LE_SEQNCR_EndingActionEnum@@@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetEndingAction(unsigned long,unsigned short,enum LE_SEQNCR_EndingActionEnum)" (?LE_SEQNCR_SetEndingAction@@YAHKGW4LE_SEQNCR_EndingActionEnum@@@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetEndingAction(unsigned long,unsigned short,enum LE_SEQNCR_EndingActionEnum)" (?LE_SEQNCR_SetEndingAction@@YAHKGW4LE_SEQNCR_EndingActionEnum@@@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetEndingAction(unsigned long,unsigned short,enum LE_SEQNCR_EndingActionEnum)" (?LE_SEQNCR_SetEndingAction@@YAHKGW4LE_SEQNCR_EndingActionEnum@@@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetEndingAction(unsigned long,unsigned short,enum LE_SEQNCR_EndingActionEnum)" (?LE_SEQNCR_SetEndingAction@@YAHKGW4LE_SEQNCR_EndingActionEnum@@@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetEndingAction(unsigned long,unsigned short,enum LE_SEQNCR_EndingActionEnum)" (?LE_SEQNCR_SetEndingAction@@YAHKGW4LE_SEQNCR_EndingActionEnum@@@Z)
+UDIBar.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXYDrop(unsigned long,unsigned short,long,long,enum LE_SEQNCR_DropFramesEnum)" (?LE_SEQNCR_StartXYDrop@@YAHKGJJW4LE_SEQNCR_DropFramesEnum@@@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartXYDrop(unsigned long,unsigned short,long,long,enum LE_SEQNCR_DropFramesEnum)" (?LE_SEQNCR_StartXYDrop@@YAHKGJJW4LE_SEQNCR_DropFramesEnum@@@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB_Alpha(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB_Alpha@@YAXKFFK@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB_Alpha(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB_Alpha@@YAXKFFK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "void __cdecl LE_GRAFIX_ShowTCB_Alpha(unsigned long,short,short,unsigned long)" (?LE_GRAFIX_ShowTCB_Alpha@@YAXKFFK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "struct tagRECT  LE_GRAFIX_ScreenDestinationRect" (?LE_GRAFIX_ScreenDestinationRect@@3UtagRECT@@A)
+UDOpts.obj : error LNK2001: unresolved external symbol "public: static struct TextureFilterOptions  pc3D::m_TxtrFilters" (?m_TxtrFilters@pc3D@@2UTextureFilterOptions@@A)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: static struct TextureFilterOptions  pc3D::m_TxtrFilters" (?m_TxtrFilters@pc3D@@2UTextureFilterOptions@@A)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DIRINI_ExpandFileName(char const *,char *,struct LE_DIRINI_PathListStruct *)" (?LE_DIRINI_ExpandFileName@@YAHPBDPADPAULE_DIRINI_PathListStruct@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DIRINI_ExpandFileName(char const *,char *,struct LE_DIRINI_PathListStruct *)" (?LE_DIRINI_ExpandFileName@@YAHPBDPADPAULE_DIRINI_PathListStruct@@@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DIRINI_ExpandFileName(char const *,char *,struct LE_DIRINI_PathListStruct *)" (?LE_DIRINI_ExpandFileName@@YAHPBDPADPAULE_DIRINI_PathListStruct@@@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "struct LE_DIRINI_PathListStruct *  LE_DIRINI_GlobalPathList" (?LE_DIRINI_GlobalPathList@@3PAULE_DIRINI_PathListStruct@@A)
+UDUtils.obj : error LNK2001: unresolved external symbol "struct LE_DIRINI_PathListStruct *  LE_DIRINI_GlobalPathList" (?LE_DIRINI_GlobalPathList@@3PAULE_DIRINI_PathListStruct@@A)
+Userifce.obj : error LNK2001: unresolved external symbol "struct LE_DIRINI_PathListStruct *  LE_DIRINI_GlobalPathList" (?LE_DIRINI_GlobalPathList@@3PAULE_DIRINI_PathListStruct@@A)
+UDOpts.obj : error LNK2001: unresolved external symbol "public: void __thiscall DDrawDriver::GetDisplayModeList(class Array<struct _DDSURFACEDESC2,struct _DDSURFACEDESC2> &,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)" (?GetDisplayModeList@DDrawDriver@@QAEXAAV?$Array@U_DDSURFACEDESC2@@U1@@@KKKKK@Z)
+UDOpts.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_Load(unsigned long)" (?LE_DATA_Load@@YAHK@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetVolume(unsigned long,unsigned short,unsigned char)" (?LE_SEQNCR_SetVolume@@YAHKGE@Z)
+UDSound.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_SetVolume(unsigned long,unsigned short,unsigned char)" (?LE_SEQNCR_SetVolume@@YAHKGE@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "void __cdecl LE_ERROR_Msg(char *,enum LE_ERROR_OutputTypesEnum,int)" (?LE_ERROR_Msg@@YAXPADW4LE_ERROR_OutputTypesEnum@@H@Z)
+Udpenny.obj : error LNK2001: unresolved external symbol "unsigned char  LE_BLT_KeyGreenLimit" (?LE_BLT_KeyGreenLimit@@3EA)
+UDPieces.obj : error LNK2001: unresolved external symbol _Mesh_PurgeTextures
+UDPieces.obj : error LNK2001: unresolved external symbol _Mesh_EnableTexturePurge
+UDPieces.obj : error LNK2001: unresolved external symbol _SetCurrentTIMBank
+UDUtils.obj : error LNK2001: unresolved external symbol _SetCurrentTIMBank
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_UnloadRef(unsigned long)" (?LE_DATA_UnloadRef@@YAHK@Z)
+UDSound.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DATA_UnloadRef(unsigned long)" (?LE_DATA_UnloadRef@@YAHK@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_MoveRySTxz(unsigned long,unsigned short,float,float,float,float)" (?LE_SEQNCR_MoveRySTxz@@YAHKGMMMM@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartRySTxzDrop(unsigned long,unsigned short,float,float,float,float,enum LE_SEQNCR_DropFramesEnum)" (?LE_SEQNCR_StartRySTxzDrop@@YAHKGMMMMW4LE_SEQNCR_DropFramesEnum@@@Z)
+UDPieces.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_GetChildMeshWorldMatrix(unsigned long,unsigned short,struct _D3DMATRIX *)" (?LE_SEQNCR_GetChildMeshWorldMatrix@@YAHKGPAU_D3DMATRIX@@@Z)
+udpsel.obj : error LNK2001: unresolved external symbol "char *  LE_DIRINI_INI_PathName" (?LE_DIRINI_INI_PathName@@3PADA)
+udpsel.obj : error LNK2001: unresolved external symbol "public: void __thiscall DDrawWnd::Pause(int)" (?Pause@DDrawWnd@@QAEXH@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "short __cdecl LE_GRAFIX_AnyBitmapHeight(unsigned long)" (?LE_GRAFIX_AnyBitmapHeight@@YAFK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "short __cdecl LE_GRAFIX_AnyBitmapHeight(unsigned long)" (?LE_GRAFIX_AnyBitmapHeight@@YAFK@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "short __cdecl LE_GRAFIX_AnyBitmapWidth(unsigned long)" (?LE_GRAFIX_AnyBitmapWidth@@YAFK@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "short __cdecl LE_GRAFIX_AnyBitmapWidth(unsigned long)" (?LE_GRAFIX_AnyBitmapWidth@@YAFK@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_StartCXYSR(unsigned long,unsigned short,unsigned long,unsigned short,int,long,long,float,float)" (?LE_SEQNCR_StartCXYSR@@YAHKGKGHJJMM@Z)
+UDStats.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_IsSequenceFinished(unsigned long,unsigned short,int)" (?LE_SEQNCR_IsSequenceFinished@@YAHKGH@Z)
+UDTrade.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_IsSequenceFinished(unsigned long,unsigned short,int)" (?LE_SEQNCR_IsSequenceFinished@@YAHKGH@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_IsSequenceFinished(unsigned long,unsigned short,int)" (?LE_SEQNCR_IsSequenceFinished@@YAHKGH@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "float __cdecl LE_MATRIX_3D_VectorLength(struct _D3DVECTOR *)" (?LE_MATRIX_3D_VectorLength@@YAMPAU_D3DVECTOR@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Mesh::SubstituteTexture(struct TextureID *)" (?SubstituteTexture@Mesh@@QAEHPAUTextureID@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol _LoadBMPTexture
+UDUtils.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_DATA_AllocExternalFileDataID(char *,enum LE_DATA_DataTypeEnum,unsigned long,unsigned short)" (?LE_DATA_AllocExternalFileDataID@@YAKPADW4LE_DATA_DataTypeEnum@@KG@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Surface::Create(struct IDirectDrawSurface4 *)" (?Create@Surface@@QAEHPAUIDirectDrawSurface4@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol _GetBitShift
+UDUtils.obj : error LNK2001: unresolved external symbol _GetBitDepth
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Surface::CreateTexture(unsigned int,unsigned int,struct _DDPIXELFORMAT const &)" (?CreateTexture@Surface@@QAEHIIABU_DDPIXELFORMAT@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall D3DDevice::TextureFormatSupported(struct _DDPIXELFORMAT const &)" (?TextureFormatSupported@D3DDevice@@QAEHABU_DDPIXELFORMAT@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "protected: void __thiscall Surface::DetermineIfPalettized(void)" (?DetermineIfPalettized@Surface@@IAEXXZ)
+UDUtils.obj : error LNK2001: unresolved external symbol "int __cdecl LE_DIRINI_AddPath(char const *,struct LE_DIRINI_PathListStruct * *)" (?LE_DIRINI_AddPath@@YAHPBDPAPAULE_DIRINI_PathListStruct@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Surface::GDIBlit(unsigned long,unsigned long,class Surface &,struct tagRECT const &)" (?GDIBlit@Surface@@QAEHKKAAV1@ABUtagRECT@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Surface::BltFast(unsigned long,unsigned long,class Surface &,struct tagRECT &,unsigned long)" (?BltFast@Surface@@QAEHKKAAV1@AAUtagRECT@@K@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Surface::Create(struct HBITMAP__ *,int,int)" (?Create@Surface@@QAEHPAUHBITMAP__@@HH@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol _LoadBMP
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Surface::Create(class Surface &,int,int)" (?Create@Surface@@QAEHAAV1@HH@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: void __thiscall Mesh::Render(class D3DDevice *)" (?Render@Mesh@@QAEXPAVD3DDevice@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall Surface::Blt(struct tagRECT &,struct IDirectDrawSurface4 *,struct tagRECT &,unsigned long,struct _DDBLTFX &)" (?Blt@Surface@@QAEHAAUtagRECT@@PAUIDirectDrawSurface4@@0KAAU_DDBLTFX@@@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: void __thiscall Matrix::ViewMatrix(struct _D3DVECTOR const &,struct _D3DVECTOR const &,struct _D3DVECTOR const &,float)" (?ViewMatrix@Matrix@@QAEXABU_D3DVECTOR@@00M@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "void * __cdecl LE_DATA_GetPointer(unsigned long)" (?LE_DATA_GetPointer@@YAPAXK@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol _DDRAW_ClearMainSurfaces
+UDUtils.obj : error LNK2001: unresolved external symbol "public: struct IDirect3DViewport3 * __thiscall DDrawDriver::CreateViewport(void)" (?CreateViewport@DDrawDriver@@QAEPAUIDirect3DViewport3@@XZ)
+UDUtils.obj : error LNK2001: unresolved external symbol "public: int __thiscall DDrawWnd::FlipDisplay(int)" (?FlipDisplay@DDrawWnd@@QAEHH@Z)
+UDUtils.obj : error LNK2001: unresolved external symbol "char *  g_szDXINIPath" (?g_szDXINIPath@@3PADA)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned short *  LE_MAIN_CommandLine" (?LE_MAIN_CommandLine@@3PAGA)
+Userifce.obj : error LNK2001: unresolved external symbol "unsigned long __cdecl LE_SEQNCR_CreateVideoObject(char *,int,unsigned short,struct tagRECT *,int,int,int,int,int,int,int,int)" (?LE_SEQNCR_CreateVideoObject@@YAKPADHGPAUtagRECT@@HHHHHHHH@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int  LE_GRAFIX_ScreenBitsPerPixel" (?LE_GRAFIX_ScreenBitsPerPixel@@3HA)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SEQNCR_TakeOverAndPlayBinkVideo(char *,int)" (?LE_SEQNCR_TakeOverAndPlayBinkVideo@@YAHPADH@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SOUND_ChatOff(void)" (?LE_SOUND_ChatOff@@YAHXZ)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SOUND_ChatOn(int (__cdecl*)(void *,unsigned short,int),int)" (?LE_SOUND_ChatOn@@YAHP6AHPAXGH@ZH@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SOUND_ChatSend(float,float,float)" (?LE_SOUND_ChatSend@@YAHMMM@Z)
+Userifce.obj : error LNK2001: unresolved external symbol "int __cdecl LE_SOUND_ChatReceive(void *,unsigned short,unsigned long)" (?LE_SOUND_ChatReceive@@YAHPAXGK@Z)
+libcmtd.lib(wincrt0.obj) : error LNK2001: unresolved external symbol _WinMain@16
+Monopoly.exe : fatal error LNK1120: 173 unresolved externals
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+Monopoly.exe - 416 error(s), 6 warning(s)
+</pre>
+</body>
+</html>

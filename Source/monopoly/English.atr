@@ -1,0 +1,1475 @@
+/* $Header: /Projects - 1999/Mono 2 Hotseat/English.atr 3     6/30/99 4:21p Russellk $
+ *
+ * $Log: /Projects - 1999/Mono 2 Hotseat/English.atr $
+ * 
+ * 3     6/30/99 4:21p Russellk
+ * 
+ * 2     6/30/99 2:40p Russellk
+ * Added moneybag name
+ * 
+ * 1     1/08/99 2:06p Russellk
+ * 
+ * 1     1/08/99 11:39a Russellk
+ * 
+ * 1     1/08/99 11:34a Russellk
+ * Graphics
+ * 
+ * 4     12/18/98 4:02p Russellk
+ * Changed to use 10 tokens instead of SW 8 - wheelbarrow AI file added
+ * and bug fixed for AI filenames (no comma in file name list left tenth
+ * pointer null).  Comments changed slightly to look a bit more like
+ * monopoly tokens instead of SW tokens.
+ * 
+ * 3     12/17/98 4:26p Russellk
+ * Obsolete comments removed for new version.  Log file facility entered
+ * in Mess.c to record phase and action/error message activity.
+ * 
+ */
+
+// Structure type identifiers here:
+_32Bit              // Message ID
+_32Bit              // Sound effect ID
+_String 252         // Message String,
+                    // Currently 252 chars long due to limitation in atrans util
+
+/*****************************************************************************
+ * First up are all the error messages (see NOTIFY_ERROR_MESSAGE for details).
+ * The error strings have special embedded codes that are expanded when the
+ * string is displayed.  The codes are made from a caret (^) and a following
+ * character:
+ *   ^1 expands numberB as a number,
+ *   ^2 expands numberC as a number,
+ *   ^3 expands numberD as a number,
+ *   ^4 expands numberE as a number,
+ *   ^A expands stringA,
+ *   ^P expands numberC as a player name,
+ *   ^Q expands numberB as a player name,
+ *   ^S expands numberD as a square name
+ *   ^T expands numberE as a set of squares.
+ */
+
+.ITEM   TMN_ERROR_NAME_IN_USE                 WAV_NO_SOUND
+{Sorry, your requested name (^A), token or color is already used by Player ^2 (^P).  Or maybe you didn't specify a name?}
+
+.ITEM   TMN_ERROR_NO_MORE_PLAYERS             WAV_NO_SOUND
+{Sorry "^A", this game already has the maximum number of players and can't accept any more.}
+
+.ITEM   TMN_ERROR_NOT_YOUR_PLAYER             WAV_NO_SOUND
+{Oops!  You cannot rename Player ^2 (^P) to ^A.  You can only change your own name.}
+
+.ITEM   TMN_ERROR_FUNCTION_NOT_IMPLEMENTED    WAV_NO_SOUND
+{Error! Function ^A not yet implemented.}
+
+.ITEM   TMN_ERROR_WRONG_PHASE                 WAV_NO_SOUND
+{^P, you can't do that now, the game is busy doing something else.  Please try later.  In programmer-speak: Wrong Phase.  Action ^1 from player #^2 is inappropriate for phase ^3.}
+
+.ITEM   TMN_ERROR_WRONG_PLAYER                WAV_NO_SOUND
+{Sorry ^P, it's not your turn.  In programmer-speak: Wrong Player.  Action ^1 in phase ^3 is from player #^2.}
+
+.ITEM   TMN_ERROR_NEED_TWO_PLAYERS            WAV_NO_SOUND
+{You need to have two or more players before starting a game.}
+
+.ITEM   TMN_ERROR_UMIMPLEMENTED_SQUARE        WAV_NO_SOUND
+{^P has landed on ^S, which isn't implemented yet.}
+
+.ITEM   TMN_ERROR_DEBTOR_BANKRUPT             WAV_NO_SOUND
+{^Q went bankrupt before ^P could collect the $^3 debt owed.}
+
+.ITEM   TMN_ERROR_NEED_JAIL_ROLL              WAV_NO_SOUND
+{Sorry, ^P, you can't roll any more times to get out of jail.  Try something else.}
+
+.ITEM   TMN_ERROR_NEED_JAIL_MONEY             WAV_NO_SOUND
+{Sorry, ^P, you need $^1 to get out of jail, you only have $^3.  Try raising some cash.}
+
+.ITEM   TMN_ERROR_NEED_JAIL_CARD              WAV_NO_SOUND
+{Sorry, ^P, but you don't have a get out of jail free card.  Maybe you could trade for one?}
+
+.ITEM   TMN_ERROR_UNIMPLEMENTED               WAV_NO_SOUND
+{Unimplemented: ^A}
+
+.ITEM   TMN_ERROR_RESTART_NOT_ALLOWED         WAV_NO_SOUND
+{Sorry, ^P, but you can't restart in phase ^1.  Try again later.}
+
+.ITEM   TMN_ERROR_BUILDING_ON_UNOWNED         WAV_NO_SOUND
+{Sorry, ^P, but you can't buy new buildings or sell old ones on ^S because you don't own it.}
+
+.ITEM   TMN_ERROR_BUILDING_NEEDS_MONOPOLY     WAV_NO_SOUND
+{All the squares in the group, not just ^S, need to be owned by ^P before houses can be built/sold there.}
+
+.ITEM   TMN_ERROR_BUILDING_ON_NONPROPERTY     WAV_NO_SOUND
+{^P, you can't build/sell houses on ^S because it is not a property square.}
+
+.ITEM   TMN_ERROR_BUILDING_NO_HOTELS          WAV_NO_SOUND
+{Sorry, there are no more hotels.  ^P can't build one on ^S until some of the hotels in use get sold.}
+
+.ITEM   TMN_ERROR_BUILDING_NO_HOUSES          WAV_NO_SOUND
+{Sorry, there are no more houses available.  ^P can't build on ^S until some become available.}
+
+.ITEM   TMN_ERROR_BUILDING_NO_BREAKDOWN_HOUSES WAV_NO_SOUND
+{^P is in a bind!  You need ^1 houses to break down the hotel on ^S and there aren't that many available houses.  Try selling everything at once.}
+
+.ITEM   TMN_ERROR_BUILDING_NOT_EVEN           WAV_NO_SOUND
+{^P, please build/sell evenly.  Instead of building/selling on ^S, start with a square that has ^1 houses.}
+
+.ITEM   TMN_ERROR_UNIMPLEMENTED_CARD          WAV_NO_SOUND
+{^P has picked up unimplemented chance/community chest card #^1, on square ^S.}
+
+.ITEM   TMN_ERROR_BUILDING_NEEDS_CASH         WAV_NO_SOUND
+{Sorry, ^P, but you need $^1 in cash before you can buy a building on ^S.}
+
+.ITEM   TMN_ERROR_BANKRUPT_TO                 WAV_NO_SOUND
+{^P has gone bankrupt to ^Q over a debt of $^3.}
+
+.ITEM   TMN_ERROR_UNDO_FOR_BANKRUPTCY_TO      WAV_NO_SOUND
+{^P has gone bankrupt to ^Q over a debt of $^3 and actions that were done between owing the money and going bankrupt have been reversed.  That way ^P can't give away his stuff, which rightfully belongs to ^Q.}
+
+.ITEM   TMN_ERROR_AUCTION_SQUARE_NEEDED       WAV_NO_SOUND
+{^P, you need to specify the building's square before you can bid in the auction for a building.  Just buy a building as usual to enter into the auction.}
+
+.ITEM   TMN_ERROR_AUCTION_WRONG_BUILDING      WAV_NO_SOUND
+{Sorry, ^P, but you can't build on ^S because the auction was for the other kind of building.}
+
+.ITEM   TMN_ERROR_JOINED_BUILDING_AUCTION     WAV_NO_SOUND
+{^P has joined the auction and wants to place the building on ^S.}
+
+.ITEM   TMN_ERROR_BUILDING_MAXED_OUT          WAV_NO_SOUND
+{^P, you can't build any more houses on ^S because it already has a hotel on it.  That's it.  Once you get to a hotel you can't build any more.  No, you can't have several hotels, just one is allowed.}
+
+.ITEM   TMN_ERROR_BUILDING_ALREADY_BUYING     WAV_NO_SOUND
+{Sorry, ^P, you are already buying a building.  Please wait until the shortage question has been resolved and try again later to buy your next building on ^S.}
+
+.ITEM   TMN_ERROR_COLLECTOR_BANKRUPT          WAV_NO_SOUND
+{^Q gets a free lunch.  ^P went bankrupt before collecting the $^3 debt from ^Q.}
+
+.ITEM   TMN_ERROR_SELL_NO_HOUSES              WAV_NO_SOUND
+{^P, you can't sell houses from ^S because there aren't any houses there.}
+
+.ITEM   TMN_ERROR_MORTGAGING_ON_UNOWNED       WAV_NO_SOUND
+{^P is trying to mortgage square ^S, which belongs to someone else.}
+
+.ITEM   TMN_ERROR_MORTGAGE_NO_CASH            WAV_NO_SOUND
+{Sorry, ^P, but you need to have $^1 in cash to unmortgage ^S.}
+
+.ITEM   TMN_ERROR_BUILDING_MORTGAGED          WAV_NO_SOUND
+{Sorry, ^P, but you can't build on ^S because there are mortgaged squares somewhere in the same monopoly color group.}
+
+.ITEM   TMN_ERROR_MORTGAGING_HOUSES           WAV_NO_SOUND
+{^P, you have to sell all the buildings on the monopoly color group before you can mortgage ^S.}
+
+.ITEM   TMN_ERROR_MORTGAGE_INFO               WAV_NO_SOUND
+{^P has mortgaged ^S for $^1.}
+
+.ITEM   TMN_ERROR_UNMORTGAGE_INFO             WAV_NO_SOUND
+{^P has unmortgaged ^S after paying $^1 in fees.}
+
+.ITEM   TMN_ERROR_RENT_INFO                   WAV_NO_SOUND
+{^P is charging you $^1 in rent for landing on ^S.}
+
+.ITEM   TMN_ERROR_TAXES_CHARGED               WAV_NO_SOUND
+{^P's taxes are $^1.}
+
+.ITEM   TMN_ERROR_CANT_TRADE_THAT             WAV_NO_SOUND
+{^P, you can't trade that!}
+
+.ITEM   TMN_ERROR_TRADE_ACCEPTED              WAV_NO_SOUND
+{^P has accepted the trade as it stands.}
+
+.ITEM   TMN_ERROR_TRADE_REJECTED              WAV_NO_SOUND
+{^P has rejected the trade.}
+
+.ITEM   TMN_ERROR_TRADE_CHANGING              WAV_NO_SOUND
+{^P is now the most recent person to change the trade.}
+
+.ITEM   TMN_ERROR_TRADE_BANKRUPTCY            WAV_NO_SOUND
+{^P would go bankrupt if this trade was done, you have expenses of $^1 (may include mortgage transfer interest fees) and assets of $^3.  Please fix up the trade before you try to accept it again.}
+
+.ITEM   TMN_ERROR_TRADE_HOUSE_SALE            WAV_NO_SOUND
+{^P's houses on the monopoly at ^S will automatically be sold as part of the property transfer.}
+
+.ITEM   TMN_ERROR_TRADE_CANT_EDIT_DURING_ACCEPT WAV_NO_SOUND
+{^P isn't allowed to edit the trade during acceptance because ^P isn't involved in the deal.}
+
+.ITEM   TMN_ERROR_TRADE_GIVE_AND_GET          WAV_NO_SOUND
+{^P must both give something and get something in a trade, or not trade at all.  Please fix up the trade before you try to accept it again.}
+
+.ITEM   TMN_ERROR_SAVE_GAME_LATER             WAV_NO_SOUND
+{Sorry ^P, but you can't save the game right now.  Try again later when nothing is happening; the start of a turn is a good time.}
+
+.ITEM   TMN_ERROR_SAVE_GAME_FAILURE           WAV_NO_SOUND
+{Sorry ^P, but something went wrong while you were trying to save the game.  Try again when there is more free memory, writeable disk space, fewer dead AIs, or whatever was causing a save to fail.}
+
+.ITEM   TMN_ERROR_LOAD_GAME_FAILURE           WAV_NO_SOUND
+{Sorry ^P, can't load your saved game because the data is corrupt or important parts are missing.}
+
+.ITEM   TMN_ERROR_LOAD_OPTIONS_FAILURE        WAV_NO_SOUND
+{Sorry ^P, can't load your options because the data is corrupt or missing.}
+
+.ITEM   TMN_ERROR_LOAD_OPTIONS_LATER          WAV_NO_SOUND
+{Unable to load ^P's options right now, try again later (spectators can't load options and the game can't change them when it is busy doing something).}
+
+.ITEM   TMN_ERROR_IMMUNITY_OUT_OF             WAV_NO_SOUND
+{Sorry ^P, but we can't keep track of any more immunities or futures.  There are already ^1 of them in use.}
+
+.ITEM   TMN_ERROR_IMMUNITY_GRANTED            WAV_NO_SOUND
+{^Q has granted a rent immunity to ^P for ^3 "hits" on ^T.}
+
+.ITEM   TMN_ERROR_IMMUNITY_USED               WAV_NO_SOUND
+{^Q has used one rent immunity from ^P by landing on ^S.  There are now ^4 "hits" remaining.  Of course, it still counts even if ^S is mortgaged.  All that matters is that ^P owns it and ^Q landed on it.}
+
+.ITEM   TMN_ERROR_GAME_WON_NORMAL             WAV_NO_SOUND
+{^Q has won the game by bankrupting all his opponents.  In case you are wondering, his net wealth is $^2.}
+
+.ITEM   TMN_ERROR_GAME_WON_TIME               WAV_NO_SOUND
+{^Q has won the game by being the richest ($^2) after the game's ^3 second time limit was reached.}
+
+.ITEM   TMN_ERROR_GAME_WON_SHORT              WAV_NO_SOUND
+{^Q has won the game by having the most wealth ($^2) after ^3 players have gone bankrupt in the short game.}
+
+.ITEM   TMN_ERROR_BUILDING_BOUGHT             WAV_NO_SOUND
+{^Q has bought a building on ^S for $^2.}
+
+.ITEM   TMN_ERROR_BUILDING_SOLD               WAV_NO_SOUND
+{^Q has sold a building on ^S for $^2.}
+
+.ITEM   TMN_ERROR_BUILDING_ALL_SOLD           WAV_NO_SOUND
+{^Q has sold all the buildings on the ^S monopoly squares, for $^2.}
+
+.ITEM   TMN_ERROR_PLAYER_CHEATING             WAV_NO_SOUND
+{^P has cheated!}
+
+.ITEM   TMN_ERROR_PROPERTY_FEES               WAV_NO_SOUND
+{^P has to pay $^1 for ^3 houses and ^4 hotels.}
+
+.ITEM   TMN_ERROR_WAIT_ADD_OTHER_PLAYERS      WAV_NO_SOUND
+{You can't add any more players until the remaining ^1 out of ^2 people have added theirs.}
+
+.ITEM   TMN_ERROR_SAVE_OPTIONS_FAILURE        WAV_NO_SOUND
+{Sorry ^P, but something went wrong while you were trying to save the options.  Try again when there is more free memory, writeable disk space, or whatever was causing a save to fail.}
+
+.ITEM   TMN_ERROR_CANNOT_GO_BANKRUPT          WAV_NO_SOUND
+{^P, you aren't allowed to go bankrupt just yet.  You can raise the $^3 you owe to ^Q by selling buildings and mortgaging properties.}
+
+.ITEM   TMN_ERROR_CANT_TRADE_UNTIL_SETTLED    WAV_NO_SOUND
+{^P, you can't propose a trade until the previous trade has been settled.}
+
+.ITEM   TMN_ERROR_TIE_ROLLOFF                 WAV_NO_SOUND
+{There is a ^3 player tie.  ^P and ^1 other player(s) must roll off to decide who goes first.}
+
+.ITEM   TMN_ERROR_GAME_STARTING               WAV_NO_SOUND
+{The game is starting.  ^P goes first.}
+
+.ITEM   TMN_ERROR_PLAYER_DISCONNECTED         WAV_NO_SOUND
+{^P has been dropped from the game and replaced by an AI.}
+
+.ITEM   TMN_ERROR_PLAYER_REPLACED             WAV_NO_SOUND
+{^P is taking over from previous player ^A.}
+
+.ITEM   TMN_ERROR_PLAYER_INACTIVE_WARNING     WAV_NO_SOUND
+{Wake up, ^P!  You have been inactive for ^1 seconds and will be disconnected in ^3 seconds unless you do something.  Anything, even a chat message, will reset the clock.}
+
+.ITEM   TMN_ERROR_FUTURE_RENT_GRANTED         WAV_NO_SOUND
+{^Q has granted ^3 future rent "hits" on ^T to ^P.}
+
+.ITEM   TMN_ERROR_FUTURE_RENT_USED            WAV_NO_SOUND
+{^Q will now receive the rent money instead of ^P from whoever landed on ^S.  There are now ^4 "hits" remaining.  Of course, if it was mortgaged or ^Q landed on ^S then no money will be transfered, but a hit would still be used.}
+
+.ITEM   TMN_GAME_PAUSED                       WAV_NO_SOUND
+{^Q has paused the game.}
+
+.ITEM   TMN_GAME_UNPAUSED                     WAV_NO_SOUND
+{^Q has unpaused the game.}
+
+.ITEM   TMN_ADDING_PLAYERS                    WAV_NO_SOUND
+{The game is now accepting new players.  There is room for ^1 more.}
+
+.ITEM   TMN_FREE_PARKING_POT_COLLECTED        WAV_NO_SOUND
+{^P has collected the $^1 Free Parking Jackpot.}
+
+.ITEM   TMN_ERROR_NEED_HUMAN_PLAYERS          WAV_NO_SOUND
+{The game can't start until there are Human players on the ^1 computers that currently don't have Human players.  This is because the "no spectators" option is in force.}
+
+
+
+/*****************************************************************************
+ * These error messages are only displayed locally, never sent over the
+ * network.  So, if your program doesn't use them, it doesn't need to
+ * have strings for these messages.
+ */
+
+.ITEM   TMN_ERROR_LOBBY_CONNECT_FAILED        WAV_NO_SOUND
+{The lobby failed to make a DirectPlay connection.  DirectPlay error ^1.}
+
+.ITEM   TMN_ERROR_LOBBY_APP_GUID              WAV_NO_SOUND
+{The DirectPlay lobby wants to start a game session with a different "GUID" than the one used for games that understand the "Monopoly1997a" protocol (which is what this game uses).  That means that network play probably won't work properly.}
+
+.ITEM   TMN_ERROR_DPM_CANT_CREATE             WAV_NO_SOUND
+{Can't create the DirectPlay object.  Maybe you don't have DirectX 3 installed?  DirectPlay error ^1.}
+
+.ITEM   TMN_ERROR_DPM_NO_SERVER_PLAYER        WAV_NO_SOUND
+{Can't find the server player.}
+
+.ITEM   TMN_ERROR_DPM_CANT_OPEN               WAV_NO_SOUND
+{Can't open a new or existing DirectPlay session.  DirectPlay error ^1.}
+
+.ITEM   TMN_ERROR_DPM_CANT_CONNECT            WAV_NO_SOUND
+{Can't connect to a service provider or shortcut connection.  DirectPlay error ^1.}
+
+.ITEM   TMN_ERROR_DPM_PLAYER_CREATE           WAV_NO_SOUND
+{Unable to create your player using your name and settings.  DirectPlay error ^1.}
+
+.ITEM   TMN_ERROR_DPNAMESET                   WAV_NO_SOUND
+{Unable to rename your DirectPlay player to "^A".  DirectPlay error ^1.}
+
+.ITEM   TMN_ERROR_DP_SESSION_LOST             WAV_NO_SOUND
+{The DirectPlay session has been lost.  All network players using DirectPlay have been disconnected.}
+
+.ITEM   TMN_WSOCK_NOT_AVAILABLE               WAV_NO_SOUND
+{not available}
+
+.ITEM   TMN_ERROR_WS_CONNECT_ACCEPT_FAILURE   WAV_NO_SOUND
+{WinSock error ^1 happened while checking for new connections.  To avoid trouble, no new network connections will be accepted.  However, existing network players can still play.}
+
+
+/*****************************************************************************
+ * Other miscellaneous things.
+ */
+
+.ITEM   TMN_BANK_NAME                         WAV_NO_SOUND
+{The Bank}
+
+.ITEM   TMN_SPECTATOR_NAME                    WAV_NO_SOUND
+{A Spectator}
+
+.ITEM   TMN_NOBODY_NAME                       WAV_NO_SOUND
+{Nobody or Everybody}
+
+.ITEM ATR_TOKEN_NAME_0                        WAV_NO_SOUND
+{Cannon}
+
+.ITEM   ATR_TOKEN_NAME_1                      WAV_NO_SOUND
+{Race Car}
+
+.ITEM   ATR_TOKEN_NAME_2                      WAV_NO_SOUND
+{Dog}
+
+.ITEM   ATR_TOKEN_NAME_3                      WAV_NO_SOUND
+{Top Hat}
+
+.ITEM   ATR_TOKEN_NAME_4                      WAV_NO_SOUND
+{Iron}
+
+.ITEM   ATR_TOKEN_NAME_5                      WAV_NO_SOUND
+{Horse And Rider}
+
+.ITEM   ATR_TOKEN_NAME_6                      WAV_NO_SOUND
+{Battleship}
+
+.ITEM   ATR_TOKEN_NAME_7                      WAV_NO_SOUND
+{Shoe}
+
+.ITEM   ATR_TOKEN_NAME_8                      WAV_NO_SOUND
+{Thimble}
+
+.ITEM   ATR_TOKEN_NAME_9                      WAV_NO_SOUND
+{Wheel Barrow}
+
+.ITEM   ATR_TOKEN_NAME_10                     WAV_NO_SOUND
+{Money bag}
+
+.ITEM   TMN_MESSAGE_BOX_TITLE                 WAV_NO_SOUND
+{Monopoly Message}
+
+.ITEM   TMN_BUTTON_CANCEL                     WAV_NO_SOUND
+{Cancel}
+
+.ITEM   TMN_BUTTON_OK                         WAV_NO_SOUND
+{OK!}
+
+// The arguments are no longer language dependant - left here anyway
+.ITEM   TMN_ARGS_SERVER                       WAV_NO_SOUND
+{-server}
+
+.ITEM   TMN_ARGS_CLIENT                       WAV_NO_SOUND
+{-client}
+
+.ITEM   TMN_ARGS_DIRECTPLAY                   WAV_NO_SOUND
+{-directplay}
+
+.ITEM   TMN_ARGS_SOCKET                       WAV_NO_SOUND
+{-winsock}
+
+.ITEM   TMN_ARGS_IP_ADDRESS                   WAV_NO_SOUND
+{-ipaddress}
+
+.ITEM   TMN_ARGS_TCP_PORT                     WAV_NO_SOUND
+{-tcpport}
+
+.ITEM   TMN_ARGS_NETSYS_CHOOSE                WAV_NO_SOUND
+{-netchoose}
+
+.ITEM   TMN_ARGS_PLAYERNAME                   WAV_NO_SOUND
+{-playername}
+// End of no longer used language dependant parameters.
+
+.ITEM   TMN_BOX_SERVER_TITLE                  WAV_NO_SOUND
+{Network Game Choices}
+
+.ITEM   TMN_BOX_SERVER_PROMPT                 WAV_NO_SOUND
+{Please choose "Host" if you want your computer to start a new game.  Choose "Join" to join an existing game that someone else is hosting.}
+
+.ITEM   TMN_BOX_SERVER_SERVER_BUTTON          WAV_NO_SOUND
+{Host}
+
+.ITEM   TMN_BOX_SERVER_CLIENT_BUTTON          WAV_NO_SOUND
+{Join}
+
+.ITEM   TMN_DP_SESSION_NAME_UNKNOWN           WAV_NO_SOUND
+{A Monopoly Session}
+
+.ITEM   TMN_DP_USER_NAME_UNKNOWN              WAV_NO_SOUND
+{Unknown User}
+
+.ITEM   TMN_BOX_DP_SERVICE_TITLE              WAV_NO_SOUND
+{Choose DirectPlay Connection}
+
+.ITEM   TMN_BOX_DP_SESSION_TITLE              WAV_NO_SOUND
+{Choose Game Session}
+
+.ITEM   TMN_BOX_GETIP_TITLE                   WAV_NO_SOUND
+{Enter IP Address}
+
+.ITEM   TMN_BOX_GETIP_PROMPT                  WAV_NO_SOUND
+{Please identify the computer you want to connect to.  For example "friend.isp.net:12345" or "192.20.30.40:12345".  The port number and colon, ":12345", is optional; you just have to use the same port as your friend is using.}
+
+.ITEM   TMN_BOX_SHOWIP_TITLE                  WAV_NO_SOUND
+{Your IP Address}
+
+.ITEM   TMN_BOX_SHOWIP_PROMPT                 WAV_NO_SOUND
+{This is your current Internet IP address.  Tell your friends to use it along with WinSock networking to join the game on your computer.}
+
+.ITEM   TMN_BOX_NETSYS_TITLE                  WAV_NO_SOUND
+{Choose Network Systems}
+
+.ITEM   TMN_BOX_NETSYS_PROMPT                 WAV_NO_SOUND
+{Please pick a network system to use for your game.  DirectPlay works with modems, direct serial connections, the Internet and other networks.  WinSock only works with TCP/IP networks like the Internet.}
+
+.ITEM   TMN_BOX_NETSYS_DIRECTPLAY             WAV_NO_SOUND
+{DirectPlay}
+
+.ITEM   TMN_BOX_NETSYS_WINSOCK                WAV_NO_SOUND
+{WinSock}
+
+.ITEM   TMN_BOX_NETSYS_PORT                   WAV_NO_SOUND
+{TCP Port}
+
+
+
+/*****************************************************************************
+ * Square names.
+ */
+
+.ITEM   TMN_SQUARENAME_GO                     WAV_NO_SOUND
+{GO}
+
+.ITEM   TMN_SQUARENAME_MEDITERRANEAN_AVENUE   WAV_NO_SOUND
+{Mediterranean Avenue}
+
+.ITEM   TMN_SQUARENAME_COMMUNITY_CHEST_1      WAV_NO_SOUND
+{Community Chest}
+
+.ITEM   TMN_SQUARENAME_BALTIC_AVENUE          WAV_NO_SOUND
+{Baltic Avenue}
+
+.ITEM   TMN_SQUARENAME_INCOME_TAX             WAV_NO_SOUND
+{Income Tax}
+
+.ITEM   TMN_SQUARENAME_READING_RR             WAV_NO_SOUND
+{Reading Railroad}
+
+.ITEM   TMN_SQUARENAME_ORIENTAL_AVENUE        WAV_NO_SOUND
+{Oriental Avenue}
+
+.ITEM   TMN_SQUARENAME_CHANCE_1               WAV_NO_SOUND
+{Chance}
+
+.ITEM   TMN_SQUARENAME_VERMONT_AVENUE         WAV_NO_SOUND
+{Vermont Avenue}
+
+.ITEM   TMN_SQUARENAME_CONNECTICUT_AVENUE     WAV_NO_SOUND
+{Connecticut}
+
+.ITEM   TMN_SQUARENAME_JUST_VISITING          WAV_NO_SOUND
+{JAIL: Just Visiting}
+
+.ITEM   TMN_SQUARENAME_ST_CHARLES_PLACE       WAV_NO_SOUND
+{St. Charles Place}
+
+.ITEM   TMN_SQUARENAME_ELECTRIC_COMPANY       WAV_NO_SOUND
+{Electric Company}
+
+.ITEM   TMN_SQUARENAME_STATES_AVENUE          WAV_NO_SOUND
+{States Avenue}
+
+.ITEM   TMN_SQUARENAME_VIRGINIA_AVENUE        WAV_NO_SOUND
+{Virginia Avenue}
+
+.ITEM   TMN_SQUARENAME_PENNSYLVANIA_RR        WAV_NO_SOUND
+{Pennsylvania Railroad}
+
+.ITEM   TMN_SQUARENAME_ST_JAMES_PLACE         WAV_NO_SOUND
+{St. James Place}
+
+.ITEM   TMN_SQUARENAME_COMMUNITY_CHEST_2      WAV_NO_SOUND
+{Community Chest}
+
+.ITEM   TMN_SQUARENAME_TENNESSEE_AVENUE       WAV_NO_SOUND
+{Tennessee Avenue}
+
+.ITEM   TMN_SQUARENAME_NEW_YORK_AVENUE        WAV_NO_SOUND
+{New York Avenue}
+
+.ITEM   TMN_SQUARENAME_FREE_PARKING           WAV_NO_SOUND
+{Free Parking}
+
+.ITEM   TMN_SQUARENAME_KENTUCKY_AVENUE        WAV_NO_SOUND
+{Kentucky Avenue}
+
+.ITEM   TMN_SQUARENAME_CHANCE_2               WAV_NO_SOUND
+{Chance}
+
+.ITEM   TMN_SQUARENAME_INDIANA_AVENUE         WAV_NO_SOUND
+{Indiana Avenue}
+
+.ITEM   TMN_SQUARENAME_ILLINOIS_AVENUE        WAV_NO_SOUND
+{Illinois Avenue}
+
+.ITEM   TMN_SQUARENAME_BnO_RR                 WAV_NO_SOUND
+{B and O Railroad}
+
+.ITEM   TMN_SQUARENAME_ATLANTIC_AVENUE        WAV_NO_SOUND
+{Atlantic Avenue}
+
+.ITEM   TMN_SQUARENAME_VENTNOR_AVENUE         WAV_NO_SOUND
+{Ventnor Avenue}
+
+.ITEM   TMN_SQUARENAME_WATER_WORKS            WAV_NO_SOUND
+{Waterworks}
+
+.ITEM   TMN_SQUARENAME_MARVIN_GARDENS         WAV_NO_SOUND
+{Marvin Gardens}
+
+.ITEM   TMN_SQUARENAME_GO_TO_JAIL             WAV_NO_SOUND
+{Go To Jail}
+
+.ITEM   TMN_SQUARENAME_PACIFIC_AVENUE         WAV_NO_SOUND
+{Pacific Avenue}
+
+.ITEM   TMN_SQUARENAME_NORTH_CAROLINA_AVENUE  WAV_NO_SOUND
+{North Carolina Avenue}
+
+.ITEM   TMN_SQUARENAME_COMMUNITY_CHEST_3      WAV_NO_SOUND
+{Community Chest}
+
+.ITEM   TMN_SQUARENAME_PENNSYLVANIA_AVENUE    WAV_NO_SOUND
+{Pennsylvania Avenue}
+
+.ITEM   TMN_SQUARENAME_SHORT_LINE_RR          WAV_NO_SOUND
+{Short Line Railroad}
+
+.ITEM   TMN_SQUARENAME_CHANCE_3               WAV_NO_SOUND
+{Chance}
+
+.ITEM   TMN_SQUARENAME_PARK_PLACE             WAV_NO_SOUND
+{Park Place}
+
+.ITEM   TMN_SQUARENAME_LUXURY_TAX             WAV_NO_SOUND
+{Luxury Tax}
+
+.ITEM   TMN_SQUARENAME_BOARDWALK              WAV_NO_SOUND
+{Boardwalk}
+
+.ITEM   TMN_SQUARENAME_IN_JAIL                WAV_NO_SOUND
+{In Jail}
+
+.ITEM   TMN_SQUARENAME_OFF_BOARD              WAV_NO_SOUND
+{Off Board}
+
+/*****************************************************************************
+ * Names for groups of squares.
+ */
+.ITEM   TMN_GROUPNAME_1                       WAV_NO_SOUND
+{Group 1}
+
+.ITEM   TMN_GROUPNAME_2                       WAV_NO_SOUND
+{Group 2}
+
+.ITEM   TMN_GROUPNAME_3                       WAV_NO_SOUND
+{Group 3}
+
+.ITEM   TMN_GROUPNAME_4                       WAV_NO_SOUND
+{Group 4}
+
+.ITEM   TMN_GROUPNAME_5                       WAV_NO_SOUND
+{Group 5}
+
+.ITEM   TMN_GROUPNAME_6                       WAV_NO_SOUND
+{Group 6}
+
+.ITEM   TMN_GROUPNAME_7                       WAV_NO_SOUND
+{Group 7}
+
+.ITEM   TMN_GROUPNAME_8                       WAV_NO_SOUND
+{Group 8}
+
+/*****************************************************************************
+ * Messages sent by AIs, for each token.
+ */
+
+// TODO:  These will change for monopoly
+.ITEM   TMN_GUN_TRADE_COUNTER_1       WAV_NO_SOUND
+{Interesting deal, but not very fair.  How about this? }
+.ITEM   TMN_GUN_TRADE_COUNTER_2       WAV_NO_SOUND
+{No but try this on for size. }
+.ITEM   TMN_GUN_TRADE_COUNTER_3       WAV_NO_SOUND
+{I like this better. }
+.ITEM   TMN_GUN_TRADE_COUNTER_4       WAV_NO_SOUND
+{Give this a shot. }
+.ITEM   TMN_GUN_TRADE_COUNTER_5       WAV_NO_SOUND
+{Interesting deal, but not very fair.  How about this? }
+.ITEM   TMN_GUN_TRADE_REJECT_1        WAV_NO_SOUND
+{No go., ^P.}
+.ITEM   TMN_GUN_TRADE_REJECT_2        WAV_NO_SOUND
+{Forget it., ^P.}
+.ITEM   TMN_GUN_TRADE_REJECT_3        WAV_NO_SOUND
+{No deal., ^P.}
+.ITEM   TMN_GUN_TRADE_REJECT_4        WAV_NO_SOUND
+{Not a chance., ^P.}
+.ITEM   TMN_GUN_TRADE_REJECT_5        WAV_NO_SOUND
+{Misfire., ^P.}
+.ITEM   TMN_GUN_IMPATIENT_1         WAV_NO_SOUND
+{I haven't got all day.. ^P!}
+.ITEM   TMN_GUN_IMPATIENT_2         WAV_NO_SOUND
+{Time is money^P!}
+.ITEM   TMN_GUN_IMPATIENT_3         WAV_NO_SOUND
+{You outta bullets? ^P!}
+.ITEM   TMN_GUN_IMPATIENT_4         WAV_NO_SOUND
+{You wanna make your mind up. Now! ^P!}
+.ITEM   TMN_GUN_IMPATIENT_5         WAV_NO_SOUND
+{Dum-de-dum... Any time now...^P!}
+.ITEM   TMN_GUN_OFFER_MONOPOLY_TRADE_1    WAV_NO_SOUND
+{I haven't got all day.. ^P!}
+.ITEM   TMN_GUN_OFFER_MONOPOLY_TRADE_2    WAV_NO_SOUND
+{You better take me up on this offer. Now.}
+.ITEM   TMN_GUN_OFFER_MONOPOLY_TRADE_3    WAV_NO_SOUND
+{Any hesitation could kill this deal.}
+.ITEM   TMN_GUN_OFFER_MONOPOLY_TRADE_4    WAV_NO_SOUND
+{Time is money^P!}
+.ITEM   TMN_GUN_OFFER_MONOPOLY_TRADE_5    WAV_NO_SOUND
+{This could go on forever.}
+.ITEM   TMN_GUN_TOO_MANY_COUNTERS_1     WAV_NO_SOUND
+{I don't have time for all this haggling.}
+.ITEM   TMN_GUN_TOO_MANY_COUNTERS_2     WAV_NO_SOUND
+{This could go on forever.}
+.ITEM   TMN_GUN_TOO_MANY_COUNTERS_3     WAV_NO_SOUND
+{Cut to the chase here.}
+.ITEM   TMN_GUN_TOO_MANY_COUNTERS_4     WAV_NO_SOUND
+{Decide. One way or another.}
+.ITEM   TMN_GUN_TOO_MANY_COUNTERS_5     WAV_NO_SOUND
+{I don't have time for all this haggling.}
+.ITEM   TMN_GUN_NOT_SERIOUS_TRADER_1      WAV_NO_SOUND
+{You're getting on my nerves.}
+.ITEM   TMN_GUN_NOT_SERIOUS_TRADER_2      WAV_NO_SOUND
+{Stop fooling around!}
+.ITEM   TMN_GUN_NOT_SERIOUS_TRADER_3      WAV_NO_SOUND
+{My trigger fingers gettin itchy.}
+.ITEM   TMN_GUN_NOT_SERIOUS_TRADER_4      WAV_NO_SOUND
+{I might just put a bounty on you!}
+.ITEM   TMN_GUN_NOT_SERIOUS_TRADER_5      WAV_NO_SOUND
+{You're getting on my nerves.}
+.ITEM   TMN_GUN_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_GUN_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_GUN_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_GUN_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_GUN_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_GUN_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_GUN_NOT_INVOLVED_IN_TRADE     WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_GUN_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_CAR_TRADE_COUNTER_1       WAV_NO_SOUND
+{This is more to my liking!}
+.ITEM   TMN_CAR_TRADE_COUNTER_2       WAV_NO_SOUND
+{This is more to my liking!}
+.ITEM   TMN_CAR_TRADE_COUNTER_3       WAV_NO_SOUND
+{I prefer this.}
+.ITEM   TMN_CAR_TRADE_COUNTER_4       WAV_NO_SOUND
+{I have a much better idea.}
+.ITEM   TMN_CAR_TRADE_COUNTER_5       WAV_NO_SOUND
+{I have a much better idea.}
+.ITEM   TMN_CAR_TRADE_REJECT_1        WAV_NO_SOUND
+{Impossible!}
+.ITEM   TMN_CAR_TRADE_REJECT_2        WAV_NO_SOUND
+{Out of the question!}
+.ITEM   TMN_CAR_TRADE_REJECT_3        WAV_NO_SOUND
+{Try and make me!}
+.ITEM   TMN_CAR_TRADE_REJECT_4        WAV_NO_SOUND
+{You should live so long!}
+.ITEM   TMN_CAR_TRADE_REJECT_5        WAV_NO_SOUND
+{Forget it.}
+.ITEM   TMN_CAR_IMPATIENT_1         WAV_NO_SOUND
+{Take your time why don't you.}
+.ITEM   TMN_CAR_IMPATIENT_2         WAV_NO_SOUND
+{I wouldn't want to rush you.}
+.ITEM   TMN_CAR_IMPATIENT_3         WAV_NO_SOUND
+{And they say I am slow.}
+.ITEM   TMN_CAR_IMPATIENT_4         WAV_NO_SOUND
+{Get the lead out.}
+.ITEM   TMN_CAR_IMPATIENT_5         WAV_NO_SOUND
+{Put the pedal to the metal!}
+.ITEM   TMN_CAR_OFFER_MONOPOLY_TRADE_1    WAV_NO_SOUND
+{You won't get a better offer than this.}
+.ITEM   TMN_CAR_OFFER_MONOPOLY_TRADE_2    WAV_NO_SOUND
+{You won't get a better offer than this.}
+.ITEM   TMN_CAR_OFFER_MONOPOLY_TRADE_3    WAV_NO_SOUND
+{This is good for both of us.}
+.ITEM   TMN_CAR_OFFER_MONOPOLY_TRADE_4    WAV_NO_SOUND
+{It's now or never.}
+.ITEM   TMN_CAR_OFFER_MONOPOLY_TRADE_5    WAV_NO_SOUND
+{It's now or never.}
+.ITEM   TMN_CAR_TOO_MANY_COUNTERS_1     WAV_NO_SOUND
+{I am bored.}
+.ITEM   TMN_CAR_TOO_MANY_COUNTERS_2     WAV_NO_SOUND
+{You're just playing for time.}
+.ITEM   TMN_CAR_TOO_MANY_COUNTERS_3     WAV_NO_SOUND
+{You stuck in idle?}
+.ITEM   TMN_CAR_TOO_MANY_COUNTERS_4     WAV_NO_SOUND
+{Stalling won't do you any good.}
+.ITEM   TMN_CAR_TOO_MANY_COUNTERS_5     WAV_NO_SOUND
+{Get your act together.}
+.ITEM   TMN_CAR_NOT_SERIOUS_TRADER_1      WAV_NO_SOUND
+{Stripped your gears?}
+.ITEM   TMN_CAR_NOT_SERIOUS_TRADER_2      WAV_NO_SOUND
+{You ever seen the size of my fists?}
+.ITEM   TMN_CAR_NOT_SERIOUS_TRADER_3      WAV_NO_SOUND
+{You can't be serious.}
+.ITEM   TMN_CAR_NOT_SERIOUS_TRADER_4      WAV_NO_SOUND
+{You're really starting to bug me.}
+.ITEM   TMN_CAR_NOT_SERIOUS_TRADER_5      WAV_NO_SOUND
+{You can't be serious.}
+.ITEM   TMN_CAR_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_CAR_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_CAR_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_CAR_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_CAR_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_CAR_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_CAR_NOT_INVOLVED_IN_TRADE     WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_CAR_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_DOG_TRADE_COUNTER_1         WAV_NO_SOUND
+{Interesting deal. But I must alter it further. }
+.ITEM   TMN_DOG_TRADE_COUNTER_2         WAV_NO_SOUND
+{Perhaps we can yet come to some compromise. }
+.ITEM   TMN_DOG_TRADE_COUNTER_3         WAV_NO_SOUND
+{Interesting deal. But I must alter it further. }
+.ITEM   TMN_DOG_TRADE_COUNTER_4         WAV_NO_SOUND
+{I much prefer this proposal. }
+.ITEM   TMN_DOG_TRADE_COUNTER_5         WAV_NO_SOUND
+{You have a lot to learn. }
+.ITEM   TMN_DOG_TRADE_REJECT_1          WAV_NO_SOUND
+{Absolutely and unequivocally.... no!}
+.ITEM   TMN_DOG_TRADE_REJECT_2          WAV_NO_SOUND
+{Under no circumstances!}
+.ITEM   TMN_DOG_TRADE_REJECT_3          WAV_NO_SOUND
+{No!}
+.ITEM   TMN_DOG_TRADE_REJECT_4          WAV_NO_SOUND
+{Absolutely and unequivocally.... no!}
+.ITEM   TMN_DOG_TRADE_REJECT_5          WAV_NO_SOUND
+{Under no circumstances!}
+.ITEM   TMN_DOG_IMPATIENT_1           WAV_NO_SOUND
+{Do you really think it wise to test my patience?}
+.ITEM   TMN_DOG_IMPATIENT_2           WAV_NO_SOUND
+{My tolerance is waning. ^P.}
+.ITEM   TMN_DOG_IMPATIENT_3           WAV_NO_SOUND
+{Decide! Once and for all!}
+.ITEM   TMN_DOG_IMPATIENT_4           WAV_NO_SOUND
+{Woof Woof, already!}
+.ITEM   TMN_DOG_IMPATIENT_5           WAV_NO_SOUND
+{Delay no further!}
+.ITEM   TMN_DOG_OFFER_MONOPOLY_TRADE_1      WAV_NO_SOUND
+{Your pitiful existence is coming to an end.  Act or be destroyed.}
+.ITEM   TMN_DOG_OFFER_MONOPOLY_TRADE_2      WAV_NO_SOUND
+{Your fate lies in the balance. Choose!}
+.ITEM   TMN_DOG_OFFER_MONOPOLY_TRADE_3      WAV_NO_SOUND
+{Act or be destroyed!}
+.ITEM   TMN_DOG_OFFER_MONOPOLY_TRADE_4      WAV_NO_SOUND
+{Resolve this matter or perish!}
+.ITEM   TMN_DOG_OFFER_MONOPOLY_TRADE_5      WAV_NO_SOUND
+{Your pitiful existence is coming to an end.  Act or be destroyed.}
+.ITEM   TMN_DOG_TOO_MANY_COUNTERS_1       WAV_NO_SOUND
+{I warn you not to underestimate my bite}
+.ITEM   TMN_DOG_TOO_MANY_COUNTERS_2       WAV_NO_SOUND
+{Procrastinate no further!}
+.ITEM   TMN_DOG_TOO_MANY_COUNTERS_3       WAV_NO_SOUND
+{It is useless to delay.}
+.ITEM   TMN_DOG_TOO_MANY_COUNTERS_4       WAV_NO_SOUND
+{Dog eat dog?  Get on with it.}
+.ITEM   TMN_DOG_TOO_MANY_COUNTERS_5       WAV_NO_SOUND
+{This is pointless.}
+.ITEM   TMN_DOG_NOT_SERIOUS_TRADER_1        WAV_NO_SOUND
+{Do you know who you are fooling with? ^P.}
+.ITEM   TMN_DOG_NOT_SERIOUS_TRADER_2        WAV_NO_SOUND
+{I do not have time for this inanity. ^P.}
+.ITEM   TMN_DOG_NOT_SERIOUS_TRADER_3        WAV_NO_SOUND
+{You are annoying the wrong doggy my friend. ^P.}
+.ITEM   TMN_DOG_NOT_SERIOUS_TRADER_4        WAV_NO_SOUND
+{Barking up the wrong tree, pal. ^P.}
+.ITEM   TMN_DOG_NOT_SERIOUS_TRADER_5        WAV_NO_SOUND
+{Your lucky I'm not a bigger doy. ^P.}
+.ITEM   TMN_DOG_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Don't make me bite you.}
+.ITEM   TMN_DOG_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_DOG_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_DOG_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_DOG_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_DOG_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_DOG_NOT_INVOLVED_IN_TRADE     WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_DOG_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_HAT_TRADE_COUNTER_1         WAV_NO_SOUND
+{Risky deal.  I will require more to settle my nerves.}
+.ITEM   TMN_HAT_TRADE_COUNTER_2         WAV_NO_SOUND
+{I got a better idea.}
+.ITEM   TMN_HAT_TRADE_COUNTER_3         WAV_NO_SOUND
+{I pulled this out of my hat instead.}
+.ITEM   TMN_HAT_TRADE_COUNTER_4         WAV_NO_SOUND
+{What do you think of this?}
+.ITEM   TMN_HAT_TRADE_COUNTER_5         WAV_NO_SOUND
+{Risky deal.  I will require more to settle my nerves.}
+.ITEM   TMN_HAT_TRADE_REJECT_1          WAV_NO_SOUND
+{Use your head for something more than a hat rack.}
+.ITEM   TMN_HAT_TRADE_REJECT_2          WAV_NO_SOUND
+{You expect me to even consider that?}
+.ITEM   TMN_HAT_TRADE_REJECT_3          WAV_NO_SOUND
+{What kind of deal is that? No way.}
+.ITEM   TMN_HAT_TRADE_REJECT_4          WAV_NO_SOUND
+{You take me for an air head?  No way!}
+.ITEM   TMN_HAT_TRADE_REJECT_5          WAV_NO_SOUND
+{What kind of deal is that? No way.}
+.ITEM   TMN_HAT_IMPATIENT_1           WAV_NO_SOUND
+{I hate long waits.}
+.ITEM   TMN_HAT_IMPATIENT_2           WAV_NO_SOUND
+{C'mon! Look alive!}
+.ITEM   TMN_HAT_IMPATIENT_3           WAV_NO_SOUND
+{C'mon! Look alive!}
+.ITEM   TMN_HAT_IMPATIENT_4           WAV_NO_SOUND
+{You're not exactly quick, are you?}
+.ITEM   TMN_HAT_IMPATIENT_5           WAV_NO_SOUND
+{I hate long waits.}
+.ITEM   TMN_HAT_OFFER_MONOPOLY_TRADE_1      WAV_NO_SOUND
+{Sometimes you have to take a risk to win it all. What will it be?}
+.ITEM   TMN_HAT_OFFER_MONOPOLY_TRADE_2      WAV_NO_SOUND
+{Don't take no chances? Chances are you won't win.}
+.ITEM   TMN_HAT_OFFER_MONOPOLY_TRADE_3      WAV_NO_SOUND
+{Sometimes you have to lay it all on the line, pal.}
+.ITEM   TMN_HAT_OFFER_MONOPOLY_TRADE_4      WAV_NO_SOUND
+{You want the glory? You might just have to risk it all.}
+.ITEM   TMN_HAT_OFFER_MONOPOLY_TRADE_5      WAV_NO_SOUND
+{Sometimes you have to take a risk to win it all. What will it be?}
+.ITEM   TMN_HAT_TOO_MANY_COUNTERS_1       WAV_NO_SOUND
+{This is getting old.}
+.ITEM   TMN_HAT_TOO_MANY_COUNTERS_2       WAV_NO_SOUND
+{What are you stalling for?}
+.ITEM   TMN_HAT_TOO_MANY_COUNTERS_3       WAV_NO_SOUND
+{Make up your mind.}
+.ITEM   TMN_HAT_TOO_MANY_COUNTERS_4       WAV_NO_SOUND
+{What are you trying to prove?}
+.ITEM   TMN_HAT_TOO_MANY_COUNTERS_5       WAV_NO_SOUND
+{Let's get this show on the road.}
+.ITEM   TMN_HAT_NOT_SERIOUS_TRADER_1      WAV_NO_SOUND
+{Talk to me when you're serious, okay? }
+.ITEM   TMN_HAT_NOT_SERIOUS_TRADER_2      WAV_NO_SOUND
+{What exactly is your problem, pal? }
+.ITEM   TMN_HAT_NOT_SERIOUS_TRADER_3      WAV_NO_SOUND
+{Talk to me when you're serious, okay? }
+.ITEM   TMN_HAT_NOT_SERIOUS_TRADER_4      WAV_NO_SOUND
+{Hey! I could be working on my computer right now. }
+.ITEM   TMN_HAT_NOT_SERIOUS_TRADER_5      WAV_NO_SOUND
+{What exactly is your problem, pal? }
+.ITEM   TMN_HAT_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_HAT_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_HAT_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_HAT_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_HAT_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_HAT_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_HAT_NOT_INVOLVED_IN_TRADE     WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_HAT_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_IRON_TRADE_COUNTER_1          WAV_NO_SOUND
+{I wasn't born yesterday. That is worth only this much.}
+.ITEM   TMN_IRON_TRADE_COUNTER_2          WAV_NO_SOUND
+{I must press for a little more.}
+.ITEM   TMN_IRON_TRADE_COUNTER_3          WAV_NO_SOUND
+{How about this?}
+.ITEM   TMN_IRON_TRADE_COUNTER_4          WAV_NO_SOUND
+{Here's a suggestion.}
+.ITEM   TMN_IRON_TRADE_COUNTER_5          WAV_NO_SOUND
+{I wasn't born yesterday. That is worth only this much.}
+.ITEM   TMN_IRON_TRADE_REJECT_1           WAV_NO_SOUND
+{That isn't ironing out.}
+.ITEM   TMN_IRON_TRADE_REJECT_2           WAV_NO_SOUND
+{I don't want to get involved.}
+.ITEM   TMN_IRON_TRADE_REJECT_3           WAV_NO_SOUND
+{You can not be serious.}
+.ITEM   TMN_IRON_TRADE_REJECT_4           WAV_NO_SOUND
+{Not in a million presses.}
+.ITEM   TMN_IRON_TRADE_REJECT_5           WAV_NO_SOUND
+{Nope.}
+.ITEM   TMN_IRON_IMPATIENT_1            WAV_NO_SOUND
+{Would you make up your mind?}
+.ITEM   TMN_IRON_IMPATIENT_2            WAV_NO_SOUND
+{I haven't got all day.}
+.ITEM   TMN_IRON_IMPATIENT_3            WAV_NO_SOUND
+{What is with you? Hurry up!}
+.ITEM   TMN_IRON_IMPATIENT_4            WAV_NO_SOUND
+{I know I should be patient, but really...}
+.ITEM   TMN_IRON_IMPATIENT_5            WAV_NO_SOUND
+{What's keeping you? You on permanent press?}
+.ITEM   TMN_IRON_OFFER_MONOPOLY_TRADE_1       WAV_NO_SOUND
+{Lets seize the moment!}
+.ITEM   TMN_IRON_OFFER_MONOPOLY_TRADE_2       WAV_NO_SOUND
+{Seize the moment!  It's do or die!}
+.ITEM   TMN_IRON_OFFER_MONOPOLY_TRADE_3       WAV_NO_SOUND
+{This is it. There's no turning back!}
+.ITEM   TMN_IRON_OFFER_MONOPOLY_TRADE_4       WAV_NO_SOUND
+{Your very existence will be determined by this decision.}
+.ITEM   TMN_IRON_OFFER_MONOPOLY_TRADE_5       WAV_NO_SOUND
+{Lets seize the moment!}
+.ITEM   TMN_IRON_TOO_MANY_COUNTERS_1        WAV_NO_SOUND
+{This is almost as boring as watching grass grow.}
+.ITEM   TMN_IRON_TOO_MANY_COUNTERS_2        WAV_NO_SOUND
+{This haggling is getting us nowhere.}
+.ITEM   TMN_IRON_TOO_MANY_COUNTERS_3        WAV_NO_SOUND
+{Your wrinkling my disposition.}
+.ITEM   TMN_IRON_TOO_MANY_COUNTERS_4        WAV_NO_SOUND
+{You're postponing the inevitable.}
+.ITEM   TMN_IRON_TOO_MANY_COUNTERS_5        WAV_NO_SOUND
+{I warn you not to underestimate my power.}
+.ITEM   TMN_IRON_NOT_SERIOUS_TRADER_1       WAV_NO_SOUND
+{Have you got nothing better to do than this?}
+.ITEM   TMN_IRON_NOT_SERIOUS_TRADER_2       WAV_NO_SOUND
+{Is this your idea of fun?}
+.ITEM   TMN_IRON_NOT_SERIOUS_TRADER_3       WAV_NO_SOUND
+{What's wrong with you?}
+.ITEM   TMN_IRON_NOT_SERIOUS_TRADER_4       WAV_NO_SOUND
+{Have you lost it?}
+.ITEM   TMN_IRON_NOT_SERIOUS_TRADER_5       WAV_NO_SOUND
+{Is this your idea of fun?}
+.ITEM   TMN_IRON_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_IRON_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_IRON_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_IRON_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_IRON_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_IRON_CANT_SUGGEST_TRADE         WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_IRON_NOT_INVOLVED_IN_TRADE      WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_IRON_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_HORSE_TRADE_COUNTER_1        WAV_NO_SOUND
+{I have a better idea. How about this?}
+.ITEM   TMN_HORSE_TRADE_COUNTER_2        WAV_NO_SOUND
+{I propose yet another option.}
+.ITEM   TMN_HORSE_TRADE_COUNTER_3        WAV_NO_SOUND
+{I counter with this offer.}
+.ITEM   TMN_HORSE_TRADE_COUNTER_4        WAV_NO_SOUND
+{This is more to my liking.}
+.ITEM   TMN_HORSE_TRADE_COUNTER_5        WAV_NO_SOUND
+{I have a better idea. How about this?}
+.ITEM   TMN_HORSE_TRADE_REJECT_1         WAV_NO_SOUND
+{Under no circumstances.  }
+.ITEM   TMN_HORSE_TRADE_REJECT_2         WAV_NO_SOUND
+{Don't even think about it. }
+.ITEM   TMN_HORSE_TRADE_REJECT_3         WAV_NO_SOUND
+{You must be dreaming. }
+.ITEM   TMN_HORSE_TRADE_REJECT_4         WAV_NO_SOUND
+{Not likely. }
+.ITEM   TMN_HORSE_TRADE_REJECT_5         WAV_NO_SOUND
+{Not a hope in hell. }
+.ITEM   TMN_HORSE_IMPATIENT_1          WAV_NO_SOUND
+{Is this going to be a long story?}
+.ITEM   TMN_HORSE_IMPATIENT_2          WAV_NO_SOUND
+{Patience is not my strong suit.}
+.ITEM   TMN_HORSE_IMPATIENT_3          WAV_NO_SOUND
+{Would you kindly step on it please.}
+.ITEM   TMN_HORSE_IMPATIENT_4          WAV_NO_SOUND
+{Look alive!}
+.ITEM   TMN_HORSE_IMPATIENT_5          WAV_NO_SOUND
+{Hey! Let's get a move on!}
+.ITEM   TMN_HORSE_OFFER_MONOPOLY_TRADE_1     WAV_NO_SOUND
+{Both our people can benefit from this.}
+.ITEM   TMN_HORSE_OFFER_MONOPOLY_TRADE_2     WAV_NO_SOUND
+{The die is cast! It's time to face the music.}
+.ITEM   TMN_HORSE_OFFER_MONOPOLY_TRADE_3     WAV_NO_SOUND
+{You're standing at the crossroads. This decision will affect both of us.}
+.ITEM   TMN_HORSE_OFFER_MONOPOLY_TRADE_4     WAV_NO_SOUND
+{This deal could have repercussions in both our lives. }
+.ITEM   TMN_HORSE_OFFER_MONOPOLY_TRADE_5     WAV_NO_SOUND
+{Both our people can benefit from this.}
+.ITEM   TMN_HORSE_TOO_MANY_COUNTERS_1      WAV_NO_SOUND
+{Stop horsing around.}
+.ITEM   TMN_HORSE_TOO_MANY_COUNTERS_2      WAV_NO_SOUND
+{Negotiate don't procrastinate.}
+.ITEM   TMN_HORSE_TOO_MANY_COUNTERS_3      WAV_NO_SOUND
+{You testing my diplomatic skills.}
+.ITEM   TMN_HORSE_TOO_MANY_COUNTERS_4      WAV_NO_SOUND
+{This indecision is driving me crazy.}
+.ITEM   TMN_HORSE_TOO_MANY_COUNTERS_5      WAV_NO_SOUND
+{Horsing around still?}
+.ITEM   TMN_HORSE_NOT_SERIOUS_TRADER_1     WAV_NO_SOUND
+{You're a big waste of time.}
+.ITEM   TMN_HORSE_NOT_SERIOUS_TRADER_2     WAV_NO_SOUND
+{You're being ridiculous.}
+.ITEM   TMN_HORSE_NOT_SERIOUS_TRADER_3     WAV_NO_SOUND
+{You are growing more tedious by the minute.}
+.ITEM   TMN_HORSE_NOT_SERIOUS_TRADER_4     WAV_NO_SOUND
+{I am not amused.}
+.ITEM   TMN_HORSE_NOT_SERIOUS_TRADER_5     WAV_NO_SOUND
+{I've met more intelligent dust bunnies.}
+.ITEM   TMN_HORSE_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_HORSE_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_HORSE_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_HORSE_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_HORSE_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_HORSE_CANT_SUGGEST_TRADE       WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_HORSE_NOT_INVOLVED_IN_TRADE      WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_HORSE_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_SHIP_TRADE_COUNTER_1          WAV_NO_SOUND
+{Bum deal Try this.}
+.ITEM   TMN_SHIP_TRADE_COUNTER_2          WAV_NO_SOUND
+{Raw deal. Try this.}
+.ITEM   TMN_SHIP_TRADE_COUNTER_3          WAV_NO_SOUND
+{Lousy deal. Try this.}
+.ITEM   TMN_SHIP_TRADE_COUNTER_4          WAV_NO_SOUND
+{Lousy deal. Try this.}
+.ITEM   TMN_SHIP_TRADE_COUNTER_5          WAV_NO_SOUND
+{Raw deal. Try this.}
+.ITEM   TMN_SHIP_TRADE_REJECT_1           WAV_NO_SOUND
+{God forbid!}
+.ITEM   TMN_SHIP_TRADE_REJECT_2           WAV_NO_SOUND
+{God forbid!}
+.ITEM   TMN_SHIP_TRADE_REJECT_3           WAV_NO_SOUND
+{Not a prayer!}
+.ITEM   TMN_SHIP_TRADE_REJECT_4           WAV_NO_SOUND
+{Fat chance!}
+.ITEM   TMN_SHIP_TRADE_REJECT_5           WAV_NO_SOUND
+{Fat chance!}
+.ITEM   TMN_SHIP_IMPATIENT_1            WAV_NO_SOUND
+{Please don't dilly-dally}
+.ITEM   TMN_SHIP_IMPATIENT_2            WAV_NO_SOUND
+{Hop to it, matey!}
+.ITEM   TMN_SHIP_IMPATIENT_3            WAV_NO_SOUND
+{Are you lying down on the job?}
+.ITEM   TMN_SHIP_IMPATIENT_4            WAV_NO_SOUND
+{Are you asleep at your post?}
+.ITEM   TMN_SHIP_IMPATIENT_5            WAV_NO_SOUND
+{Time is of the essence.}
+.ITEM   TMN_SHIP_OFFER_MONOPOLY_TRADE_1       WAV_NO_SOUND
+{Here is an offer you can't possibly refuse.}
+.ITEM   TMN_SHIP_OFFER_MONOPOLY_TRADE_2       WAV_NO_SOUND
+{Here is an offer you can't possibly refuse. }
+.ITEM   TMN_SHIP_OFFER_MONOPOLY_TRADE_3       WAV_NO_SOUND
+{Our very existence could hang in the balance.}
+.ITEM   TMN_SHIP_OFFER_MONOPOLY_TRADE_4       WAV_NO_SOUND
+{Here is an offer you can't possibly refuse..}
+.ITEM   TMN_SHIP_OFFER_MONOPOLY_TRADE_5       WAV_NO_SOUND
+{Our very existence could hang in the balance.}
+.ITEM   TMN_SHIP_TOO_MANY_COUNTERS_1        WAV_NO_SOUND
+{You're testing my patience.}
+.ITEM   TMN_SHIP_TOO_MANY_COUNTERS_2        WAV_NO_SOUND
+{It's senseless to delay.}
+.ITEM   TMN_SHIP_TOO_MANY_COUNTERS_3        WAV_NO_SOUND
+{This could go on ad infinitum.}
+.ITEM   TMN_SHIP_TOO_MANY_COUNTERS_4        WAV_NO_SOUND
+{Be reasonable, please.}
+.ITEM   TMN_SHIP_TOO_MANY_COUNTERS_5        WAV_NO_SOUND
+{Do try to come to a resolution.}
+.ITEM   TMN_SHIP_NOT_SERIOUS_TRADER_1       WAV_NO_SOUND
+{I sense that you are being imbecilic. }
+.ITEM   TMN_SHIP_NOT_SERIOUS_TRADER_2       WAV_NO_SOUND
+{Talk to me when you are serious.}
+.ITEM   TMN_SHIP_NOT_SERIOUS_TRADER_3       WAV_NO_SOUND
+{Are you malfunctioning or something?}
+.ITEM   TMN_SHIP_NOT_SERIOUS_TRADER_4       WAV_NO_SOUND
+{Talk to me when you are serious.}
+.ITEM   TMN_SHIP_NOT_SERIOUS_TRADER_5       WAV_NO_SOUND
+{I don't suffer fools easily.}
+.ITEM   TMN_SHIP_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_SHIP_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{Your dry docked.  Try not to talk to me anymore.}
+.ITEM   TMN_SHIP_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_SHIP_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_SHIP_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_SHIP_CANT_SUGGEST_TRADE         WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_SHIP_NOT_INVOLVED_IN_TRADE      WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_SHIP_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_SHOE_TRADE_COUNTER_1         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_SHOE_TRADE_COUNTER_2         WAV_NO_SOUND
+{Here's another possibility.}
+.ITEM   TMN_SHOE_TRADE_COUNTER_3         WAV_NO_SOUND
+{We could try this.}
+.ITEM   TMN_SHOE_TRADE_COUNTER_4         WAV_NO_SOUND
+{I'd like this better.}
+.ITEM   TMN_SHOE_TRADE_COUNTER_5         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_SHOE_TRADE_REJECT_1          WAV_NO_SOUND
+{Negative.}
+.ITEM   TMN_SHOE_TRADE_REJECT_2          WAV_NO_SOUND
+{Nothing doing.}
+.ITEM   TMN_SHOE_TRADE_REJECT_3          WAV_NO_SOUND
+{No way}
+.ITEM   TMN_SHOE_TRADE_REJECT_4          WAV_NO_SOUND
+{Not possible.}
+.ITEM   TMN_SHOE_TRADE_REJECT_5          WAV_NO_SOUND
+{I can't accept such a ridiculous offer.}
+.ITEM   TMN_SHOE_IMPATIENT_1           WAV_NO_SOUND
+{Move it along would you.}
+.ITEM   TMN_SHOE_IMPATIENT_2           WAV_NO_SOUND
+{Step on it!}
+.ITEM   TMN_SHOE_IMPATIENT_3           WAV_NO_SOUND
+{On the double.}
+.ITEM   TMN_SHOE_IMPATIENT_4           WAV_NO_SOUND
+{Hurry up!}
+.ITEM   TMN_SHOE_IMPATIENT_5           WAV_NO_SOUND
+{Move it along would you.}
+.ITEM   TMN_SHOE_OFFER_MONOPOLY_TRADE_1      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_SHOE_OFFER_MONOPOLY_TRADE_2      WAV_NO_SOUND
+{Our big chance is now. This is a shoe-in!}
+.ITEM   TMN_SHOE_OFFER_MONOPOLY_TRADE_3      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_SHOE_OFFER_MONOPOLY_TRADE_4      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_SHOE_OFFER_MONOPOLY_TRADE_5      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_SHOE_TOO_MANY_COUNTERS_1       WAV_NO_SOUND
+{I do not like haggling.}
+.ITEM   TMN_SHOE_TOO_MANY_COUNTERS_2       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_SHOE_TOO_MANY_COUNTERS_3       WAV_NO_SOUND
+{Do you have a problem?}
+.ITEM   TMN_SHOE_TOO_MANY_COUNTERS_4       WAV_NO_SOUND
+{Stop dragging your feet.}
+.ITEM   TMN_SHOE_TOO_MANY_COUNTERS_5       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_SHOE_NOT_SERIOUS_TRADER_1      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_SHOE_NOT_SERIOUS_TRADER_2      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_SHOE_NOT_SERIOUS_TRADER_3      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_SHOE_NOT_SERIOUS_TRADER_4      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_SHOE_NOT_SERIOUS_TRADER_5      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_SHOE_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_SHOE_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_SHOE_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_SHOE_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_SHOE_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_SHOE_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_SHOE_NOT_INVOLVED_IN_TRADE      WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_SHOE_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_THIMBLE_TRADE_COUNTER_1         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_THIMBLE_TRADE_COUNTER_2         WAV_NO_SOUND
+{Here's another possibility.}
+.ITEM   TMN_THIMBLE_TRADE_COUNTER_3         WAV_NO_SOUND
+{Let's stitch it up another way.}
+.ITEM   TMN_THIMBLE_TRADE_COUNTER_4         WAV_NO_SOUND
+{I'd like this better.}
+.ITEM   TMN_THIMBLE_TRADE_COUNTER_5         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_THIMBLE_TRADE_REJECT_1          WAV_NO_SOUND
+{Negative.}
+.ITEM   TMN_THIMBLE_TRADE_REJECT_2          WAV_NO_SOUND
+{Nothing doing.}
+.ITEM   TMN_THIMBLE_TRADE_REJECT_3          WAV_NO_SOUND
+{No way}
+.ITEM   TMN_THIMBLE_TRADE_REJECT_4          WAV_NO_SOUND
+{Not possible.}
+.ITEM   TMN_THIMBLE_TRADE_REJECT_5          WAV_NO_SOUND
+{I can't accept such a ridiculous offer.}
+.ITEM   TMN_THIMBLE_IMPATIENT_1           WAV_NO_SOUND
+{Move it along would you.}
+.ITEM   TMN_THIMBLE_IMPATIENT_2           WAV_NO_SOUND
+{Hurry up!}
+.ITEM   TMN_THIMBLE_IMPATIENT_3           WAV_NO_SOUND
+{On the double.}
+.ITEM   TMN_THIMBLE_IMPATIENT_4           WAV_NO_SOUND
+{Hurry up!}
+.ITEM   TMN_THIMBLE_IMPATIENT_5           WAV_NO_SOUND
+{Move it along would you.}
+.ITEM   TMN_THIMBLE_OFFER_MONOPOLY_TRADE_1      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_THIMBLE_OFFER_MONOPOLY_TRADE_2      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_THIMBLE_OFFER_MONOPOLY_TRADE_3      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_THIMBLE_OFFER_MONOPOLY_TRADE_4      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_THIMBLE_OFFER_MONOPOLY_TRADE_5      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_THIMBLE_TOO_MANY_COUNTERS_1       WAV_NO_SOUND
+{I am getting a little frayed.}
+.ITEM   TMN_THIMBLE_TOO_MANY_COUNTERS_2       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_THIMBLE_TOO_MANY_COUNTERS_3       WAV_NO_SOUND
+{Do you have a problem?}
+.ITEM   TMN_THIMBLE_TOO_MANY_COUNTERS_4       WAV_NO_SOUND
+{Get it together!}
+.ITEM   TMN_THIMBLE_TOO_MANY_COUNTERS_5       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_THIMBLE_NOT_SERIOUS_TRADER_1      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_THIMBLE_NOT_SERIOUS_TRADER_2      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_THIMBLE_NOT_SERIOUS_TRADER_3      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_THIMBLE_NOT_SERIOUS_TRADER_4      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_THIMBLE_NOT_SERIOUS_TRADER_5      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_THIMBLE_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_THIMBLE_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_THIMBLE_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_THIMBLE_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_THIMBLE_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_THIMBLE_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_THIMBLE_NOT_INVOLVED_IN_TRADE      WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_THIMBLE_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_BARROW_TRADE_COUNTER_1         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_BARROW_TRADE_COUNTER_2         WAV_NO_SOUND
+{Here's another possibility.}
+.ITEM   TMN_BARROW_TRADE_COUNTER_3         WAV_NO_SOUND
+{We could try this.}
+.ITEM   TMN_BARROW_TRADE_COUNTER_4         WAV_NO_SOUND
+{I'd like this better.}
+.ITEM   TMN_BARROW_TRADE_COUNTER_5         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_BARROW_TRADE_REJECT_1          WAV_NO_SOUND
+{Thats full of it.}
+.ITEM   TMN_BARROW_TRADE_REJECT_2          WAV_NO_SOUND
+{Nothing doing.}
+.ITEM   TMN_BARROW_TRADE_REJECT_3          WAV_NO_SOUND
+{No way}
+.ITEM   TMN_BARROW_TRADE_REJECT_4          WAV_NO_SOUND
+{Not enough in the barrow for me!}
+.ITEM   TMN_BARROW_TRADE_REJECT_5          WAV_NO_SOUND
+{I can't accept such a ridiculous offer.}
+.ITEM   TMN_BARROW_IMPATIENT_1           WAV_NO_SOUND
+{Move it along would you.}
+.ITEM   TMN_BARROW_IMPATIENT_2           WAV_NO_SOUND
+{Hurry up!}
+.ITEM   TMN_BARROW_IMPATIENT_3           WAV_NO_SOUND
+{Roll it out!}
+.ITEM   TMN_BARROW_IMPATIENT_4           WAV_NO_SOUND
+{Hurry up!}
+.ITEM   TMN_BARROW_IMPATIENT_5           WAV_NO_SOUND
+{Move it along would you.}
+.ITEM   TMN_BARROW_OFFER_MONOPOLY_TRADE_1      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_BARROW_OFFER_MONOPOLY_TRADE_2      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_BARROW_OFFER_MONOPOLY_TRADE_3      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_BARROW_OFFER_MONOPOLY_TRADE_4      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_BARROW_OFFER_MONOPOLY_TRADE_5      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_BARROW_TOO_MANY_COUNTERS_1       WAV_NO_SOUND
+{I do not like haggling.}
+.ITEM   TMN_BARROW_TOO_MANY_COUNTERS_2       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_BARROW_TOO_MANY_COUNTERS_3       WAV_NO_SOUND
+{Do you have a problem?}
+.ITEM   TMN_BARROW_TOO_MANY_COUNTERS_4       WAV_NO_SOUND
+{Stop dragging your feet.}
+.ITEM   TMN_BARROW_TOO_MANY_COUNTERS_5       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_BARROW_NOT_SERIOUS_TRADER_1      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_BARROW_NOT_SERIOUS_TRADER_2      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_BARROW_NOT_SERIOUS_TRADER_3      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_BARROW_NOT_SERIOUS_TRADER_4      WAV_NO_SOUND
+{I have gardening to do.}
+.ITEM   TMN_BARROW_NOT_SERIOUS_TRADER_5      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_BARROW_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_BARROW_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_BARROW_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_BARROW_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_BARROW_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_BARROW_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_BARROW_NOT_INVOLVED_IN_TRADE      WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_BARROW_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+
+.ITEM   TMN_MONEYBAG_TRADE_COUNTER_1         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_MONEYBAG_TRADE_COUNTER_2         WAV_NO_SOUND
+{Here's another possibility.}
+.ITEM   TMN_MONEYBAG_TRADE_COUNTER_3         WAV_NO_SOUND
+{We could try this.}
+.ITEM   TMN_MONEYBAG_TRADE_COUNTER_4         WAV_NO_SOUND
+{I'd like this better.}
+.ITEM   TMN_MONEYBAG_TRADE_COUNTER_5         WAV_NO_SOUND
+{This is a lot better.}
+.ITEM   TMN_MONEYBAG_TRADE_REJECT_1          WAV_NO_SOUND
+{Thats full of it.}
+.ITEM   TMN_MONEYBAG_TRADE_REJECT_2          WAV_NO_SOUND
+{Nothing doing.}
+.ITEM   TMN_MONEYBAG_TRADE_REJECT_3          WAV_NO_SOUND
+{No way}
+.ITEM   TMN_MONEYBAG_TRADE_REJECT_4          WAV_NO_SOUND
+{Not enough in the barrow for me!}
+.ITEM   TMN_MONEYBAG_TRADE_REJECT_5          WAV_NO_SOUND
+{I can't accept such a ridiculous offer.}
+.ITEM   TMN_MONEYBAG_IMPATIENT_1           WAV_NO_SOUND
+{Lots of time for me to count my money.}
+.ITEM   TMN_MONEYBAG_IMPATIENT_2           WAV_NO_SOUND
+{Lots of time for me to count my money.}
+.ITEM   TMN_MONEYBAG_IMPATIENT_3           WAV_NO_SOUND
+{Lots of time for me to count my money.}
+.ITEM   TMN_MONEYBAG_IMPATIENT_4           WAV_NO_SOUND
+{Lots of time for me to count my money.}
+.ITEM   TMN_MONEYBAG_IMPATIENT_5           WAV_NO_SOUND
+{Lots of time for me to count my money.}
+.ITEM   TMN_MONEYBAG_OFFER_MONOPOLY_TRADE_1      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_MONEYBAG_OFFER_MONOPOLY_TRADE_2      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_MONEYBAG_OFFER_MONOPOLY_TRADE_3      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_MONEYBAG_OFFER_MONOPOLY_TRADE_4      WAV_NO_SOUND
+{It's crunch time!  What's it going to be?}
+.ITEM   TMN_MONEYBAG_OFFER_MONOPOLY_TRADE_5      WAV_NO_SOUND
+{Our big chance is now. Let's just do it!}
+.ITEM   TMN_MONEYBAG_TOO_MANY_COUNTERS_1       WAV_NO_SOUND
+{I do not like haggling.}
+.ITEM   TMN_MONEYBAG_TOO_MANY_COUNTERS_2       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_MONEYBAG_TOO_MANY_COUNTERS_3       WAV_NO_SOUND
+{Do you have a problem?}
+.ITEM   TMN_MONEYBAG_TOO_MANY_COUNTERS_4       WAV_NO_SOUND
+{Stop dragging your feet.}
+.ITEM   TMN_MONEYBAG_TOO_MANY_COUNTERS_5       WAV_NO_SOUND
+{Is it possible for you to make a decision?}
+.ITEM   TMN_MONEYBAG_NOT_SERIOUS_TRADER_1      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_MONEYBAG_NOT_SERIOUS_TRADER_2      WAV_NO_SOUND
+{You're being very foolish. ^P.}
+.ITEM   TMN_MONEYBAG_NOT_SERIOUS_TRADER_3      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_MONEYBAG_NOT_SERIOUS_TRADER_4      WAV_NO_SOUND
+{I have gardening to do.}
+.ITEM   TMN_MONEYBAG_NOT_SERIOUS_TRADER_5      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_MONEYBAG_ANNOYED_WITH_TRADER_1      WAV_NO_SOUND
+{Stop pestering me with silly trades.}
+.ITEM   TMN_MONEYBAG_ANNOYED_WITH_TRADER_2      WAV_NO_SOUND
+{I had enough of you.  Try not to talk to me anymore.}
+.ITEM   TMN_MONEYBAG_ANNOYED_WITH_TRADER_3      WAV_NO_SOUND
+{You had your chance.  Go away!}
+.ITEM   TMN_MONEYBAG_ANNOYED_WITH_TRADER_4      WAV_NO_SOUND
+{Let me make this plain.  ^P, I don't like you. GO AWAY!}
+.ITEM   TMN_MONEYBAG_ANNOYED_WITH_TRADER_5      WAV_NO_SOUND
+{You have nerve to talk to me.  I won't return the favor.}
+.ITEM   TMN_MONEYBAG_CANT_SUGGEST_TRADE        WAV_NO_SOUND
+{I'm not sure what to suggest.  Make me a deal and I'll consider it then.}
+.ITEM   TMN_MONEYBAG_NOT_INVOLVED_IN_TRADE      WAV_NO_SOUND
+{I have nothing to do with this.}
+.ITEM   TMN_MONEYBAG_ASK_ME_LATER              WAV_NO_SOUND
+{We already talked about this.  Ask me later.}
+

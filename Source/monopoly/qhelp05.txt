@@ -1,0 +1,63 @@
+Empezando 
+
+¡Bienvenido a la ayuda rápida de Monopoly! Monopoly es un juego en el que pueden participar hasta seis jugadores, de los cuales al menos uno tiene que ser humano. Los otros pueden ser: el ordenador (inteligencia artificial o IA), gente conectada a un ordenador en red o gente en su ordenador local. Para empezar a jugar, cada jugador deberá introducir su nombre y elegir una ficha. Al ir introduciendo a los jugadores, verás sus nombres aparecer en la parte inferior de la pantalla. Cuando hayas introducido al menos dos jugadores, haz clic en "Empezar a jugar". Si quieres jugar una Partida corta o cambiar las reglas, haz clic en "Personalizar reglas". Nota: si estás jugando en red, sólo el anfitrión podrá cambiar las reglas.
+
+Interfase principal 
+
+En la parte inferior de la pantalla principal hay etiquetas con nombres que muestran a los jugadores, sus fichas y la cantidad de dinero que tienen. Haz clic en la etiqueta con el nombre del jugador para mostrar sus detalles. Justo encima de esto, un área coloreada muestra los títulos de todas las posibles propiedades. El color de fondo representa al jugador en control y los títulos en negrita son las propiedades que tiene. La bandeja del medio muestra al jugador que le toca tirar y la cantidad que saca con el dado. En la parte de arriba del área inferior están siempre disponibles los botones de control. 
+
+En la parte superior de la pantalla principal está el tablero de Monopoly, que muestra el movimiento de las fichas y las propiedades que cada jugador tiene, identificadas por la barra de color en la esquina del tablero.
+
+Pantalla de estado 
+
+Si haces clic en Estado, en la parte derecha de la pantalla principal, estarán disponibles muchos detalles del estado del juego. En la esquina superior izquierda verás una muestra del tablero de juego y podrás continuar viendo y jugando la partida mientras estés en esta pantalla. En la parte inferior izquierda, en vez de los títulos de propiedad, podrás ver botones que te permitirán elegir el estado del Jugador, el estado del Título o el estado de la Banca. En cada una de estas tres categorías puedes ordenar los objetos al hacer clic en los botones de la parte inferior derecha. Encima, cada jugador tendrá un área que muestra lo que poseen.
+
+Comerciando
+
+Si haces clic en "Comerciar", en la esquina izquierda de la pantalla principal, primero se te preguntará con qué jugador quieres comerciar y después verás el tablero de juego en la parte superior y centrado. Tú estás a la izquierda, con todas tus propiedades actuales, tu dinero y tus activos. Para ofrecer algo, haz clic en el objeto y se moverá a tu área central. Para pedir algo, haz clic en los objetos de los otros jugadores y se moverán al área del centro. Cuando hayas establecido un negocio, haz clic en "Proponer". El otro jugador, ya sea local, el ordenador o en red, deberá hacer clic en "Aceptar", "Rechazar" o hacerte una "Contraoferta". Si hace otra oferta, podrás cambiar el negocio existente y "Proponer" uno nuevo.
+
+Para ofrecer o requerir la renta Futura o la Inmunidad del alquiler de una propiedad, haz clic en "Crear nueva" y especifica la propiedad y el número de veces. Primero, se te preguntará a quién pertenece el Futuro o la Inmunidad y luego la propiedad y el número de turnos. Después de que un Futuro o una Inmunidad se haya establecido, el negocio se hará como con cualquier otro objeto.
+
+Subasta
+
+Si caes en una propiedad sin dueño y no quieres comprarla, se puede subastar, y la recaudación va a la Banca. Haz clic en las facturas de la bandeja del dinero para aumentar tu puja. Nota: el retraso que permite el Sr. Monopoly durante la subasta deberá ser establecido en las reglas personalizadas al comienzo del juego.
+
+Juego en red
+
+Para establecer un juego en red, ya sea en una red local, en Internet o usando la Microsoft Game Zone, sigue las instrucciones dadas en "Jugar una partida en línea" cuando empieces Monopoly. Para más detalles, ve a la ayuda completa.
+
+Charla en red
+
+La charla en red puede ser apagada y encendida en cualquier momento al pulsar la tecla TAB. El cuadro de diálogo de charla principal se puede cambiar de tamaño cogiendo el tirador de la esquina inferior derecha. Se puede mover haciendo clic en cualquiera de la superficie vacía de la barra superior. Los botones de la barra superior son los siguientes:
+
+Cuadrados de colores -el(los) jugador(es) a los que va dirigido el mensaje
+Arco iris -todos los jugadores
+Martillo -opciones de charla activadas/desactivadas, las opciones son:
+	Fondo transparente
+	Texto transparente
+	Tamaño de la fuente del texto
+Página de texto -abre el cuadro de diálogo con mensajes rápidos, sin traducir. Las categorías son:
+	
+	Felicitaciones
+	Respuestas comunes
+	Ritmo del juego
+	Comerciando
+	Comentarios positivos
+	Comentarios negativos
+Flecha - hace que la persiana del cuadro de diálogo se abra o se cierre
+
+	
+Preguntas más frecuentes
+
+¿Qué es una Inmunidad?
+Si posees una propiedad, puedes ofrecer inmunidad contra la renta a cualquier jugador por un número concreto de veces que caiga en tu propiedad. Haz clic en "Crear nueva inmunidad" y sigue las instrucciones.
+¿Qué es un Futuro?
+Si posees una propiedad, puedes ofrecer la renta de esa propiedad a otro jugador cuando cualquier otro jugador caiga en ella. Puedes especificar el número de turnos que está vigente. Haz clic en "Crear nuevo futuro" y sigue las instrucciones.
+¿Cómo hago un negocio?
+Si inicias el negocio, estarás a la izquierda. Haz clic en tus cosas para ofrecerlas. Haz clic en las cosas de los otros jugadores que esperas a cambio. Después, pulsa "Proponer". 
+¿Cómo hago que el juego vaya más deprisa?
+En Menús/Opciones, desactiva algunas cosas como el filtro bilineal, la técnica de dithering, la iluminación, etc.
+¿Cómo juego en Internet?
+Recomendamos el uso de Microsoft Game Zone (gratis). Haz clic en "Jugar una partida en línea" y sigue las instrucciones dadas al principio del juego para conectarte con otro jugador. Cada jugador debe tener una copia del CD de Monopoly en su unidad de CD-ROM.
+
+Para informarte de las últimas noticias puedes ir al archivo Léame.txt del CD.

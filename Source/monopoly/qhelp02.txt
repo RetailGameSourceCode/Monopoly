@@ -1,0 +1,47 @@
+Getting Started
+
+Welcome to Monopoly Quick Help!  Monopoly is a game for up to six players, one of which must be a human.  The others may be computer opponents (artificial intelligence or AI), people connected on a computer network, or people on your local computer.  To start playing, each player should enter their name and pick a token.  As you enter players, you will see their name tags appear at the bottom of the screen.  When at least two players have been added, click Start to play.  If you want to play a Short Game or change the rules, click Custom Rules.  Note: if you are playing over a network, only the Host may change the rules.
+
+Main Interface
+
+At the bottom of the main screen there are name tags which show the players, their tokens and the amount of money they have.  Click on the player name tag if you want to control the mouse.  Directly above that, a colored area shows the deeds for all possible properties.  The background color represents the player in control and the bold deeds are the actual properties they have.  The tray in the middle shows the player whose turn it is and the amount they rolled on the dice.  At the top of the lower area are the available control buttons at any time.
+
+At the top of the main screen is the Monopoly board which shows the tokens moving and the properties which each player owns, identified by the colored bar at the edge of the board.
+
+Status Screen
+
+If you click Status on the right side of the main screen, many details on the game status will be available.  In the top left corner, you will see a display of the game board and you'll be able to continue watching and playing the game while on this screen.  Instead of the property deeds you will see buttons on the lower left allowing you to pick Player status, Deed status or Bank status.  In each of these three categories, you may sort the items by clicking buttons on the lower right side.  Above, each player will have an area showing everything they own.
+
+Trading
+
+If you click Trade on the left side of the main screen, you'll first be asked which player you want to trade with and then see the game board at top, center.  You're on the left, with all your current properties, money and assets displayed.  To offer something, click, and it will move to your center area.  To request something, click on the other player's items and they will move to the center area.  When you've set up the trade, click Propose.  The other player, whether local, computer or network, must then click Accept, Reject or make you a Counter offer.  If they Counter, they will be allowed to edit the existing  trade and Propose a new trade.
+
+To offer or request the Future rent or Immunity from rent on a property, click under Create New and specify your property and the number of times.   You will first be asked who is to own the Future or Immunity and then the property and number of turns.  After a Future or Immunity has been set up, it may be traded just like another item.
+
+Auction
+
+If you land on an unowned property and don't wish to buy it, it may be auctioned, with the proceeds going to the bank.  Click on the bills in the money tray to increase your bid. Note:  the time delay that Mr. Monopoly allows during the auction may be set in the custom rules at the start of the game.
+
+Network Play
+
+To set up a network game, either on a local area network, over the Internet, or using the Microsoft Game Zone, follow the instructions under Play an Online Game when starting Monopoly.  For details see the Full Help file.
+
+Network Chat
+
+Network Chat may be turned on or off by hitting the TAB key at any time.  The main Chat dialog may be resized by grabbing the handle on the lower right corner.  It may be moved by clicking on any blank surface on the top bar.  The buttons on the top bar are as follows:
+
+Colored squares - the player(s) to whom the message will be sent; Rainbow - all players; Hammer - chat options On/Off, options are Background transparency, Text transparency, and Text font size; Text page - opens dialog with quick, pre-translated messages.  Categories are Greetings, Common answers, Game play and pace, Trading, Positive comments, and Negative comments; Arrow - causes window shade of dialog box to open/close
+	
+FAQ - Frequently Asked Questions
+
+What's an Immunity? - If you own a property, you can offer any other player immunity from rent for a number of times they land on your property.  Click Create New Immunity and follow the steps.
+
+What's a Future? - If you own a property, you can offer another player the rent from that property when any other player lands on it.  You can specify the number of turns this applies.  Click Create New Future and follow the steps.
+
+How do I trade? - If you initiate the trade, you're on the left. Click on your things to offer them.  Click on the other player's things that you expect in return.  Then hit Propose.
+
+How do I make the game run faster? - Under Menus/Options, turn off things like Bilinear filtering, Dithering, Lighting etc.
+
+How do I play over the Internet? - We recommend you use the Microsoft Game Zone (free).  Or click Play an Online Game and follow the setup steps at the beginning of the game to connect directly with another player.  Each player must have a copy of the Monopoly CD in their CD-ROM drive.
+
+Please see the ReadMe.txt file on the CD for any late-breaking news.

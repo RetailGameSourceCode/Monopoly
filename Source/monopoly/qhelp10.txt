@@ -1,0 +1,69 @@
+
+
+
+Hjelp til å starte
+
+Velkommen til Monopol Hurtighjelp! Monopol er et spill for opp til seks spillere, hvor en av dem må være et menneske. De andre kan være datastyrte motspillere (kunstig intelligens eller AI), motspillere tilkoblet et nettverk, eller spillere på din egen datamaskin.
+For å begynne å spille, må hver spiller skrive inn navnet sitt og velge en brikke. Ettersom du skriver inn navnene til spillerne vil du se navnskiltene deres komme frem nederst på skjermen. Når minimum to spillere har blitt lagt til, klikk på Start for å begynne å spille. Om du vil spille et kort spill eller forandre på reglene, klikk på Brukerdefinerte regler. NB! Om du spiller over et nettverk, så kan bare verten forandre på reglene.
+
+
+Hovedinterface
+
+Nederst på hovedskjermen finner du navnskiltene til de som spiller, brikkene og formuen deres. Klikk på navnskiltet ditt om du vil kontrollere musa. Rett ovenfor navnskiltene, vil et farget område vise skjøtene til alle de forskjellige eiendommene. Fargen i bakgrunnen representerer spilleren i kontroll og skjøtene i fet skrift er eiendommene de eier. Brettet i midten viser hvilken spiller sin tur det er og hva de slår med terningen. Alle de tilgjengelige kontroll-knappene finnes på toppen av det nederste området.
+
+Øverst på hovedskjermen er Monopolbrettet som viser brikkene som flytter på seg, og eiendommene som hver spiller eier. Eieren av eiendommene identifiseres av den fargede listen på kanten av brettet. 
+
+Statusskjerm
+
+Hvis du klikker på Vis status på høyre side av hovedskjermen, vil flere detaljer om spillets status komme til syne. Øverst i det venstre hjørne vil du kunne se et bilde av spillebrettet, og du vil ha muligheten til å fortsette å se på spillets gang og spille samtidig mens du er på statusskjermen. Istedenfor skjøtene, vil du kunne se knapper nederst til venstre som tillater deg å velge spillerstatus, skjøtestatus eller bankstatus. I hver av disse tre kategoriene kan du sortere objektene ved å klikke på knappene nederst til høyre. Øverst på skjermen vil det være et felt hvor hver spiller vil ha et område som viser alt de eier.
+
+Handel
+
+Om du klikker på Handel på venstre side av hovedskjermen, vil du først bli spurt hvilken spiller du vil byttehandle med og å se på spillebrettet i midten på toppen av skjermen. Du er til venstre med alle dine nåværende eiendommer, formue og eiendeler til syne. For å gjøre et bud, klikk på objektene, og de vil flytte seg til midten av ditt område. For å be om noe, klikk på den andre spillerens ting og de vil flytte seg til midten av feltet. Når handelen har blitt arrangert, klikk på Foreslå . Den andre spilleren, uansett om de er på din datamaskin, en annen datamaskin eller nettverk, må da klikke på Akseptere, Avslå eller gjøre et Motbud. Om de gjør et motbud har de lov til å endre handelen og Foreslå en ny handel.
+
+For å tilby eller forespørre Fremtidsgjeld eller Fritak fra leie på en eiendom, klikk under Lag ny og spesifiser din eiendom og antall ganger. Du vil først bli spurt hvem som vil eie Fremtidsgjelden eller Fritaket, og deretter eiendommen og antall ganger. Etter at Fremtidsgjelden eller Fritaket har blitt satt opp, kan de bli handlet med som de andre objektene.
+
+Auksjon
+
+Om du lander på en eiendom som ikke er oppkjøpt enda og ikke ønsker å kjøpe den, så kan den auksjoneres bort, og fortjenesten vil gå til banken. Klikk på pengesedlene i pengefatet for å forhøye budet ditt. NB! Tidsforsinkelsen som Herr Monopol tillater under auksjonen kan bli bestemt i de brukerdefinerte reglene før spillet begynner. 
+
+Nettverkspill
+
+For å sette opp et nettverkspill, enten i det lokale nettverket, over Internett eller ved å bruke Microsoft Game Zone, følg instruksjonene i starten av Monopol, under Spill et nettverk-spill. For mer informasjon se i Full-hjelp-filen.
+
+Nettverk-snakk
+
+Nettverk-snakk kan bli skrudd av eller på ved å trykke på TAB-knappen til enhver tid i løpet av spillet. Snakke-vinduet kan bli omforstørret ved å ta tak i håndtaket nederst i høyre hjørne. Det kan bli flyttet på ved å klikke på enhver tom flate på den øverste listen. De følgende knappene på den øverste listen er som følger:
+
+Fargede firkanter - spilleren/spillerne som beskjeden vil bli sendt til
+Regnbue - alle spillere
+Hammer - snakke muligheter, Av/På muligheter er
+	Gjennomsiktig bakgrunn
+	Gjennomsiktig tekst
+	Tekstens fontstørrelse
+
+Tekstside - åpner dialog med kvikke tidligere oversatte beskjeder. Kategoriene er 
+	Hilsener
+	Vanlige svar
+	Spillets gang og tempo
+	Handel	
+	Positive kommentarer
+	Negative kommentarer
+
+Pil - Får dialogrutens rullegardinmeny til å åpne/lukke seg
+	
+
+SSO - Spørsmål spurt ofte
+
+Hva er et Fritak?
+Om du eier en eiendom, kan du tilby en hver av de andre spillere fritak fra å betale leie et bestemt antall ganger om de lander på din eiendom. Klikk Lag ny fritak og følg instruksjonene. 
+Hva er en Fremtidsgjeld?
+Hvis du eier en eiendom kan du tilby en motspiller leien av eiendommen for når en hver annen spiller lander der. Du kan spesifisere hvor mange omganger dette gjelder. Klikk på Lag ny fremtidsgjeld og følg instruksjonene.
+Hvordan handler jeg?
+Hvis du innleder handelen, er du til venstre. Klikk på dine ting for å tilby dem. Klikk på tingene som du forventer å få i bytte hos den andre spilleren. Så klikker du på Foreslå.
+Hvordan får jeg spillet til å gå raskere?
+Under Meny/Alternativer, skru av funksjoner slik som Bilineær filtrerering, Dithering, Lyseffekter etc.
+Hvordan spiller jeg over Internett?
+Vi anbefaler at du bruker Microsoft Game Zone (gratis). For å få forbindelse med en annen spiller, klikk på Spill et nettverkspill og følg instruksjonene i starten av spillet for å begynne. Hver spiller må ha en kopi av Monopol-CD'en i sin CD-ROM-stasjon.
+
+Vennligst se Viktig-filen på CD'en for de seneste nyhetene.

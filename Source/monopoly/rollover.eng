@@ -1,0 +1,8 @@
+ODDS - The odds of landing on a certain property after your next turns.
+NET WORTH - The value of a player's assets minus their liabilities.  Pick the player who's net worth you'd like calculated.
+FUTURE VALUE TO YOU - The estimated value of a property as seen from the current state of the game. Pick a property.
+FUTURE VALUE TO OTHER - The estimated value of a property to another player, as seen from the current state of the game. Pick a property and pick the other player.
+MAXIMUM EXPENSE - The greatest expense you could expect to pay out on the next turn, given the current state of the game. Pick a player.
+TOTAL CURRENT INCOME - The total rent from all a player's properties.
+MAXIMUM INCOME - The most revenue you could expect to collect after on the next turn given the current state of the game. Pick a player.
+TOTAL POTENTIAL INCOME - The total rent a player could expect if they fully improved all their current properties.

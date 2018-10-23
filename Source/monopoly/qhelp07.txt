@@ -1,0 +1,61 @@
+Inledning
+
+Välkommen till snabbhjälp för Monopol!  Monopol är ett spel för upp till sex spelare, varav minst en måste vara en mänsklig spelare.  Övriga spelare kan vara datormotståndare (artificiell intelligens eller AI), spelare anslutna via ett nätverk eller spelare på din lokala dator.  För att börja spela måste varje spelare skriva in sitt namn och välja en spelpjäs.  Allteftersom spelare läggs till kommer deras namn upp längst ner på skärmen.  När minst två spelare lagts till kan spelet startas genom att klicka på Starta.  Klicka på Specialanpassade regler om du vill spela ett kort spel eller anpassa reglerna.  Obs: om du spelar över ett nätverk kan endast värden ändra reglerna.
+
+Huvudskärm
+
+Längst ner på huvudskärmen finns namnskyltar som visar spelarna, deras respektive spelpjäser och hur mycket pengar de har.  Klicka på en namnskylt för att visa mer detaljerad information om spelaren.  Direkt ovanför i det färgade området visas alla lagfartsbevis i spelet.  Bakgrundsfärgen representerar spelaren i kontroll och de markerade lagfartsbevisen är de fastigheter han/hon äger.  Brickan i mitten visar vems tur det är och tärningarnas utslag.  Högst upp i det nedre området finns kontrollknapparna som alltid är tillgängliga.
+
+Den övre delen av huvudskärmen består av Monopolbrädet som visar spelpjäsernas rörelser och fastigheter ägda av spelarna.  Dessa identifieras med hjälp av de färgade listerna längsmed kanten av brädet.
+
+Statusskärm
+
+Klicka på Status till höger på huvudskärmen för att visa detaljerad info och statistik över spelomgången.  I det övre vänstra hörnet visas spelbrädet; du kan fortsätta att följa och spela omgången från denna skärm.  I nedre vänstra hörnet finns istället för lagfartsbevis knappar med vilka du kan välja att visa spelarstatus, lagfartsbevisstatus eller bankstatus.  I alla dessa kategorier kan du sortera objekten genom att använda knapparna nere till höger.  Ovanför visas alla spelares tillgångar i en separat ruta.
+ 
+Byteshandel
+
+När du klickar på Köpslå på vänster sida av huvudskärmen blir du först tillfrågad vilken spelare du vill köpslå med och sedan visas spelbrädet överst i mitten.  Till vänster kan du se alla dina nuvarande fastigheter, kontanter och tillgångar.  Klicka på någon av dina egna tillgångar för att erbjuda, eller klicka på någon av motståndarens tillgångar för att efterfråga.  Dessa objekt förflyttas då till området i mitten.  Klicka på föreslå när du satt ihop bytet.  Motspelaren, vare sig det är en datorspelare, lokal eller nätverksansluten spelare, måste då klicka på Acceptera, Förkasta eller Kontra.  Om spelaren kontrar kan han/hon ändra i det nuvarande bytet och föreslå ett nytt byte.
+
+För att erbjuda befrielse från hyra eller begära framtida hyra för en fastighet klickar du under Skapa ny och specificerar fastighet och antal gånger.  Du blir först tillfrågad vem som ska få framtida hyra eller befrielse från hyra och därefter vilken fastighet och antalet omgångar.  När en framtida hyra eller befrielse från hyra har åstadkommits kan den användas i byteshandel på samma sätt som övriga objekt.
+
+Auktion
+
+Om du hamnar på en ledig fastighet och inte vill köpa den kan den auktioneras ut.  Banken tar då hand om eventuell vinst.  Klicka på sedlarna på pengabrickan för att höja ditt bud.  Obs: den tidsgräns herr Monopol tillåter under en auktion kan ställas in i de anpassade reglerna i början av spelet.
+
+Nätverksspel
+
+Följ instruktionerna under Spela ett onlinespel när du startar Monopol för att starta ett nätverksspel över ett lokalt nätverk, Internet eller i Microsoft Game Zone.  Se den fullständiga hjälpfilen för mer information.
+
+Nätverkschat
+
+Nätverkschat kan alltid slås av och på med TAB-tangenten.  Du kan ändra storlek på Chat-dialogrutan genom att ta tag i handtaget i nedre högra hörnet.  Den kan flyttas genom att klicka i ett tomt område på topplisten.  Knapparna på topplisten beskrivs nedan:
+
+Färgade rutor - spelaren till vilken meddelandet ska skickas
+Regnbågen - alla spelare
+Hammaren - chatalternativ av/på, alternativen är
+        Genomskinlig bakgrund
+        Genomskinlig text
+        Textstorlek
+Textsida - öppnar dialogruta med snabba, översatta meddelanden. Kategorierna är
+        Hälsningar
+        Vanliga svar
+        Spelhastighet etc
+        Köpslående
+        Positiva kommentarer
+        Negativa kommentarer
+Pil - öppnar/stänger dialogrutans rullgardinsmeny
+	
+Vanliga frågor
+
+Vad är befrielse från hyra?
+Om du äger en fastighet kan du erbjuda en motspelare befrielse från hyra för ett bestämt antal gånger de hamnar på fastigheten. Klicka på Skapa ny befrielse från hyra och följ instruktionerna.
+Vad är framtida hyra?
+Om du äger en fastighet kan du erbjuda en motspelare hyran från den fastigheten när någon annan spelare hamnar på den.  Du kan ange för hur många omgångar detta ska gälla.  Klicka på Skapa ny framtida hyra och följ instruktionerna.
+Hur köpslår man?
+Om du föreslagit bytet befinner du dig till vänster på skärmen. Klicka på dina tillgångar för att erbjuda dem.  Klicka på de av motspelarens tillgångar du skulle vilja ha i utbyte.  Tryck sedan på Föreslå.
+Hur kan man få spelet att gå fortare?
+Under Menyer/Alternativ, stäng av saker som Bilinjär filtrering, Gitter, Ljus osv.
+Hur spelar man över Internet?
+Vi rekommenderar att använda Microsoft Game Zone (gratis).  Klicka på Spela ett onlinespel och följ instruktionerna i början av spelet för att ansluta med en annan spelare.  Varje spelare måste ha en kopia av Monopol-cd:n i sin cd-romenhet.
+
+Se Viktigt.txt på cd:n för sent tillkomna ändringar.

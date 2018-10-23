@@ -1,0 +1,67 @@
+Start
+
+Velkommen til Monopoly Hurtig Hjælp! Monopoly er et spil for højst seks spillere, hvoraf en skal være menneskelig.  De andre spillere kan være computer modspillere (kunstig intelligens eller AI), modspillere forbundet via computer netværk, eller spillere på din lokale computer.  For at starte spillet, skal hver spiller skrive deres navn og vælge en brik.  Løbende med at du indskriver navnene, kan du se deres navneskilte komme frem nederst på skærmen.  Når mindst to spillere er indskrevet, kan du klikke på Start for at begynde spillet.  Hvis du vil spille et hurtigt spil eller ændre reglerne, klik på Brugerdefinerede regler.   
+Vær opmærksom på: hvis du spiller over et netværk er det kun værten der kan ændre reglerne.
+
+
+Hovedinterface
+
+Nederst på hovedskærmen er der navneskilte, som viser spillerne deres brikker og deres formue.  Klik på spiller navneskiltet hvis du vil se spillerens detaljer.  Direkte over dette viser et farvet område skøderne over mulige grunde.  Baggrundsfarven repræsenterer spilleren i kontrol, og de oplyste skøder viser grundene spilleren ejer.  Bakken i midten viser hvis tur det er, og hvor meget de slog med terningerne.  Øverst i det nederste område ses alle de knapper, der er til rådighed på en gang.
+
+Øverst på hovedskærmen er et Monopoly-bræt, der viser brikkerne bevæge sig og de grunde hver enkelt spiller ejer.  Grundejerne er identificeret ved farverne i kanten af brættet.
+
+Status Skærmen 
+
+Hvis du klikker på Status i højre side af hovedskærmen, vil mange detaljer om spillets status blive tilgængelig.  Øverst i venstre hjørne vil du se et billede af spillebrættet, hvor du kan følge spillets gang imens du er på status skærmen.  I stedet for skøderne til venstre vil du se knapper, som giver dig mulighed for at vælge Spiller Status, Skøde Status og Bank Status.  I hver af disse tre kategorier kan du inddele genstandene ved at klikke på knapperne nederst i højre side.  Ovenover vil hver spiller have et område, som viser alt hvad de ejer.
+
+Forhandling
+
+Hvis du klikker på Forhandle i venstre side af hovedskærmen, vil du først blive spurgt hvem du vil forhandle med, og så vil spillebrættet komme til syne øverst i skærmen.  Alle dine nuværende grunde, penge og fordele er vist til venstre. For at give et bud, klik på en genstand og den vil flytte sig til midten af skærmen.  For at byde på noget, klik på den anden spillers genstand og den vil flytte sig.  Når du har arrangeret handelen, klik på Foreslå.  Den anden spiller, uanset om de er på din lokale computer, en anden computer eller på netværket, skal derefter klikke på Accepter, Afslå eller give dig et nyt bud.  Hvis de giver et nyt bud, har de lov til at ændre handelen og foreslå en ny handel.
+
+For at tilbyde eller anmode om leje af et gældsbevis eller immunitet fra leje på en grund, skal du klikke på Lav Ny og specificere din grund og et vis antal gange det skal gælde.  Du vil først blive spurgt, hvem der skal eje gældsbeviset eller immuniteten, og derefter grunden og hvor mange omgange, det skal gælde.  Efter et gældsbevis eller immunitet er blevet lavet, kan det blive handlet med ligesom enhver anden genstand.
+
+Auktion
+
+Hvis du lander på en grund, der endnu ikke er opkøbt og du ikke ønsker at købe den, kan den blive sat på auktion, hvor udbyttet går til banken.  Klik på pengesedlerne i pengebakken for at forhøje dit bud. 
+Vær opmærksom på:  den tidsforsinkelse som Hr. Monopoly tillader i auktionen kan blive ændret i de brugerdefinerede regler i starten af spillet.
+
+Netværksspil
+
+For at spille et netværksspil, enten på et lokalt netværk, over internettet eller ved at bruge Microsoft Game Zone skal du følge instruktionerne i starten af Monopoly under Spil et Netværksspil.  For mere information se i Hjælp filen.
+
+Netværkschat
+
+Netværkschat kan blive tilkoblet eller frakoblet ved at trykke på TAB knappen, dette kan gøres igennem hele spillet.  Hoved Chat diaglogen kan blive sat i størrelse ved at tage fat i håndtaget i nederste højre hjørne. Det kan blive flyttet ved at klikke på en tom plads i den øverste blok.  Knapperne på denne blok betyder følgende:
+
+Farvede firkanter - den eller de spiller(e) som beskeden vil blive sendt til
+Regnbue - alle spillere
+Hammer - chat muligheder 
+Tilkoblet/Frakoblet, mulighederne er
+	Gennemsigtig Baggrund
+	Gennemsigtig Tekst
+	Tekstens font størrelse
+Tekst side - åbner dialog med hurtig, tidligere oversatte beskeder.
+Kategorierne er
+	Hilsner	
+	Almindelige svar
+	Spillets gang og tempo
+	Forhandling	
+	Positive kommentarer
+	Negative kommentarer	
+Pil - får vinduets skygge af dialog boksen til at åbne/lukke 
+	
+
+OSS - Ofte Stillede Spørgsmål
+
+Hvad er en immunitet?
+Hvis du ejer en grund, kan du tilbyde en modspiller immunitet fra at betale leje et bestemt antal gange, de lander på din grund.  Klik på Lav Ny Immunitet og følg instruktionerne.
+Hvad er et gældsbevis?
+Hvis du ejer en grund, kan du tilbyde en modspiller lejen fra grunden, når enhver anden spiller lander på den.  Du kan specificere det antal ture dette gælder. Klik på Lav Nyt Gældsbevis og følg instruktionerne.
+Hvordan handler jeg?
+Hvis du indleder handelen, er du til venstre.  Klik på din genstand for at tilbyde den.  Klik på de genstande fra den anden spiller som du forventer at få i bytte.  Klik så på Foreslå.
+Hvordan får jeg spillet til at køre hurtigere?
+Under Menuer/ Valgmuligheder, kan du slukke for funktioner såsom bilinær filtrering, dithering, lys o.s.v..
+Hvordan spille jeg over internettet?
+Vi anbefaler du bruger Microsoft Game Zone (gratis).  For at få forbindelse med en anden spiller, klik på Spil et Netværksspil og følg instruktionerne for at begynde i starten af spillet.  Hver spiller skal have en kopi af Monopoly cd'en i deres cd-rom-drev.
+
+Se LæsMig.txt filen på cd'en for at høre om de seneste nyheder.

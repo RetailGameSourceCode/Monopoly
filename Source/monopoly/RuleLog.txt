@@ -1,0 +1,13 @@
+_________________________________________________________________________________________
+|>NOTIFY_ACTION_COMPLETED (117)............... From: THE BANK        To: ALL/NO PLAYER(S) 
+|>[A:   6] [B:   1] [C:   6] [D:   0] [E:   0] 
+
+__PHASE_PUSH_____________________________________________________________________________
+| GF_ADDING_NEW_PLAYERS (0)................... From: Player 0 To: Player 0, Amount: 0
+  _________________________________________________________________________________________
+  |>NOTIFY_ERROR_MESSAGE (80)................... From: THE BANK        To: ALL/NO PLAYER(S) 
+  |>[A:  78] [B:   6] [C:   0] [D:   0] [E:   0] 
+  |>Message: The game is now accepting new players.  There is room for 6 more.
+    _________________________________________________________________________________________
+    |>ACTION_RESTART_PHASE (4).................... From: THE BANK        To: THE BANK         
+    |>[A:   0] [B:   0] [C:   0] [D:   0] [E:   0] 

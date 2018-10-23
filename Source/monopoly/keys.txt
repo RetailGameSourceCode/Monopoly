@@ -1,0 +1,45 @@
+Hot keys (not all are necessarily available in every build):
+
+Normal keys - part of the game & must work properly.
+Space - Press default key during the game (not setup)
+Left mouse button or CTRL - while clicking the camera view button will move through cameras 1 by 1 rather than
+  the normal rotation of 3 views.
+Left mouse button or CTRL - while clicking & dragging in the 3D board window will consider up/down movement
+  as orbit vertically rather than the regular in/out.
+
+
+Level 1 - usually included in AQ builds, failures do not constitute bugs
+
+F2 - At the start screen, it will add 2 human & 2 computer players (faster start).
+F4 - Toggle through various 3D boards & texture levels (may not work anymore)
+F9 - Toggle 2D/3D game mode.  Actual render mode is not changed nor does this happen in the real game,
+      so please do not report bugs about the transition (use with caution).
+D  - Demo mode - go directly to demo mode.
+s  - Display update functions return immediately while s is held - determines if speed problems are
+      in graphics display or in re-evaluation of what should be displayed.
+
+These are used for viewing token animations
+1 - previous token
+2 - next token
+9 - previous sequence
+0 - next sequence
+When you tap the key, the tokens animation will run.
+
+Special dice rolls:
+1 - Hold the right mouse button while clicking roll - you will get dice roll # 1 (normally 1, 1 but will vary depending on what coders last found useful)
+2 - Hold the right mouse button & the up arrow key while clicking roll - you will get dice roll # 2 (normally 6, 6)
+We have found in testing these help obtaining specific properties switfly for testing as well as other tests.
+
+
+Level 2 - rarely included in AQ builds (it would be an oversight or specific request).  Subject to change without notice
+F1 - Debug message box
+v - Video mode change request (this will be on the options menu soon as part of the game)
+w - Wireframe mode toggle for 3D objects
+j - Gives jail cards to player 0 for display purposes (buggy)
+s - A save screen to bmp test function
+F1 - Toggle an english text box reporting rules engine notifications (visible in the hotseat version at all times)
+x - Triggers token animations (requires coding to use)
+F6 - toggles 'black screen' mode to test new screens are smart enough to shut themselves down
+F7 - send the new game message
+F8 - rotate through game screens (mode switch test)
+F11 - give player 0 & 1 all properties, with CTRL held player 0 gets all.

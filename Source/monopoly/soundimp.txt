@@ -1,0 +1,200 @@
+/************************************************************/
+/************************************************************/
+/************************************************************/
+Token & Wav file sounds that have been implemented.
+Indented ones have been used.
+Please if you implement a sound that has not previously been used indent it.
+/************************************************************/
+/************************************************************/
+/************************************************************/
+
+
+    AAAAAAAA_THESE ARE USED
+    PB_BuyBoardSide1,                                               // Good choice. Even these properties can be valuable.
+    PB_BuyBoardSide2,                                               // Nice property!
+    PB_BuyBoardSide3,                                               // I'll bet that purchase pays off later!
+    PB_BuyBoardSide4,                                               // These are certainly the best properties to acquire alright.
+    PB_BuyRailroad,                                                 // You'll be a railroad tycoon in no time.
+    PB_BuyUtility,                                                  // Smart buy!  They're also useful for trading
+    PB_CollectMoney_Go,                                             // Here's your salary. 200 dollars!
+    PB_CollectMoney_LandedOnGoAndDoublePayRuleInEffect,             // Here's double your salary for landing on GO this time
+    PB_LandOn_Chance,                                               // Chance!
+    PB_LandOn_CommunityChest,                                       // Community Chest! What will it be?  Pay out or be paid?
+    PB_LandOn_FreeParking,                                          // Free parking!
+    PB_LandOn_FreeParkingWithFreeParkingRuleOn,                     // Jackpot!  Congratulations!
+    PB_LandOn_GoToJail_Negative,                                    // Oh oh!  Go to jail. Too bad.
+    PB_LandOn_GoToJail_Positive,                                    // Well, this is safe anyway.
+    PB_LandOn_IncomeTax,                                            // $200 or 10% of your assets?
+    PB_LandOn_JustVisiting,                                         // Just visiting the jail.
+    PB_LandOn_LuxuryTax,                                            // That will be $75 please
+    PB_RollDice_Cannon,                                             // Cannon. You take a shot at it.
+    PB_RollDice_Car,                                                // Racecar, let's roll.
+    PB_RollDice_Dog,                                                // It's the dog's turn.
+    PB_RollDice_Generic,                                            // Roll those dice.
+    PB_RollDice_Hat,                                                // All right Top Hat, it's your turn to roll.
+    PB_RollDice_Horse,                                              // Horse and rider. You're at the starting gate.
+    PB_RollDice_Iron,                                               // OK Iron, click to roll.
+    PB_RollDice_SackOfMoney,                                        // It's  Sack of Moneys turn.
+    PB_RollDice_Ship,                                               // Battleship! Fire when ready!
+    PB_RollDice_Shoe,                                               // O.K. Shoe.  Step on it.
+    PB_RollDice_Thimble,                                            // All right Thimble, roll them bones.
+    PB_RollDice_Wheelbarrow,                                        // Wheelbarrow, you got the dice.
+    PB_TokenLandsOnUnownedProperty,                                 // Are you going to buy this property or put it up for auction?
+    PB_WelcomeGame,                                                 // Hello there!  You can call me Mr. Monopoly. Welcome!
+    TKS_BuySide1,                                                   // I love a deal! Sure!
+    TKS_BuySide2,                                                   // Sure, why not? Property is property!
+    TKS_BuySide3,                                                   // Buy Buy Buy!
+    TKS_BuySide4,                                                   // Roger! Will buy! Over and out!
+    TKS_ChoseAuction,                                               // I feel like an auction!
+    TKS_GenericGood,                                                // Yes sir!
+    TKS_HitGOWithDoubleCashRule,                                    // Yes Siree! Bring it on!
+    TKS_Intro,                                                      // Well, into the fray once again.
+    TKS_LandFreeParkingNotPaying,                                   // Think I'll kick back for some R. & R.
+    TKS_LandOn0Houses,                                              // Another broadside! Gadzooks man!
+    TKS_LandOn1To3Houses,                                           // I've been ambushed!
+    TKS_LandOn4Houses,                                              // Hey! I'm cannon not cannon fodder!
+    TKS_LandOnBigHit,                      (50% +)                  // Great Scott! I'm taking a lickin'!
+    TKS_LandOnBiggerHit,                   (75% +)                  // You are looking at a soldier of misfortune!
+    TKS_LandOnFreeParkingPaying,                                    // Make it happen, Captain!
+    TKS_LandOnGoToJailEarly,                                        // Off to the brig so soon?
+    TKS_LandOnGoToJailLate,                                         // A good place to lay low for awhile.
+    TKS_LandOnIncomeTaxPoor,                                        // Not the taxman again!
+    TKS_LandOnIncomeTaxRich,                                        // Uncle Sam gives and he takes away!
+    TKS_LandOnJailJustVisiting,                                     // Just visiting - don't lock the gates behind me!
+    TKS_LandOnJailNotEmpty,                                         // Like to help you but you gotta do your time like the rest of us!
+    TKS_LandOnLowHit,                      (25% +)                  // I'm taking a beating!
+    TKS_LandOnLowLowHit,                   ( 4% +)                  // Holy Moses! I'm taking a proper thumping here!
+    TKS_LandOnLowerHit,                    (10% +)                  // Well, that's the way the cannonball bounces!
+    TKS_LandOnLowestHit,                   ( 0% +)                  // You'll have to hit me harder than that pal!.
+    TKS_LandOnLuxuryTax,                                            // Luxury? I'm trying to take care of the necessities!
+    TKS_LandOnMorgagedProperty,                                     // This is safe anyway!
+    TKS_LandOnOtherHotel,                                           // This is as about as much fun as the frontline.
+    TKS_LandOnOwnProperty,                                          // I love being a property owner! Just let me bask for a second!
+    TKS_LandOnUnownedGreen,                                         // Hmmm. I prefer Khaki but green is cool.
+    TKS_LandOnUnownedPPOrBoardwalk,                                 // This is where the Generals must hang their hats! I'll buy!
+    TKS_LandOnUnownedRailroad,                                      // Choo choo! I think I'm on the right track.
+    TKS_LandOnUnownedRailroadHoldingOther3,                         // Well, lookey here! I got me the whole set!
+    TKS_LandOnUnownedUtility,                                       // These are strategic properties, sure I'll buy!
+    TKS_LandOnUnownedUtilityHoldingOther,                           // Alright! I've got the pair!
+    TKS_StartSide4Only,                                             // This neighborhood is five-star all the way!
+    TKS_StartTurnGeneric,                                           // Into the breech.
+
+PB_AnnouncePreviousHighScoresIfAny,                             // You too could be among these top players!
+PB_Auction,                                                     // The bank will now auction this property.
+PB_Auction_Building,                                            // Auction this building?
+PB_Auction_CallOutTokenWithHighestBid,                          // Cannon -
+PB_Auction_CongratulateWinner,                                  // Congratulations on buying a splendid property.
+PB_Auction_ExplanationOnButtonsToIncreaseBid,                   // Just click these buttons to increase your bid
+PB_Auction_GoingOnce,                                           // Going once -
+PB_Auction_GoingSold,                                           // Sold!
+PB_Auction_GoingTwice,                                          // Going twice -
+PB_Auction_HurryPlayersBid,                                     // Quick now, bid or not?
+PB_Auction_LostTimeUp,                                          // Sorry, they get it!
+PB_Auction_Once,                                                // Once
+PB_Auction_OpeningBid,                                          // Who would like to make an opening bid?
+PB_Auction_Twice,                                               // Twice
+PB_Bankrupt,                                                    // Your luck just ran out. Sorry!
+PB_BoardSquareNames_US,                                         // Mediterranean Avenue
+PB_Calculator,                                                  // Wondering "What if?" Just try clicking on these buttons.
+PB_ChanceCard,                                                  // Advance to go  f(collect $200)
+PB_ChooseAIDifficultyLevel,                                     // What's the strength of this computer opponent?
+PB_ChooseAIDifficultyLevel_old,                                 // Pick the skill level of your computer opponent.
+PB_ChooseClassicOrCityBoard_AnyVersion,                         // Go ahead, pick the board.
+PB_ChooseClassicOrCityBoard_AnyVersion_old,                     // Would you like to play on the classic Monopoly board or pick another city?
+PB_ChooseClassicOrCityBoard_Europe,                             // Which country would you like to play in?
+PB_ChooseClassicOrCityBoard_US,                                 // Pick the city you'd like to play in  - or use the classic Monopoly board.
+PB_ChooseCurrency,                                              // What currency would you like?
+PB_ChooseNetworkOrLocalGame,                                    // So what will it be?  Play right here or over a network?
+PB_ChooseNetworkOrLocalGame_old,                                // First of all, would you like to start a network game?
+PB_ChoosePlayer_HumanOrComputer,                                // OK.  Is this player going to be human or a computer AI?
+PB_ChoosePlayer_HumanOrComputer_old,                            // Are you playing with someone else or would you like us to provide a computer opponent?
+PB_ChooseStandardOrCustomRules,                                 // Would you like to play with the standard rules or use some custom variations?
+PB_ChooseStandardOrCustomRules_old,                             // You can use the standard Monopoly rules or we have some custom variations if you like?
+PB_ChooseTokenForComputerPlayer,                                // Which token should we use for this player?
+PB_ChooseTokenForComputerPlayer_old,                            // Which token would you like your computer opponent to use?
+PB_CommunityChestCard,                                          // Life insurance matures.  Collect $100
+PB_CustomRulesAgreedOnStartGame_old,                            // Alright then.  Everyone's in agreement. So let's advance to GO!
+PB_Exit,                                                        // See you next time!
+PB_GameOver,                                                    // Alright!  We have a winner!
+  PB_GameStarted_old,                                             // It's Monopoly time!  Let's advance to GO!
+PB_HousingShortage_FirstTimeHotels,                             // Unfortunately, there's a hotel shortage.  And your  opponent wants to buy a remaining hotel.  Would you like to bid on this hotel ...
+PB_HousingShortage_FirstTimeHouses,                             // Oh oh! There's a housing shortage.  Your opponent wants to buy one of the last ones.  Would you like to bid on this house at auction
+PB_HousingShortage_NotFirstTime,                                // The bank is running low on those buildings.  Should it hold an auction?
+PB_HumanPlayerPickToken,                                        // Please pick a token.
+PB_HumanPlayerPickToken_old,                                    // What token would you like?
+PB_HumanReplacedByComputerPlayer,                               // It seems like someone has quit our game.  They'll be replaced by a computer opponent.
+  PB_JailPayMoneyOrTryForDoubles,                                 // So.  Would you like to pay $50 or try to roll doubles?
+PB_MainScreenIntro_old,                                         // This is the main Monopoly screen.
+PB_Menu_old,                                                    // These menus will let you do things like; change some options, answer your questions or if you like, quit the game.
+PB_NameComputerPlayer,                                          // What's a good name for this player?
+PB_NegotiateRules,                                              // Once everyone agrees on the special rules we can advance to GO.
+PB_NegotiateRules_old,                                          // Someone wants to play with some special rules. That's fine! Once everyone agrees, we can get this show on the road.
+PB_NewPlayerClickNameOrPressButton,                             // See your name? Click it.  New player?  Click the button.
+PB_NewPlayerEnterName,                                          // Ah, new are you?  Can you enter your name?
+PB_NewPlayerEnterNameOrPickFromList_old,                        // Alright! Now enter your name or pick from the list.
+PB_NewPlayerEnterName_old,                                      // O.K.! Simply enter your name.
+PB_NoUserInputForXSeconds_old,                                  // What would you like to do?
+  PB_PlayAgain,                                                   // Would you like to play again?
+  PB_PlayerAcquiredMonopoly,                                      // A Monopoly!  All right!
+PB_PlayerBuiltFirstHotel,                                       // Your first hotel!
+PB_PlayerBuiltFirstHouse,                                       // Ahh a house.  Maybe the first of many!
+  PB_PlayerClicks_BuyHouseHotel,                                  // On which property would you like to build?
+  PB_PlayerClicks_Mortgage,                                       // Which property would you like to mortgage?
+  PB_PlayerClicks_SellHouseHotel,                                 // Which building would you like to sell?
+  PB_PlayerClicks_UnMortgage,                                     // Unmortgage! Which property?
+PB_PromptEachPlayerForCustomRulesConfirmation_old,              // Cannon, do you agree to these rules?
+PB_Proposal_GoodDeal,                                           // What a steal! Grab it!
+PB_Proposal_NotGoodDeal,                                        // Hmmm. I don’t know about this deal?
+PB_RaisingMoneySuggestion,                                      // Short of cash? You'll need to raise some money then.
+  PB_SayDiceRoll_10,                                              // Ten!
+  PB_SayDiceRoll_11,                                              // Eleven!
+  PB_SayDiceRoll_12,                                              // Twelve!
+  PB_SayDiceRoll_2,                                               // Two!
+  PB_SayDiceRoll_3,                                               // Three!
+  PB_SayDiceRoll_4,                                               // Four!
+  PB_SayDiceRoll_5,                                               // Five!
+  PB_SayDiceRoll_6,                                               // Six!
+  PB_SayDiceRoll_7,                                               // Seven!
+  PB_SayDiceRoll_8,                                               // Eight!
+  PB_SayDiceRoll_9,                                               // Nine!
+PB_StatusScreen_FirstTime,                                      // Let's see how everybody's doing.
+PB_StatusScreen_FirstTimeBankAssets,                            // Here are the assets remaining in the bank.
+PB_StatusScreen_FirstTimeDeeds,                                 // Here are all the deeds.  You can see who owns what.
+PB_SummaryScreen,                                               // So, add more players or start the game?
+PB_SummaryScreen_old,                                           // OK then. Add more players or start the game?
+PB_TradeScreen,                                                 // Are you ready to do some trading?
+PB_TradeScreen_PickTradePartner,                                // Who would you like to trade with?
+PB_TradeScreen_ProposeClickedButOneSideHasNotOfferedAnything,   // During a trade, the players involved must both give up and receive something
+PB_TradeScreen_ThirdPartyTradeExplanation,                      // If  there's a third player you'd like involved in the trade, click "Conditional"
+PB_TradeScreen_TradeCancelled,                                  // Uh oh.  The trade is cancelled.
+PB_TradeScreen_TradeComplete,                                   // The trade is complete!
+PB_Trade_FirstTimeFuture,                                       // A future! This means the holder, not the owner, would collect all future rent on the property, for a number of turns.
+PB_Trade_FirstTimeImmunity,                                     // An Immunity!  This means the holder would be immune from paying rent on the property, for a number of times they land on it.
+PB_WelcomeGame_old,                                             // Hello! Welcome to Monopoly. I'm Rich Uncle Pennybags and this is my little friend.
+
+TKS_AboutToBankrupt,                                            // I'm being hung out to dry here!
+TKS_Bankrupt,                                                   // I am tapped!
+TKS_Build,                                                      // I'm going to build! Call the engineering corp.
+TKS_BuildingHouseAfterthought,                                  // That changes things.... I will build after all.
+TKS_DoneTurn,                                                   // Go ahead! The rest of you can play now.
+TKS_FirstTurn,                                                  // Hi!  I'm the cannon. With me you get more bang for your buck.
+TKS_GenericBad,                                                 // Oh no!
+TKS_GiveUp,                                                     // I surrender! It's game over for this soldier.
+TKS_LandOnTileWith2PlusOthers,                                  // Looks like a party!
+TKS_LandOnUnownedPropertyFillingMonopoly,                       // You are looking at a soldier of  fortune!
+TKS_Mortgage,                                                   // Wonder if those people at the bank would help a soldier out!
+TKS_MortgageAfterthought,                                       // The bank said to call'em if I needed them! I better mortgage.
+TKS_NegativeMonopolies,                                         // Those purple properties are like a minefield in waiting!
+TKS_NegativeRolls,                                              // Anything but a two!
+TKS_NobodyAround,                                               // Seem to be in solitary. Nobody's around.
+TKS_PassedByA,                                                  // Howdy, pup.         cannon
+TKS_PassedByGeneric,                                            // Somebody's in a hurry.
+TKS_PositiveRolls,                                              // Gimme a deuce.
+TKS_ProposingTrade,                                             // Hmmm... I think a trade is the order of the day!
+TKS_Sell,                                                       // I think I'll dispose of  some of my assets.
+TKS_SellHouseAfterthought,                                      // This doughboy needs some dough- I'm going to sell some buildings back to the bank.
+TKS_ThirdDoubles,                                               // Off to the brig! Drat!
+TKS_Trade,                                                      // A cease-fire while we negotiate a trade.
+TKS_UnMortgage,                                                 // Feeling good! Time to unmortgage some property.
+TKS_UnmortgageAfterthought,                                     // The bank's been nice but I can unmortgage some property now.
+TKS_WonGame,                                                    // Yowsah! Yowsah!

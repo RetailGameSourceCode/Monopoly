@@ -1,0 +1,61 @@
+Vor Spielbeginn
+
+Willkommen bei der Monopoly Kurzhilfe! Monopoly ist ein Spiel für bis zu sechs Spieler, von denen mindestens einer ein menschlicher Spieler sein muß. Die anderen können Computergegner sein (künstliche Intelligenz bzw. KI), über ein Computernetzwerk verbundene Spieler oder Spieler auf Ihrem lokalen Rechner. Zu Spielbeginn sollte jeder Spieler seinen Namen eingeben und eine Spielfigur wählen. Während der Eingabe der Spielernamen erscheinen Namensschilder im unteren Bereich des Bildschirms. Klicken Sie nach Eingabe von mindestens zwei Spielernamen auf Start, um das Spiel zu beginnen. Möchten Sie ein Kurz-Spiel spielen oder die Spielregeln ändern, klicken Sie auf Benutzerdefinierte Regeln. Hinweis: Wenn Sie über ein Netzwerk spielen, kann nur der Host die Regeln ändern.
+
+Der Hauptbildschirm
+
+Im unteren Bereich des Bildschirms befinden sich Namensschilder, die die Spieler, ihre Spielfiguren und die ihnen gehörende Geldsumme anzeigen. Klicken Sie mit der Maus auf das Namensschild des Spielers, um die Spielerdetails zu sehen. Im farbigen Bereich direkt darüber werden die Besitzrechtkarten für alle vorhandenen Grundstücke angezeigt. Die Hintergrundfarbe verdeutlicht, welcher Spieler ausgewählt wurde, und die hervorgehobenen Besitzrechtkarten repräsentieren die Grundstücke, die den jeweiligen Spielern gehören. Das Würfelfeld in der Mitte zeigt den Spieler, der an der Reihe ist, sowie die gewürfelte Zahl. Oberhalb des unteren Bildschirmbereichs befinden sich die gerade verfügbaren Steuerungsschaltflächen.
+
+Im oberen Bereich des Hauptbildschirms befindet sich das Monopoly-Brett. Dort wird angezeigt, welche Spielfiguren sich bewegen und welche Grundstücke jeder Spieler besitzt, verdeutlicht durch den farbigen Balken am Brettrand.
+
+Status-Bildschirm
+
+Wenn Sie auf der rechten Seite des Hauptbildschirms auf Status klicken, werden verschiedene Details hinsichtlich des Spielstatus' angezeigt. In der oberen linken Ecke sehen Sie dann eine Ansicht des Spielbretts, so daß Sie das Spiel weiterhin verfolgen und spielen können. Statt der Besitzrechtkarten sehen Sie auf der linken unteren Seite Schaltflächen, mit denen Sie zwischen dem Status des Spielers, der Besitzurkunden oder der Bank wählen können. Jede dieser drei Kategorien können Sie durch Anklicken der Schaltflächen auf der rechten unteren Seite nach bestimmten Kriterien ordnen. Oberhalb davon gibt es für jeden Spieler einen Bereich, in dem der jeweilige Gesamtbesitz zu sehen ist.
+ 
+Handeln
+
+Wenn Sie auf der linken Seite des Hauptbildschirms auf Handeln klicken, werden Sie zunächst gefragt, mit wem Sie handeln möchten, und sehen anschließend oben in der Mitte das Spielbrett. Sie befinden sich dann auf der linken Hälfte und können Ihre aktuellen Grundstücke, Geld und Vermögen sehen. Um etwas zu bieten, klicken Sie es an, und es bewegt sich in Ihren zentralen Bereich. Um etwas zu verlangen, klicken Sie genauso auf eine Karte des anderen Spielers, und es bewegt sich in den zentralen Bereich. Sind Sie mit den Handelsvorbereitungen fertig, klicken Sie auf Vorschlagen. Der andere Spieler, egal ob er lokal, als Computergegner oder über Netzwerk spielt, muß daraufhin annehmen, zurückweisen oder Ihnen ein Gegenangebot machen. Entgegnet er, darf er den bestehenden Handel ändern und einen neuen Handel vorschlagen.
+ 
+Um zukünftige Miete oder Befreiung von der Mietzahlung auf ein Grundstück anzubieten oder zu verlangen, klicken Sie auf Neu erstellen, und geben Sie Ihr Grundstück und die Anzahl der Runden ein. Zunächst werden Sie danach gefragt, wem diese Zukunftskarte oder Immunität gehören soll, und anschließend nach dem Grundstück und der Rundenanzahl. Ist eine Zukunftskarte oder Immunität fertiggestellt, kann sie genau wie jede andere Karte auch gehandelt werden.
+
+Auktion
+
+Wenn Sie auf einem Grundstück landen, auf das niemand Besitzanspruch erhebt, kann es versteigert werden. Die Einkünfte gehen dabei an die Bank. Klicken Sie auf die Banknoten im Geldfeld, um Ihr Gebot zu erhöhen. Hinweis: Die Wartezeit, die Mr. Monopoly bei Auktionen gestattet, kann in den benutzerdefinierten Spielregeln zu Beginn des Spiels festgelegt werden.
+
+Netzwerkspiel
+
+Um ein Netzwerkspiel über LAN, das Internet oder die Microsoft Game Zone zu erstellen, befolgen Sie bitte die Anweisungen unter der Option Ein Online-Spiel beginnen beim Starten von Monopoly. Weitere Details können Sie der vollständigen Hilfedatei entnehmen.
+
+Netzwerk-Chat
+
+Der Netzwerk-Chat kann durch Drücken der Tabulatortaste jederzeit an- oder abgeschaltet werden. Die Größe des Hauptdialogfensters zum Chatten kann durch Festhalten des Griffs in der unteren rechten Ecke verändert werden. Verschoben werden kann das Fenster durch Anklicken einer leeren Fläche auf dem oberen Balken. Die Schaltflächen auf dem oberen Feld haben folgende Bedeutung:
+
+Farbige Kästchen - der bzw. die Spieler, an die die Nachricht geschickt wird
+Regenbogen - alle Spieler
+Hammer - Chat-Optionen An/Aus. Die Optionen sind:
+	Hintergrundtransparenz
+	Texttransparenz
+	Größe der Schriftart 
+Textseite - öffnet ein Fenster mit kurzen, vorgefertigten Nachrichten. Die Kategorien sind:
+	Grüße	
+	Allgemeine Antworten
+	Spielspaß und -verlauf 
+	Handeln	
+	Positive Kommentare
+	Negative Kommentare	
+Pfeil - öffnet oder schließt das Textfeld des Dialogfensters
+	
+Häufig gestellte Fragen
+
+Was ist eine Immunität?
+Wenn Sie ein Grundstück besitzen, haben Sie die Möglichkeit, einen Mitspieler für eine bestimmte Anzahl an Runden von der Mietzahlung für dieses Grundstück zu befreien. Klicken Sie auf Neue Immunität erstellen, und folgen Sie den weiteren Schritten.
+Was ist eine Zukunftskarte?
+Wenn Sie ein Grundstück besitzen, können Sie einem Mitspieler die zukünftige Miete für dieses Grundstück anbieten, wenn ein anderer Spieler darauf landet. Sie können bestimmen, für wieviele Runden dies gilt. Klicken Sie auf Neue Zukunftskarte erstellen, und folgen Sie den weiteren Schritten. 
+Wie handelt man?
+Wenn Sie den Handel einberufen, sind Sie auf der linken Seite. Klicken Sie auf Ihre Karten, die Sie dem Handelspartner anbieten wollen. Klicken Sie auf die Karten des Handelspartners, die sie im Gegenzug erhalten möchten. Klicken Sie dann auf Vorschlagen.
+Wie kann das Spiel schneller laufen?
+Gehen Sie in Menüs/Optionen, und schalten Sie Angaben wie Bilineares Filtering, Bildpunktgrößeneinstellungen, Beleuchtung etc. ab.
+Wie kann ich über das Internet spielen?
+Wir empfehlen Ihnen, die kostenlose Microsoft Game Zone zu benutzen. Klicken Sie auf Ein Online-Spiel beginnen, und befolgen Sie zur Verbindung mit einem anderen Spieler die Setup-Schritte zu Spielbeginn. Jeder Spieler muß eine Kopie der Monopoly-CD in seinem CD-ROM Laufwerk haben. 
+
+Für die neuesten Informationen sehen Sie sich bitte auch die Liesmich.txt-Datei an.

@@ -1,0 +1,211 @@
+# Microsoft Developer Studio Project File - Name="PC3DLib" - Package Owner=<4>
+# Microsoft Developer Studio Generated Build File, Format Version 6.00
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (x86) Static Library" 0x0104
+
+CFG=PC3DLib - Win32 Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "PC3DLib.mak".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "PC3DLib.mak" CFG="PC3DLib - Win32 Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "PC3DLib - Win32 Release" (based on "Win32 (x86) Static Library")
+!MESSAGE "PC3DLib - Win32 Debug" (based on "Win32 (x86) Static Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+CPP=cl.exe
+RSC=rc.exe
+
+!IF  "$(CFG)" == "PC3DLib - Win32 Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "Release"
+# PROP BASE Intermediate_Dir "Release"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "Release"
+# PROP Intermediate_Dir "Release"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /FD /c
+# ADD CPP /MT /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /Yu"PC3DHdr.h" /FD /c
+# SUBTRACT CPP /nologo
+# ADD BASE RSC /l 0x409
+# ADD RSC /l 0x409
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# SUBTRACT BSC32 /nologo
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# SUBTRACT LIB32 /nologo
+
+!ELSEIF  "$(CFG)" == "PC3DLib - Win32 Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "Debug"
+# PROP BASE Intermediate_Dir "Debug"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "Debug"
+# PROP Intermediate_Dir "Debug"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /FD /c
+# ADD CPP /MTd /W3 /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /Yu"PC3DHdr.h" /FD /c
+# SUBTRACT CPP /nologo
+# ADD BASE RSC /l 0x409
+# ADD RSC /l 0x409
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# SUBTRACT BSC32 /nologo
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# SUBTRACT LIB32 /nologo
+
+!ENDIF 
+
+# Begin Target
+
+# Name "PC3DLib - Win32 Release"
+# Name "PC3DLib - Win32 Debug"
+# Begin Source File
+
+SOURCE=..\Pc3d\camera.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\D3DDevice.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\d3dutils.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\DDDrvMgr.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\DDrawDrv.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\DDrawWnd.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\debug.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\DXINI.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Frame.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\getdxver.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\GlobalData.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\hmdload.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Ipoint.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Irect.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Light.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Material.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Matrix.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\MemManager.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\mesh.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\mesh1.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\MeshGroup.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\NewFrame.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\NewMesh.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\pc3d.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\PC3DHdr.cpp
+# ADD CPP /Yc"PC3DHdr.h"
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\rndmesh1.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Scene.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\surface.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\Tag.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\tomesh.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pc3d\View.cpp
+# End Source File
+# End Target
+# End Project

@@ -1,0 +1,18 @@
+Monopoly 2000 Memoirs.
+
+
+Note: The game workspace had to have optimization turned off - it would crash after awhile
+  otherwise.  It may be in the shared code, so look for it right off the bat (release build).
+
+Note: AI's respond to NOTIFY_ARE_YOU_THERE with a bid - get several bids before auction is open.  A special
+  NOTIFY_NEW_HIGH_BID announces the start of bidding.
+
+Note: AI once continued unmortgaging & remortgaging Electric co until insufficient cash to unmortgage - quite a few times, it did have places for houses if it could afford em.
+
+Note: AI's in Raise money state can stall and never sell houses to raise money causing a game lockup.
+
+Note: Report that Chance, ride on reading & pay double did not charge double (not sure I beleive it, not checking).
+
+Note: Last player standing does not get the second last players properties included in their winning totals.
+  Careful that they deserve em - looks like they might be in escrow, but it could be to the bank not the winner.
+

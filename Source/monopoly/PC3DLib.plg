@@ -1,0 +1,103 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PC3DLib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP5020.TMP" with contents
+[
+/MTd /W3 /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /Fp"Debug/PC3DLib.pch" /Yu"PC3DHdr.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Projects\Monopoly_PC\Pc3d\DXINI.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP5020.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP5021.TMP" with contents
+[
+/out:"Debug\PC3DLib.lib" 
+.\Debug\camera.obj
+.\Debug\D3DDevice.obj
+.\Debug\d3dutils.obj
+.\Debug\DDDrvMgr.obj
+.\Debug\DDrawDrv.obj
+.\Debug\DDrawWnd.obj
+.\Debug\debug.obj
+.\Debug\DXINI.obj
+.\Debug\Frame.obj
+.\Debug\getdxver.obj
+.\Debug\GlobalData.obj
+.\Debug\hmdload.obj
+.\Debug\Ipoint.obj
+.\Debug\Irect.obj
+.\Debug\Light.obj
+.\Debug\Material.obj
+.\Debug\Matrix.obj
+.\Debug\MemManager.obj
+.\Debug\mesh.obj
+.\Debug\mesh1.obj
+.\Debug\MeshGroup.obj
+.\Debug\NewFrame.obj
+.\Debug\NewMesh.obj
+.\Debug\pc3d.obj
+.\Debug\PC3DHdr.obj
+.\Debug\rndmesh1.obj
+.\Debug\Scene.obj
+.\Debug\surface.obj
+.\Debug\Tag.obj
+.\Debug\tomesh.obj
+.\Debug\View.obj
+]
+Creating command line "link.exe -lib @C:\WINDOWS\TEMP\RSP5021.TMP"
+<h3>Output Window</h3>
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MTd /W3 /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /Fp"Debug/PC3DLib.pch" /Yu"PC3DHdr.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+   "C:\Projects\Monopoly_PC\Pc3d\DXINI.cpp"
+
+DXINI.cpp
+Creating library...
+Microsoft (R) Library Manager Version 6.00.8168
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+"/out:Debug\PC3DLib.lib" 
+.\Debug\camera.obj 
+.\Debug\D3DDevice.obj 
+.\Debug\d3dutils.obj 
+.\Debug\DDDrvMgr.obj 
+.\Debug\DDrawDrv.obj 
+.\Debug\DDrawWnd.obj 
+.\Debug\debug.obj 
+.\Debug\DXINI.obj 
+.\Debug\Frame.obj 
+.\Debug\getdxver.obj 
+.\Debug\GlobalData.obj 
+.\Debug\hmdload.obj 
+.\Debug\Ipoint.obj 
+.\Debug\Irect.obj 
+.\Debug\Light.obj 
+.\Debug\Material.obj 
+.\Debug\Matrix.obj 
+.\Debug\MemManager.obj 
+.\Debug\mesh.obj 
+.\Debug\mesh1.obj 
+.\Debug\MeshGroup.obj 
+.\Debug\NewFrame.obj 
+.\Debug\NewMesh.obj 
+.\Debug\pc3d.obj 
+.\Debug\PC3DHdr.obj 
+.\Debug\rndmesh1.obj 
+.\Debug\Scene.obj 
+.\Debug\surface.obj 
+.\Debug\Tag.obj 
+.\Debug\tomesh.obj 
+.\Debug\View.obj 
+
+
+
+<h3>Results</h3>
+PC3DLib.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

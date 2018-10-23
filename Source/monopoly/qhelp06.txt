@@ -1,0 +1,61 @@
+Om te beginnen...
+
+Welkom bij de Monopoly Quick Help!  Monopoly is een spel voor maximaal 6 spelers, waarvan er tenminste één menselijk moet zijn.  De andere spelers kunnen computer tegenstanders zijn (kunstmatige intelligentie oftewel AI), mensen op een computer netwerk, of mensen op uw eigen computer. Om met het spel te beginnen, moet elke speler zijn/haar naam invoeren en een pion kiezen. Wanneer u de namen van spelers toevoegt, ziet u naambordjes onder aan het scherm verschijnen. Zodra tenminste twee spelers zijn toegevoegd, kunt u op Start klikken om te spelen.  Als u een kort spel wilt spelen, of de regels wilt aanpassen, klik dan op Aangepaste Regels. Let op: indien u over een netwerk speelt, kan alleen de gastheer/vrouw de regels aanpassen.
+
+Belangrijkste Interface
+
+Onder aan het hoofdscherm ziet u de naambordjes die de spelers, hun pionnen, en de hoeveelheid geld die zij bezitten, weergegeven. Klik met de muis op het naambordje van een speler om de gegevens van die speler te bekijken.  Direct hierboven, laat een gekleurd gebied de aktes zien voor alle mogelijke eigendommen.  De achtergrondkleur laat zien welke speler het betreft en de scherp afgetekende akten zijn de eigendommen die die speler bezit. Het blad in het midden laat zien welke speler aan de beurt is en hoeveel ze hebben gegooid met de dobbelstenen. Boven aan het onderste gebied kan je zien welke knoppen op dat moment kunnen worden bediend.
+
+Boven aan het scherm zie je het Monopoly bord waarop je de pionnen kunt zien bewegen en de eigendommen die elke speler bezit, door de gekleurde streep aan de rand van het bord.
+
+Status Scherm
+
+Als u op Status rechts op het hoofdscherm klikt, kunt u details van het huidige spel bekijken. In de linkerbovenhoek, kunt u een afbeelding zien van het spelbord, en u kunt hier het spel op blijven volgen en spelen. In plaats van de eigendomsakten ziet u knoppen links onderin verschijnen die u in staat stellen de status van een Speler, Akten of de Bank te selecteren. In elk van deze drie categorieën, kunt u de voorwerpen sorteren door op de knoppen rechts onderin te klikken. Bovenaan heeft elke speler een eigen gebied waar al hun eigendommen worden afgebeeld.
+
+Ruilen
+
+Als u op Ruilen klikt aan de linkerkant van het hoofdscherm, wordt u gevraagd met welke speler u wilt ruilen en u ziet het spelbord midden bovenin. U verschijnt links, met al uw huidige eigendommen, geld en andere bezittingen afgebeeld. Om iets aan te bieden, klik erop en het zal naar het gebied in het midden worden verplaatst. Om iets te vragen, klik op de bezittingen van de andere speler, en deze zullen naar het midden worden verplaatst.  Als u de ruilhandel heeft opgezet, klik dan op Voorstellen.  De andere speler, ongeacht of deze de computer, een netwerk of plaatselijke speler is, moet dan op Accepteren, Verwerpen, of een 'Tegen'-voorstel klikken.  Indien zij een 'Tegen'voorstel verkiezen, zijn zij in staat om de bestaande ruilhandel te wijzigen en een nieuw Voorstel in te dienen.
+
+Om een Termijnmarkt of Immuniteit voor toekomstige huur aan te bieden of te vragen, klik dan op Creëer Nieuw en specificeer uw eigendom en het aantal keren. U zal eerst worden gevraagd aan wie u de Termijnmarkt of Immuniteit voor toekomstige huur aanbiedt, vervolgens welk eigendom, en dan het aantal beurten. Nadat een Termijnmarkt of Immuniteit voor toekomstige huur is opgezet, kan het worden geruild net als alle andere bezittingen.
+
+Veiling
+
+Indien u op een perceel terechtkomt dat nog vrij is, maar u wilt het niet kopen, kunt u het veilen, waarbij de opbrengst naar de bank gaat.  Klik op de biljetten in de geldla om uw bod te verhogen. Let op: de hoeveelheid tijd die Mr. Monopoly toestaat om te bieden gedurende een veiling kan worden vastgelegd in de aangepaste regels in het begin van het spel.
+
+Netwerk Spel
+
+Om een netwerkspel op te zetten, op een lokaal netwerk of over het Internet, of d.m.v. de Microsoft Game Zone, volg dan de instructies op onder Online spel spelen aan het begin van Monopoly. Voor verdere details, zie het volledige Help bestand.
+
+Network Chat
+
+Network Chat kan worden aan- of afgezet door op de tab toets te drukken. Het hoofddialoogvenster kan worden vergroot of verkleind door het handvat in de hoek rechts onderin te pakken. Het kan worden verplaatst door ergens in het  blanco gebied in de bovenste balk te klikken.
+
+Gekleurde vakken - de speler(s) aan wie het bericht zal worden verzonden
+Regenboog - alle spelers
+Hamer - Chat opties Aan/Uit, opties zijn:
+	Doorzichtige Achtergrond
+	Doorzichtige Tekst
+	Tekst tekengrootte
+Tekst pagina - opent dialoog met snelle, vooraf vertaalde berichten.  Categorieën zijn:
+	Groeten
+	Veelgebruikte antwoorden
+	Spel spelen en tempo
+	Ruilhandel
+	Positieve commentaren
+	Negatieve commentaren
+Pijl - Laat rolgordijn zakken over dialoogvenster
+	
+FAQ - Veel voorkomende vragen
+
+Wat is een Immuniteit?
+Als u een perceel bezit, kunt u aan andere spelers een immuniteit oftewel vrijstelling van huur voor een aantal keren dat zij op uw eigendom terechtkomen aanbieden. Klik op Creëer Nieuwe Immuniteit en volg de stappen.
+Wat is een Termijnmarkt?
+Als u een perceel bezit, kunt u aan andere spelers de huur die u op dit eigendom ontvangt aanbieden voor een aantal keren dat andere spelers op uw eigendom terechtkomen. U kunt het aantal beurten dat dit van toepassing is instellen. Klik op Creëer Nieuwe Termijnmarkt en volg de stappen.
+Hoe kan ik een ruilhandel opzetten?
+Als u een ruilhandel wilt opzetten, dan bent u de speler links. Klik op uw bezittingen om ze te ruil aan te bieden. Klik op de bezittingen van de andere speler die u hiervoor in ruil wilt ontvangen. Klik dan op Voorstellen.
+Hoe kan ik het spel sneller laten draaien?
+Onder Menu's/Opties, kunt u bepaalde instellingen uitzetten, zoals Tweelijnige filter, Dithering, Verlichting etc.
+Hoe kan ik over het Internet spelen?
+We raden aan dat u de Microsoft Game Zone (gratis) gebruikt.  Klik op Online spel spelen en volg de stappen aan het begin van het spel om een verbinding tot stand te brengen met een andere speler. Elke speler moet een exemplaar van de Monopoly CD in hun CD-ROM drive hebben. 
+
+Bekijk ook het LeesMij.txt bestand op de CD voor laat binnengekomen nieuws.

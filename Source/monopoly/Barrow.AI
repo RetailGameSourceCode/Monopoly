@@ -1,0 +1,923 @@
+/ *************************************************************************
+/ *					BARROW AI SETTINGS								      *
+/ *																		  *
+/ *	   This file contains the settings for a very good AI. When changing  *
+/ *   this file, note:													  *
+/ * 1) Comment lines start with / as the first character (no spaces)      *
+/ * 2) Variable names, like PLAYER ATTITUDE, are not case sensitive.      *
+/ *    However, the entire name, including the spaces, is required.       *
+/ * 3) After a variable, = must be placed.								  *
+/ * 4) Only spaces are considered white space characters (ie. will be	  *
+/ *    ignored, except in actual variable names.)						  *
+/ * 5) Return carriage can not be used to separate values. Only spaces.   *
+/ *																		  *
+/ * Note: AI_STAGE_BUYING - stage of game when many properties are        *
+/ *                         left to buy and no one has a monopoly.		  *
+/ *		  AI_STAGE_NO_MONOPOLIES - all or almost all properties have been *
+/ *                         bought, yet no one has a monopoly.			  *
+/ *		  AI_STAGE_MONOPOLIES_NOT_OWNED_ONE - stage of the game when      *
+/ *                         someone owns a monopoly, but not the AI.      *
+/ *		  AI_STAGE_MONOPOLIES_OWN_ONE - players own a monopoly, including *
+/ *							the AI.										  *
+/ *************************************************************************
+
+/ The following are settings that do not change for each level of the AI. 
+
+*****				GLOBAL SETTINGS					******
+
+/ AI is only allowed to propose AI_MAX_TRADES trades within a certain
+/ amount of time to prevent swamping players with trades.  How many turns
+/ should pass before the AI forgets a trade? (ie. how many players need
+/ to roll dice)
+TIME TO FORGET TRADE = 15
+
+/ At most how many trades should an AI be allowed to make before having
+/ to wait for trades to expire from time_forget_trade to 0? Cannot be
+/ more than 20 (AI_MAX_TRADES). 
+MAX TRADES = 2
+
+/ This number indicates the probability of the AI proposing a trade
+/ every TICK.  Hence should be around 0.005 or something of the sort. 
+/ For AI Drone mode, should be set higher, perhaps 0.02 - 0.05.
+PROPOSE TRADE PROBABILITY = 0.0015
+
+/ This number indicates the probability of the AI proposing a trade
+/ when it decides it desperately needs a monopoly.  
+MONOPOLY TRADE PROBABILITY = 0.02
+
+/ This number indicates the probability of an AI trying to give another
+/ player a monopoly for cash.  This ocurrs only if the AI owns a monopoly,
+/ there are other players with monopolies, and the AI does not have at 
+/ least a minimum number of houses. 
+PROPOSE MONOPOLY GIVE AWAY PROBABILITY = 0.02
+
+/ This number indicates the maximum number of houses the
+/ AI should have per square on all owned monopolies and still
+/ consider giving away a monopoly for cash. 
+MAXIMUMG HOUSES PER SQUARE FOR MONOPOLY GIVE AWAY = 4
+
+/ How many times will the AI counter a trade during negotiations? 
+TRADE COUNTER LIMIT = 2
+
+/ What is the probability of the AI countering a proposed trade? 
+/ Number between 1.0 and 0.0. 
+PROBABILITY OF COUNTERING TRADE = 0.8
+
+/ The following two numbers dictate how long an AI will pause,
+/ to simulate thinking, before doing certain actions.  The numbers are
+/ in seconds. If MINIMUM PAUSE FOR ACTION is set to 0, will not
+/ wait.  Note: actual minimum time waited will vary by up to one 
+/ second less.  Hence a value of 2 will result in waits between 1 - 2
+/ seconds.  A value of 1 will result in 0 - 1 second waits.
+MINIMUM PAUSE FOR ACTION = 3
+MAXIMUM PAUSE FOR ACTION = 4
+
+/ The following is a number, in seconds, of how long the AI should
+/ wait before accepting/rejecting/countering a trade, allowing
+/ other players to understand what the trade is about.
+PAUSE WHEN CONSIDERING TRADE = 7
+
+/ This number is how long, in milliseconds, will the AI wait before
+/ becoming impatient with a player taking too long to roll the dice.
+/ After this time, will send a message trying to coax the player to move. 
+/ About  180000 (3 minutes) is probably right
+PATIENCE = 260000
+
+/ How far are we willing to go to stop someone from purchasing a monopoly
+/ in an auction?  Note: the actual bid offered also depends on whether
+/ we have a monopoly, and whether there are any other monopolies on the board.
+MONOPOLY SUICIDE FACTOR = 0.8
+
+/ How many trades from the same player on the same property will the AI 
+/ consider before getting fed up?  After reaching this maximum, the AI
+/ will be fed up with any trade containing this property coming from that
+/ player.  This includes properties given as well as received in the trade.
+/ Can be between 0 - 3, where 0 means the AI will never get fed up. 
+NUMBER OF TIMES CONSIDER PROPERTY TRADE = 2
+
+/ After how many turns (its own or anyone elses) will the AI forget
+/ that a property has been traded once?  1 - 3 should be right. 
+/ Remembering a property is traded is used to not allow a single 
+/ person from constantly proposing a trade with the same property.
+TURNS BEFORE FORGETTING PROPERTY WAS TRADED = 3
+
+/ When fed up with a player proposing trades with the same properties, 
+/ what is the minimum evaluation for the AI to accept the trade?
+/ Perhaps 0.5 - 1.0 is the right value. 
+MINIMUM EVALUATION IF FED UP = 1.5
+
+/ The following settings are for level 1 (dumb) AI.
+
+
+*****				STRATEGY FOR LEVEL 1			******
+
+/ How many trades from the same player on the same property will the AI 
+/ consider before getting fed up?  After reaching this maximum, the AI
+/ will be fed up with any trade containing this property coming from that
+/ player.  This includes properties given as well as received in the trade.
+/ Can be between 0 - 3, where 0 means the AI will never get fed up. 
+NUMBER OF TIMES CONSIDER PROPERTY TRADE = 0
+
+/ This number indicates the probability of the AI proposing a trade
+/ when it decides it desperately needs a monopoly.  
+MONOPOLY TRADE PROBABILITY = 0.005
+
+/ This number indicates the probability of an AI trying to give another
+/ player a monopoly for cash.  This ocurrs only if the AI owns a monopoly,
+/ there are other players with monopolies, and the AI does not have at 
+/ least a minimum number of houses. 
+PROPOSE MONOPOLY GIVE AWAY PROBABILITY = 0.00
+
+/ How does the computer 'feel' towards a player? Determines
+/ likeliness of trades and how much the computer expects
+/ or is willing to give up from the player.  Every time a trade
+/ is rejected, especially if a monopoly forming trade, will lower attiude.
+/ Is a number between -1 and 1 representing the likelihood of trading (1 = 100%,
+/ -1 = 0%.).  Also determines how good a trade we propose.  If attitude is
+/ low, we are going to make more concessions (because player is unlikely to
+/ trade) then if a player trades often. A number separated by spaces for each
+/ player. Note: These are initial values for each token.
+PLAYER ATTITUDE = -0.25 -0.25 -0.25 -0.25 -0.25 -0.25 -0.25 -0.25
+
+/ The following number (suggested to be 0.2), represents the 
+/ attitude lost/gained towards an opponent when a trade proposed by
+/ the AI is rejected or accepted. 
+ATTITUDE LOST FOR REJECTING TRADE = 0.25
+
+/ The following number indicates the change of attitude per evaluation
+/ point when evaluating trades it did not propose or is simply observing 
+/ (ie. the worse the trade, the more points lost.)
+/ Suggested to be about 0.002. 
+ATTITUDE LOST PER EVALUATION POINT WHEN OBSERVING = 0.0075
+
+/ The following is a number that will be added/subtracted to each player_attitude
+/ every turn.
+ATTITUDE CHANGE PER TICK = 0.005
+
+/ This indicates what attitude the AI will have towards a player after a long
+/ time.  If the current attitude is above this level, the AI's attitude will
+/ lower slowly over time.  If the attitude is below this level, the AI's 
+/ attitude will increase over time. 
+ATTITUDE NEUTRAL = -0.25
+
+/ Minimum amount of liquid assets (besides housed monopolies) to have on hand. 
+/ Will not buy anything if won't be left with this much cash.  However, if     
+/ calculated expenses are greater than this number, will try to keep      
+/ more.  
+MINIMUM CASH ON HAND = 50
+
+/ What strategy should the AI use when keeping cash?
+/ 0 = always try to keep minimum amount, as above.
+/ 1 = keep enough for expected rent, calculated with housed monopolies
+/ 2 = keep enough for expected rent, calculated without housed monopolies
+/ 3 = keep enough for expeceted rent without monopolies + highest rent
+/     square
+/ 4 = Use a variant of the above three.  Will keep enough for average 
+/     rent, but will try to keep enough for expenses plus highest
+/     monopoly rent if:
+/   	- The total sum of the rents from fully housed monopolies
+/		  plus rents from all other owned properties is more than
+/		  any other player (ie. has the most expensive monopolies)
+/							  AND
+/		- current average rent intake is greater than any other 
+/		  player's (ie. has highest income. )
+CASH STRATEGY = 1
+
+/  How should we purchase houses?   
+/  0 - normal     1 - buy houses only if can get at least 3 houses per lot
+/  2 - buy houses only if an opponent is within 12 spaces of monopoly
+/  3 - both 1 and 2
+BUYING HOUSE STRATEGY = 0
+
+/ Following MULTIPLIERS are used to determine how important stuff is when
+/ evaluating our odds of winning. 
+
+/ During AI_STAGE_BUYING, how important is cash?  Probably should be 
+/ set around 0.05. (ie. $20 in liquid assets give us as much of a chance 
+/ in winning as $1 in revenue. Note: the actual multiplier used is
+/ between BUYING STAGE CASH MULTIPLIER and NO MONOPOLY STAGE CASH MULTIPLIER,
+/ depending on how many monopoly properties are left to buy. (ie. the
+/ fewer monopoly (non-cash cow) properties are left to buy, the closer
+/ the multiplier is to NO MONOPOLY STAGE CASH MULTIPLIER.
+BUYING STAGE CASH MULTIPLIER = 0.08
+
+/ During AI_STAGE_NO_MONOPOLIES, how important is cash?  Cash losses 
+/ some importance, and revenue becomes most important. Probably around 
+/ 0.025 or 0.015. 
+NO MONOPOLY STAGE CASH MULTIPLIER = 0.08
+
+/ During AI_STAGE_MONOPOLIES_NOT_OWNED_ONE, how important is cash?
+/ Liquid cash losses all importance. Precedence should be set at 
+/ getting that monopoly. Probably around 0.01 is good. 
+MONOPOLY EXISTS BUT NOT OWNER CASH MULTIPLIER = 0.08
+
+/ During AI_STAGE_MONOPOLIES_OWN_ONE.  Suddenly cash becomes important to
+/ survive a hit on opponent's monopoly & buying houses.  Probably around 0.02.  
+MONOPOLY WAR CASH MULTIPLIER = 0.08
+
+/ The following is the number x in 1.0 / x^(liquid_assets/1000) when figuring out
+/ how much is cash worth, taking into account that we have a lot of it or
+/ just a bit. 
+CASH LIQUID ASSETS DEPENDANCE = 1.15
+
+/ This number indicates how important our chances of success are
+/ for evaluating a trade.  Chance of success is calculated by 
+/ looking at average income after trade in relation to all
+/ other players.  This average income is calculated after unmortgaging
+/ and housing monopolies. Should be around 400. 
+ODDS OF WINNING FACTOR = 500
+/ODDS OF WINNING FACTOR = 0
+
+/ This number indicates how much at most we will accept our chances of
+/ success to drop for other benefits in a trade. Should be around 0.15? 
+MAX WINNING FACTOR LOSS ACCEPTABLE IN TRADE = 0.30
+
+/ This number indicates how important total assets are in evaluating
+/ current position.  Should be around 0.01. 
+CASH FACTOR = 0.02
+/CASH FACTOR = 0.0
+
+/ This number indicates how much we value the monopolies we own.  These are
+/ 10 numbers, one for each monopoly group + railroads + utilities, by which we'll 
+/ multiply the purchase price of properties.  Note: this is the fixed part
+/ of the evaluation.  The importance factors and winning chances result in
+/ different amounts of cash depending on the number of players playing, and
+/ the status of the player.  This part does not change.
+PROPERTY FACTORS = 1.2  1.2  1.2  1.2  1.3  1.3  1.3  1.2
+
+/ These numbers indicate how many times the property values we value each
+/ cash cow based on the number we have.  First 4 numbers are for 1,2,3,4 railroads,
+/ and the next two are for 1,2 utils. 
+CASH COW FACTORS = 1.0  1.2  1.4  1.8     1.0  1.2
+
+/ This number indicates how important is the fact that we got a monopoly,
+/ gave a monopoly, or traded properties that allow trades. Should be around
+/ 3.0.
+PROPERTY STRATEGIC FACTOR = 10.0
+
+/ This number indicates what is the minimum evaluation value we should get
+/ for which we will accept trades. Anywhere between -5 to 10 should be 
+/ playable values, where at -5 the AI will take losses in a trade, while
+/ 10 will make the AI not trade unless a substantial gain is proposed.
+MINIMUM EVALUATION TRADE BENEFIT = -0.5
+
+/ When the AI is 'giving' away a monopoly for cash to improve it's standings
+/ against the other players, what is the minimum evaluation for it to be
+/ acceptable for the AI to 'risk' giving a monopoly to a player who would
+/ not otherwise get one? 
+MINIMUM EVALUATION WHEN GIVING A MONOPOLY FOR CASH = 100.0
+
+/ The following importance values are related to PROPERTY STRATEGIC FACTOR.
+
+/ This number indicates how important a factor is the fact that
+/ we received our first monopoly.  Should be around 70?. 
+MONOPOLY RECEIVED IMPORTANCE = 5
+
+/ This number indicates how important a factor is the fact that
+/ we gave a monopoly for cash, without getting one back.
+/ This case is used only after a monopoly trade, when the AI player
+/ is willing to give away a monopoly for a lot of cash, improving
+/ his odds of winning. 
+GIVING MONOPOLY IMPORTANCE = 100.0
+
+/ This number indicates how important a factor is the fact that
+/ we the BALTIC monopoly. 
+BALTIC RECEIVED IMPORTANCE = 3.0
+
+/ This number indicates how important a factor is the fact that 
+/ we received/gave a property that allows a group trade for monopolies. 
+/ Should be around 10?. 
+PROPERTY ALLOWS TRADE IMPORTANCE = 0.00
+
+/ This number indicates how important a factor is the fact that 
+/ we received/gave a property that allows a group trade for a monopoly,
+/ even though player already has a group trade possibility. 
+PROPERTY ALLOWS ANOTHER TRADE IMPORTANCE = 0.0
+
+/ The following indicates how important is a property if the
+/ player owns all the squares of the monopoly except for one,
+/ and that one is unowned, unless it is boardwalk or baltic.
+PROPERTY GIVEN WITH ONE UNOWNED IMPORTANCE = 0.20
+
+/ The following indicates how important is a property if all other
+/ squares in the monopoly are unowned (including Boardwalk or Baltic)
+PROPERTY GIVEN WITH TWO UNOWNED IMPORTANCE = 0.00
+
+/ The following indicates the importance of a railroad, above its
+/ face value, depending on how many we have.  4 values - first is
+/ if we own 1, 2nd if we own 2, and so on.  Perhaps 2,6,18,54?
+RAILROAD IMPORTANCE FACTORS = 0.01 0.2 0.50 0.8
+
+/ The following indicates the importance of a utility, above
+/ its face value, depending on how many we have. 2 values - first
+/ for 1 utility, 2nd for 2nd utility.
+UTILITY IMPORTANCE FACTORS = 0.01 0.2
+
+/ The following holds a list of importance values for the number of
+/ monopolies for which the AI holds a veto.  Ie.  it is strategically
+/ beneficial to contain at least one property from every (or almost
+/ every) monopoly.  This ensures we are included in any monopoly trade,
+/ as well as allowing us to block any monopoly trades harmful to us. 
+/ A list of 9 values - where the player owns from 0 - 8 monopolies. 
+/ Note: right now, BALTIC is not counted as a monopoly when computing
+/ veto power.  Hence 7 should be the same as 8.  Also, allowing one
+/ monopoly to be free over which we have no control does not allow a
+/ monopoly trade, since no one would give someone a monopoly without
+/ a monopoly in exchange. (at least, no one in their right mind.) Hence
+/ 6 should be the same as 7. 
+/ num. monopolies have veto over:   0    1    2    3    4    5    6    7    8
+MONOPOLY VETO IMPORTANCE VALUES =   0    0    0    0    0    0.0  0.0  0.0  0.0
+
+/ The following multiplier is used in evaluating property importance
+/ changes in a trade.  If the player we are trading is losing
+/ property importance points in the trade (for instance, is
+/ giving up a cash cow for money), then we multiply the importance
+/ change by this factor.  Basically, we want people to pay for
+/ important properties, but we don't want to pay for getting them. 
+/ This multiplier is not applied to importance values arrived from
+/ monopolies. Should be between 0.5 - 1.0. 
+NEGATIVE PROPERTY IMPORTANCE CHANGE MULTIPLIER FOR OPPONENTS = 1.0
+
+/ After calculating the property importance deficit (ie. fact we
+/ gave/got a monopoly, or a property that allows a trade), what is 
+/ the lowest value so that we will consider counter proposing a trade?
+/ Numbers between -15 - 5 are fine.
+LOWEST PROPERTY STRAT FACTOR FOR COUNTER PROPOSAL = -25.0
+
+/ When using WHAT TO TRADE (see below) to figure out how much cash to
+/ offer or ask for depending on our evaluation of the player, what is the
+/ lowest level to use when proposing a non-monopoly trade? (ie. what is
+/ the most we are willing to sacrifice if the trade is not that important?)
+MINIMUM NON-MONOPOLY ATTITUDE = -1.0
+
+/ The following lists what the AI will give for a monopoly in a trade, depending 
+/ on its attitude towards a player.  The cash factors are also used to determine
+/ how much cash the AI will give/get in a trade.  The values are in the
+/ following order:
+/ 1. 0 if not to give a monopoly in return, 1 if to give worst monopoly,
+/    2 if to give best monopoly.
+/ 2. How many properties to give that will allow opponent to trade for a 
+/    monopoly?  Ie. before getting this property, the opponent has no
+/    trade opportunities to get a monopoly. After getting this property,
+/    there is a possible trade where the opponent will get a monopoly.
+/ 3. How many cash cows to give?
+/ 4. How many junk properties to give? 
+/ 5. After the optimal trade is found, where we calculated the most
+/    cash we are willing to give, and the least cash we would accept,
+/    what factor should we divide/multiply this number by?  Should not
+/    be less than 1.0, since then we are offering trades we would not
+/    accept if offered to us.
+/   			       Mono   Trade   Cows    Junk   Cash factor
+WHAT TO TRADE -0.9 =	2		0		2		1		0.9
+WHAT TO TRADE -0.8 =	2		0		2		1		1.0
+WHAT TO TRADE -0.7 =	2		0		1		2		1.0
+WHAT TO TRADE -0.6 =	2		0		1		2		1.05
+WHAT TO TRADE -0.5 =	2		0		0		3		1.1
+WHAT TO TRADE -0.4 =	2		0		0		3		1.15	
+WHAT TO TRADE -0.3 =	2		0		0		2		1.2
+WHAT TO TRADE -0.2 =	2		0		0		2		1.25
+WHAT TO TRADE -0.1 =	2		0		0		1		1.3
+WHAT TO TRADE  0.0 =	1		0		0		1		1.3
+WHAT TO TRADE  0.1 =	1		0		0		0		1.35
+WHAT TO TRADE  0.2 =	1		0		0		0		1.4
+WHAT TO TRADE  0.3 =	1		0		0		0     	1.45
+WHAT TO TRADE  0.4 =	1		0		0		0		1.5
+WHAT TO TRADE  0.5 =	1		0		0		0		1.6
+WHAT TO TRADE  0.6 =	1		0		0		0		1.65
+WHAT TO TRADE  0.7 =	1		0		0		0		1.7
+WHAT TO TRADE  0.8 =	1		0		0		0		1.75
+WHAT TO TRADE  0.9 =	1		0		0		0		1.8
+WHAT TO TRADE  1.0 =	1		0		0		0		1.85
+
+/ end level 1
+
+*****				STRATEGY FOR LEVEL 2			******
+
+/ How does the computer 'feel' towards a player? Determines
+/ likeliness of trades and how much the computer expects
+/ or is willing to give up from the player.  Every time a trade
+/ is rejected, especially if a monopoly forming trade, will lower attiude.
+/ Is a number between -1 and 1 representing the likelihood of trading (1 = 100%,
+/ -1 = 0%.).  Also determines how good a trade we propose.  If attitude is
+/ low, we are going to make more concessions (because player is unlikely to
+/ trade) then if a player trades often. A number separated by spaces for each
+/ player. Note: These are initial values for each token.
+PLAYER ATTITUDE = -0.25 -0.25 -0.25 -0.25 -0.25 -0.25 -0.25 -0.25
+
+/ The following number (suggested to be 0.2), represents the 
+/ attitude lost/gained towards an opponent when a trade proposed by
+/ the AI is rejected or accepted. 
+ATTITUDE LOST FOR REJECTING TRADE = 0.17
+
+/ The following number indicates the change of attitude per evaluation
+/ point when evaluating trades it did not propose or is simply observing 
+/ (ie. the worse the trade, the more points lost.)
+/ Suggested to be about 0.002. 
+ATTITUDE LOST PER EVALUATION POINT WHEN OBSERVING = 0.0075
+
+/ The following is a number that will be added/subtracted to each player_attitude
+/ every turn.
+ATTITUDE CHANGE PER TICK = 0.0025
+
+/ This indicates what attitude the AI will have towards a player after a long
+/ time.  If the current attitude is above this level, the AI's attitude will
+/ lower slowly over time.  If the attitude is below this level, the AI's 
+/ attitude will increase over time. 
+ATTITUDE NEUTRAL = -0.25
+
+/ Minimum amount of liquid assets (besides housed monopolies) to have on hand. 
+/ Will not buy anything if won't be left with this much cash.  However, if     
+/ calculated expenses are greater than this number, will try to keep      
+/ more.  
+MINIMUM CASH ON HAND = 200
+
+/ What strategy should the AI use when keeping cash?
+/ 0 = always try to keep minimum amount, as above.
+/ 1 = keep enough for expected rent, calculated with housed monopolies
+/ 2 = keep enough for expected rent, calculated without housed monopolies
+/ 3 = keep enough for expeceted rent without monopolies + highest rent
+/     square
+/ 4 = Use a variant of the above three.  Will keep enough for average 
+/     rent, but will try to keep enough for expenses plus highest
+/     monopoly rent if:
+/   	- The total sum of the rents from fully housed monopolies
+/		  plus rents from all other owned properties is more than
+/		  any other player (ie. has the most expensive monopolies)
+/							  AND
+/		- current average rent intake is greater than any other 
+/		  player's (ie. has highest income. )
+CASH STRATEGY = 3
+
+/  How should we purchase houses?   
+/  0 - normal     1 - buy houses only if can get at least 3 houses per lot
+/  2 - buy houses only if an opponent is within 12 spaces of monopoly
+/  3 - both 1 and 2
+BUYING HOUSE STRATEGY = 0
+
+/ Following MULTIPLIERS are used to determine how important stuff is when
+/ evaluating our odds of winning. 
+
+/ During AI_STAGE_BUYING, how important is cash?  Probably should be 
+/ set around 0.05. (ie. $20 in liquid assets give us as much of a chance 
+/ in winning as $1 in revenue. Note: the actual multiplier used is
+/ between BUYING STAGE CASH MULTIPLIER and NO MONOPOLY STAGE CASH MULTIPLIER,
+/ depending on how many monopoly properties are left to buy. (ie. the
+/ fewer monopoly (non-cash cow) properties are left to buy, the closer
+/ the multiplier is to NO MONOPOLY STAGE CASH MULTIPLIER.
+BUYING STAGE CASH MULTIPLIER = 0.06
+
+/ During AI_STAGE_NO_MONOPOLIES, how important is cash?  Cash losses 
+/ some importance, and revenue becomes most important. Probably around 
+/ 0.025 or 0.015. 
+NO MONOPOLY STAGE CASH MULTIPLIER = 0.045
+
+/ During AI_STAGE_MONOPOLIES_NOT_OWNED_ONE, how important is cash?
+/ Liquid cash losses all importance. Precedence should be set at 
+/ getting that monopoly. Probably around 0.01 is good. 
+MONOPOLY EXISTS BUT NOT OWNER CASH MULTIPLIER = 0.045
+
+/ During AI_STAGE_MONOPOLIES_OWN_ONE.  Suddenly cash becomes important to
+/ survive a hit on opponent's monopoly & buying houses.  Probably around 0.02.  
+MONOPOLY WAR CASH MULTIPLIER = 0.045
+
+/ The following is the number x in 1.0 / x^(liquid_assets/1000) when figuring out
+/ how much is cash worth, taking into account that we have a lot of it or
+/ just a bit. 
+CASH LIQUID ASSETS DEPENDANCE = 1.15
+
+/ This number indicates how important our chances of success are
+/ for evaluating a trade.  Chance of success is calculated by 
+/ looking at average income after trade in relation to all
+/ other players.  This average income is calculated after unmortgaging
+/ and housing monopolies. Should be around 400. 
+ODDS OF WINNING FACTOR = 800
+/ODDS OF WINNING FACTOR = 0
+
+/ This number indicates how much at most we will accept our chances of
+/ success to drop for other benefits in a trade. Should be around 0.15? 
+MAX WINNING FACTOR LOSS ACCEPTABLE IN TRADE = 0.12
+
+/ This number indicates how important total assets are in evaluating
+/ current position.  Should be around 0.01. 
+CASH FACTOR = 0.02
+/CASH FACTOR = 0.0
+
+/ This number indicates how much we value the monopolies we own.  These are
+/ 10 numbers, one for each monopoly group + railroads + utilities, by which we'll 
+/ multiply the purchase price of properties.  Note: this is the fixed part
+/ of the evaluation.  The importance factors and winning chances result in
+/ different amounts of cash depending on the number of players playing, and
+/ the status of the player.  This part does not change.
+PROPERTY FACTORS = 2.1  2.1  1.8  1.5  1.4  1.3  1.3  1.2
+
+/ These numbers indicate how many times the property values we value each
+/ cash cow based on the number we have.  First 4 numbers are for 1,2,3,4 railroads,
+/ and the next two are for 1,2 utils. 
+CASH COW FACTORS = 2.0  2.0  3.5  6.0     2.0  2.5
+
+/ This number indicates how important is the fact that we got a monopoly,
+/ gave a monopoly, or traded properties that allow trades. Should be around
+/ 3.0.
+PROPERTY STRATEGIC FACTOR = 10.0
+
+/ This number indicates what is the minimum evaluation value we should get
+/ for which we will accept trades. Anywhere between -5 to 10 should be 
+/ playable values, where at -5 the AI will take losses in a trade, while
+/ 10 will make the AI not trade unless a substantial gain is proposed.
+MINIMUM EVALUATION TRADE BENEFIT = 0.0
+
+/ When the AI is 'giving' away a monopoly for cash to improve it's standings
+/ against the other players, what is the minimum evaluation for it to be
+/ acceptable for the AI to 'risk' giving a monopoly to a player who would
+/ not otherwise get one? 
+MINIMUM EVALUATION WHEN GIVING A MONOPOLY FOR CASH = 100.0
+
+/ The following importance values are related to PROPERTY STRATEGIC FACTOR.
+
+/ This number indicates how important a factor is the fact that
+/ we received our first monopoly.  Should be around 70?. 
+MONOPOLY RECEIVED IMPORTANCE = 10
+
+/ This number indicates how important a factor is the fact that
+/ we gave a monopoly for cash, without getting one back.
+/ This case is used only after a monopoly trade, when the AI player
+/ is willing to give away a monopoly for a lot of cash, improving
+/ his odds of winning. 
+GIVING MONOPOLY IMPORTANCE = 100.0
+
+/ This number indicates how important a factor is the fact that
+/ we the BALTIC monopoly. 
+BALTIC RECEIVED IMPORTANCE = 6.0
+
+/ This number indicates how important a factor is the fact that 
+/ we received/gave a property that allows a group trade for monopolies. 
+/ Should be around 10?. 
+PROPERTY ALLOWS TRADE IMPORTANCE = 0.40
+
+/ This number indicates how important a factor is the fact that 
+/ we received/gave a property that allows a group trade for a monopoly,
+/ even though player already has a group trade possibility. 
+PROPERTY ALLOWS ANOTHER TRADE IMPORTANCE = 0.25
+
+/ The following indicates how important is a property if the
+/ player owns all the squares of the monopoly except for one,
+/ and that one is unowned, unless it is boardwalk or baltic.
+PROPERTY GIVEN WITH ONE UNOWNED IMPORTANCE = 0.45
+
+/ The following indicates how important is a property if all other
+/ squares in the monopoly are unowned (including Boardwalk or Baltic)
+PROPERTY GIVEN WITH TWO UNOWNED IMPORTANCE = 0.10
+
+/ The following indicates the importance of a railroad, above its
+/ face value, depending on how many we have.  4 values - first is
+/ if we own 1, 2nd if we own 2, and so on.  Perhaps 2,6,18,54?
+RAILROAD IMPORTANCE FACTORS = 0.01 0.2 1.00 2.00
+
+/ The following indicates the importance of a utility, above
+/ its face value, depending on how many we have. 2 values - first
+/ for 1 utility, 2nd for 2nd utility.
+UTILITY IMPORTANCE FACTORS = 0.01 0.2
+
+/ The following holds a list of importance values for the number of
+/ monopolies for which the AI holds a veto.  Ie.  it is strategically
+/ beneficial to contain at least one property from every (or almost
+/ every) monopoly.  This ensures we are included in any monopoly trade,
+/ as well as allowing us to block any monopoly trades harmful to us. 
+/ A list of 9 values - where the player owns from 0 - 8 monopolies. 
+/ Note: right now, BALTIC is not counted as a monopoly when computing
+/ veto power.  Hence 7 should be the same as 8.  Also, allowing one
+/ monopoly to be free over which we have no control does not allow a
+/ monopoly trade, since no one would give someone a monopoly without
+/ a monopoly in exchange. (at least, no one in their right mind.) Hence
+/ 6 should be the same as 7. 
+/ num. monopolies have veto over:   0    1    2    3    4    5    6    7    8
+MONOPOLY VETO IMPORTANCE VALUES =   0    0    0    0    0    0.0  0.0  0.0  0.0
+
+/ The following multiplier is used in evaluating property importance
+/ changes in a trade.  If the player we are trading is losing
+/ property importance points in the trade (for instance, is
+/ giving up a cash cow for money), then we multiply the importance
+/ change by this factor.  Basically, we want people to pay for
+/ important properties, but we don't want to pay for getting them. 
+/ This multiplier is not applied to importance values arrived from
+/ monopolies. Should be between 0.5 - 1.0. 
+NEGATIVE PROPERTY IMPORTANCE CHANGE MULTIPLIER FOR OPPONENTS = 0.8
+
+/ After calculating the property importance deficit (ie. fact we
+/ gave/got a monopoly, or a property that allows a trade), what is 
+/ the lowest value so that we will consider counter proposing a trade?
+/ Numbers between -15 - 5 are fine.
+LOWEST PROPERTY STRAT FACTOR FOR COUNTER PROPOSAL = -10.0
+
+/ When using WHAT TO TRADE (see below) to figure out how much cash to
+/ offer or ask for depending on our evaluation of the player, what is the
+/ lowest level to use when proposing a non-monopoly trade? (ie. what is
+/ the most we are willing to sacrifice if the trade is not that important?)
+MINIMUM NON-MONOPOLY ATTITUDE = -0.8
+
+/ The following lists what the AI will give for a monopoly in a trade, depending 
+/ on its attitude towards a player.  The cash factors are also used to determine
+/ how much cash the AI will give/get in a trade.  The values are in the
+/ following order:
+/ 1. 0 if not to give a monopoly in return, 1 if to give worst monopoly,
+/    2 if to give best monopoly.
+/ 2. How many properties to give that will allow opponent to trade for a 
+/    monopoly?  Ie. before getting this property, the opponent has no
+/    trade opportunities to get a monopoly. After getting this property,
+/    there is a possible trade where the opponent will get a monopoly.
+/ 3. How many cash cows to give?
+/ 4. How many junk properties to give? 
+/ 5. After the optimal trade is found, where we calculated the most
+/    cash we are willing to give, and the least cash we would accept,
+/    what factor should we divide/multiply this number by?  Should not
+/    be less than 1.0, since then we are offering trades we would not
+/    accept if offered to us.
+/   			       Mono   Trade   Cows    Junk   Cash factor
+WHAT TO TRADE -0.9 =	2		0		0		3		1.0		
+WHAT TO TRADE -0.8 =	2		0		0		3		1.1
+WHAT TO TRADE -0.7 =	2		0		0		2		1.2
+WHAT TO TRADE -0.6 =	2		0		0		2		1.3
+WHAT TO TRADE -0.5 =	2		0		0		1		1.4
+WHAT TO TRADE -0.4 =	2		0		0		1		1.5	
+WHAT TO TRADE -0.3 =	2		0		0		0		1.6
+WHAT TO TRADE -0.2 =	1		0		0		0		1.7
+WHAT TO TRADE -0.1 =	1		0		0		0		1.8
+WHAT TO TRADE  0.0 =	1		1		2		2		1.9
+WHAT TO TRADE  0.1 =	1		1		2		2		2.0
+WHAT TO TRADE  0.2 =	0		1		1		2		2.1
+WHAT TO TRADE  0.3 =	0		1		1		2		2.2
+WHAT TO TRADE  0.4 =	0		1		0		2		2.3
+WHAT TO TRADE  0.5 =	0		1		0		2		2.4
+WHAT TO TRADE  0.6 =	0		1		0		1		2.5
+WHAT TO TRADE  0.7 =	0		1		0		1		2.6
+WHAT TO TRADE  0.8 =	0		0		0		2		2.7
+WHAT TO TRADE  0.9 =	0		0		0		2		2.8
+WHAT TO TRADE  1.0 =	0		0		0		1		2.9
+
+/ end level 2
+
+
+*****				STRATEGY FOR LEVEL 3			******
+
+/ How does the computer 'feel' towards a player? Determines
+/ likeliness of trades and how much the computer expects
+/ or is willing to give up from the player.  Every time a trade
+/ is rejected, especially if a monopoly forming trade, will lower attiude.
+/ Is a number between -1 and 1 representing the likelihood of trading (1 = 100%,
+/ -1 = 0%.).  Also determines how good a trade we propose.  If attitude is
+/ low, we are going to make more concessions (because player is unlikely to
+/ trade) then if a player trades often. A number separated by spaces for each
+/ player. Note: These are initial values for each token.
+PLAYER ATTITUDE = 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05
+
+/ The following number (suggested to be 0.2), represents the 
+/ attitude lost/gained towards an opponent when a trade proposed by
+/ the AI is rejected or accepted. 
+ATTITUDE LOST FOR REJECTING TRADE = 0.17
+
+/ The following number indicates the change of attitude per evaluation
+/ point when evaluating trades it did not propose or is simply observing 
+/ (ie. the worse the trade, the more points lost.)
+/ Suggested to be about 0.002. 
+ATTITUDE LOST PER EVALUATION POINT WHEN OBSERVING = 0.0075
+
+/ The following is a number that will be added/subtracted to each player_attitude
+/ every turn.
+ATTITUDE CHANGE PER TICK = 0.0025
+
+/ This indicates what attitude the AI will have towards a player after a long
+/ time.  If the current attitude is above this level, the AI's attitude will
+/ lower slowly over time.  If the attitude is below this level, the AI's 
+/ attitude will increase over time. 
+ATTITUDE NEUTRAL = 0.05
+
+/ Minimum amount of liquid assets (besides housed monopolies) to have on hand. 
+/ Will not buy anything if won't be left with this much cash.  However, if     
+/ calculated expenses are greater than this number, will try to keep      
+/ more.  
+MINIMUM CASH ON HAND = 130
+
+/ What strategy should the AI use when keeping cash?
+/ 0 = always try to keep minimum amount, as above.
+/ 1 = keep enough for expected rent, calculated with housed monopolies
+/ 2 = keep enough for expected rent, calculated without housed monopolies
+/ 3 = keep enough for expeceted rent without monopolies + highest rent
+/     square
+/ 4 = Use a variant of the above three.  Will keep enough for average 
+/     rent, but will try to keep enough for expenses plus highest
+/     monopoly rent if:
+/   	- The total sum of the rents from fully housed monopolies
+/		  plus rents from all other owned properties is more than
+/		  any other player (ie. has the most expensive monopolies)
+/							  AND
+/		- current average rent intake is greater than any other 
+/		  player's (ie. has highest income. )
+CASH STRATEGY = 4
+
+/  How should we purchase houses?   
+/  0 - normal     1 - buy houses only if can get at least 3 houses per lot
+/  2 - buy houses only if an opponent is within 12 spaces of monopoly
+/  3 - both 1 and 2
+BUYING HOUSE STRATEGY = 2
+
+/ Following MULTIPLIERS are used to determine how important stuff is when
+/ evaluating our odds of winning. 
+
+/ During AI_STAGE_BUYING, how important is cash?  Probably should be 
+/ set around 0.05. (ie. $20 in liquid assets give us as much of a chance 
+/ in winning as $1 in revenue. Note: the actual multiplier used is
+/ between BUYING STAGE CASH MULTIPLIER and NO MONOPOLY STAGE CASH MULTIPLIER,
+/ depending on how many monopoly properties are left to buy. (ie. the
+/ fewer monopoly (non-cash cow) properties are left to buy, the closer
+/ the multiplier is to NO MONOPOLY STAGE CASH MULTIPLIER.
+BUYING STAGE CASH MULTIPLIER = 0.05
+
+/ During AI_STAGE_NO_MONOPOLIES, how important is cash?  Cash losses 
+/ some importance, and revenue becomes most important. Probably around 
+/ 0.025 or 0.015. 
+NO MONOPOLY STAGE CASH MULTIPLIER = 0.030
+
+/ During AI_STAGE_MONOPOLIES_NOT_OWNED_ONE, how important is cash?
+/ Liquid cash losses all importance. Precedence should be set at 
+/ getting that monopoly. Probably around 0.01 is good. 
+MONOPOLY EXISTS BUT NOT OWNER CASH MULTIPLIER = 0.025
+
+/ During AI_STAGE_MONOPOLIES_OWN_ONE.  Suddenly cash becomes important to
+/ survive a hit on opponent's monopoly & buying houses.  Probably around 0.02.  
+MONOPOLY WAR CASH MULTIPLIER = 0.04
+
+/ The following is the number x in 1.0 / x^(liquid_assets/1000) when figuring out
+/ how much is cash worth, taking into account that we have a lot of it or
+/ just a bit. 
+CASH LIQUID ASSETS DEPENDANCE = 1.15
+
+/ This number indicates how important our chances of success are
+/ for evaluating a trade.  Chance of success is calculated by 
+/ looking at average income after trade in relation to all
+/ other players.  This average income is calculated after unmortgaging
+/ and housing monopolies. Should be around 400. 
+ODDS OF WINNING FACTOR = 1000
+/ODDS OF WINNING FACTOR = 0
+
+/ This number indicates how much at most we will accept our chances of
+/ success to drop for other benefits in a trade. Should be around 0.15? 
+MAX WINNING FACTOR LOSS ACCEPTABLE IN TRADE = 0.12
+
+/ This number indicates how important total assets are in evaluating
+/ current position.  Should be around 0.01. 
+CASH FACTOR = 0.02
+/CASH FACTOR = 0.0
+
+/ This number indicates how much we value the monopolies we own.  These are
+/ 10 numbers, one for each monopoly group + railroads + utilities, by which we'll 
+/ multiply the purchase price of properties.  Note: this is the fixed part
+/ of the evaluation.  The importance factors and winning chances result in
+/ different amounts of cash depending on the number of players playing, and
+/ the status of the player.  This part does not change.
+PROPERTY FACTORS = 3.0  3.3  2.3  1.8  1.9  1.8  1.8  1.4
+
+/ These numbers indicate how many times the property values we value each
+/ cash cow based on the number we have.  First 4 numbers are for 1,2,3,4 railroads,
+/ and the next two are for 1,2 utils. 
+CASH COW FACTORS = 2.5  3.0  4.0  8.0     2.5  3.6
+
+/ This number indicates how important is the fact that we got a monopoly,
+/ gave a monopoly, or traded properties that allow trades. Should be around
+/ 3.0.
+PROPERTY STRATEGIC FACTOR = 15.0
+
+/ This number indicates what is the minimum evaluation value we should get
+/ for which we will accept trades. Anywhere between -5 to 10 should be 
+/ playable values, where at -5 the AI will take losses in a trade, while
+/ 10 will make the AI not trade unless a substantial gain is proposed.
+MINIMUM EVALUATION TRADE BENEFIT = 0.0
+
+/ When the AI is 'giving' away a monopoly for cash to improve it's standings
+/ against the other players, what is the minimum evaluation for it to be
+/ acceptable for the AI to 'risk' giving a monopoly to a player who would
+/ not otherwise get one? 
+MINIMUM EVALUATION WHEN GIVING A MONOPOLY FOR CASH = 2.0
+
+/ The following importance values are related to PROPERTY STRATEGIC FACTOR.
+
+/ This number indicates how important a factor is the fact that
+/ we received our first monopoly.  Should be around 70?. 
+MONOPOLY RECEIVED IMPORTANCE = 20
+
+/ This number indicates how important a factor is the fact that
+/ we gave a monopoly for cash, without getting one back.
+/ This case is used only after a monopoly trade, when the AI player
+/ is willing to give away a monopoly for a lot of cash, improving
+/ his odds of winning. 
+GIVING MONOPOLY IMPORTANCE = 1.0
+
+/ This number indicates how important a factor is the fact that
+/ we the BALTIC monopoly. 
+BALTIC RECEIVED IMPORTANCE = 3.0
+
+/ This number indicates how important a factor is the fact that 
+/ we received/gave a property that allows a group trade for monopolies. 
+/ Should be around 10?. 
+PROPERTY ALLOWS TRADE IMPORTANCE = 0.55
+
+/ This number indicates how important a factor is the fact that 
+/ we received/gave a property that allows a group trade for a monopoly,
+/ even though player already has a group trade possibility. 
+PROPERTY ALLOWS ANOTHER TRADE IMPORTANCE = 0.25
+
+/ The following indicates how important is a property if the
+/ player owns all the squares of the monopoly except for one,
+/ and that one is unowned, unless it is boardwalk or baltic.
+PROPERTY GIVEN WITH ONE UNOWNED IMPORTANCE = 0.45
+
+/ The following indicates how important is a property if all other
+/ squares in the monopoly are unowned (including Boardwalk or Baltic)
+PROPERTY GIVEN WITH TWO UNOWNED IMPORTANCE = 0.10
+
+/ The following indicates the importance of a railroad, above its
+/ face value, depending on how many we have.  4 values - first is
+/ if we own 1, 2nd if we own 2, and so on.  Perhaps 2,6,18,54?
+RAILROAD IMPORTANCE FACTORS = 0.01 0.2 1.00 2.00
+
+/ The following indicates the importance of a utility, above
+/ its face value, depending on how many we have. 2 values - first
+/ for 1 utility, 2nd for 2nd utility.
+UTILITY IMPORTANCE FACTORS = 0.01 0.2
+
+/ The following holds a list of importance values for the number of
+/ monopolies for which the AI holds a veto.  Ie.  it is strategically
+/ beneficial to contain at least one property from every (or almost
+/ every) monopoly.  This ensures we are included in any monopoly trade,
+/ as well as allowing us to block any monopoly trades harmful to us. 
+/ A list of 9 values - where the player owns from 0 - 8 monopolies. 
+/ Note: right now, BALTIC is not counted as a monopoly when computing
+/ veto power.  Hence 7 should be the same as 8.  Also, allowing one
+/ monopoly to be free over which we have no control does not allow a
+/ monopoly trade, since no one would give someone a monopoly without
+/ a monopoly in exchange. (at least, no one in their right mind.) Hence
+/ 6 should be the same as 7. 
+/ num. monopolies have veto over:   0    1    2    3    4    5    6    7    8
+MONOPOLY VETO IMPORTANCE VALUES =   0    0    0    0    0    0.5 1.5   2.5  3.5
+
+/ The following multiplier is used in evaluating property importance
+/ changes in a trade.  If the player we are trading is losing
+/ property importance points in the trade (for instance, is
+/ giving up a cash cow for money), then we multiply the importance
+/ change by this factor.  Basically, we want people to pay for
+/ important properties, but we don't want to pay for getting them. 
+/ This multiplier is not applied to importance values arrived from
+/ monopolies. Should be between 0.5 - 1.0. 
+NEGATIVE PROPERTY IMPORTANCE CHANGE MULTIPLIER FOR OPPONENTS = 0.6
+
+/ After calculating the property importance deficit (ie. fact we
+/ gave/got a monopoly, or a property that allows a trade), what is 
+/ the lowest value so that we will consider counter proposing a trade?
+/ Numbers between -15 - 5 are fine.
+LOWEST PROPERTY STRAT FACTOR FOR COUNTER PROPOSAL = -5.0
+
+/ When using WHAT TO TRADE (see below) to figure out how much cash to
+/ offer or ask for depending on our evaluation of the player, what is the
+/ lowest level to use when proposing a non-monopoly trade? (ie. what is
+/ the most we are willing to sacrifice if the trade is not that important?)
+MINIMUM NON-MONOPOLY ATTITUDE = -0.8
+
+/ The following lists what the AI will give for a monopoly in a trade, depending 
+/ on its attitude towards a player.  The cash factors are also used to determine
+/ how much cash the AI will give/get in a trade.  The values are in the
+/ following order:
+/ 1. 0 if not to give a monopoly in return, 1 if to give worst monopoly,
+/    2 if to give best monopoly.
+/ 2. How many properties to give that will allow opponent to trade for a 
+/    monopoly?  Ie. before getting this property, the opponent has no
+/    trade opportunities to get a monopoly. After getting this property,
+/    there is a possible trade where the opponent will get a monopoly.
+/ 3. How many cash cows to give?
+/ 4. How many junk properties to give? 
+/ 5. After the optimal trade is found, where we calculated the most
+/    cash we are willing to give, and the least cash we would accept,
+/    what factor should we divide/multiply this number by?  Should not
+/    be less than 1.0, since then we are offering trades we would not
+/    accept if offered to us.
+/   			       Mono   Trade   Cows    Junk   Cash factor
+WHAT TO TRADE -0.9 =	2		0		0		2		1.0		
+WHAT TO TRADE -0.8 =	2		0		0		1		1.0
+WHAT TO TRADE -0.7 =	2		0		0		0		1.05
+WHAT TO TRADE -0.6 =	2		0		0		0		1.1
+WHAT TO TRADE -0.5 =	2		0		0		0		1.15
+WHAT TO TRADE -0.4 =	1		0		0		0		1.2	
+WHAT TO TRADE -0.3 =	1		0		0		0		1.25
+WHAT TO TRADE -0.2 =	1		0		0		0		1.3
+WHAT TO TRADE -0.1 =	1		0		0		0		1.35
+WHAT TO TRADE  0.0 =	0		1		2		2		1.4
+WHAT TO TRADE  0.1 =	0		1		2		2		1.5
+WHAT TO TRADE  0.2 =	0		1		1		2		1.6
+WHAT TO TRADE  0.3 =	0		1		1		2		1.7
+WHAT TO TRADE  0.4 =	0		1		0		2		1.8
+WHAT TO TRADE  0.5 =	0		1		0		2		1.9
+WHAT TO TRADE  0.6 =	0		1		0		1		2.0
+WHAT TO TRADE  0.7 =	0		1		0		1		2.1
+WHAT TO TRADE  0.8 =	0		0		0		2		2.2
+WHAT TO TRADE  0.9 =	0		0		0		2		2.3
+WHAT TO TRADE  1.0 =	0		0		0		1		2.4
+
+/ end level 3

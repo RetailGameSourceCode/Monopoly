@@ -1,0 +1,66 @@
+Aloittaminen 
+
+Tervetuloa Monopolin Pika-apuun! Monopoli on peli jota voi pelata 1-6 pelaajaa, joista yhden on oltava ihminen. Muut voivat olla tietokonevastustajia (teko‰lypelaajia), ihmisi‰, jotka ovat yhteydess‰ toisiinsa tietokoneverkon kautta tai ihmisi‰, jotka pelaavat sinun omalta paikalliselta tietokoneeltasi. Aloittaaksesi pelaamisen jokaisen pelaajan on valittava pelimerkki. Aina kun lis‰‰t pelaajia, voit n‰hd‰ heid‰n nimilappujensa ilmestyv‰n ruudun alareunaan. Kun  peliin on lis‰tty ainakin kaksi pelaajaa, voit n‰p‰ytt‰‰ Aloita-painiketta pelataksesi. Jos haluat pelata lyhyemp‰‰ peliversiota tai muuttaa s‰‰ntˆj‰, n‰p‰yt‰ Mukautetut s‰‰nnˆt-painiketta. Huomaa: jos pelaat verkossa, vain pelin is‰nt‰ voi muuttaa s‰‰ntˆj‰. 
+
+P‰‰n‰yttˆ 
+
+P‰‰n‰ytˆn alareunassa on nimilappuja, joista n‰kyv‰t peliss‰ olevat pelaajat, mill‰ pelimerkill‰ kukin pelaa ja kuinka paljon rahaa kullakin on. N‰p‰ytt‰m‰ll‰ pelaajan nimilapun kohdalla voit n‰hd‰ yksityiskohtaista tietoa ko. pelaajasta. Suoraan nimilappujen yl‰puolella on v‰rillinen alue, jossa voit n‰hd‰ kaikkien mahdollisten tonttien lainhuudatustodistukset. Alueen taustav‰ri ilmaisee, mik‰ pelaaja ohjaa peli‰, ja korostetut lainhuudatustodistukset merkitsev‰t niit‰ tontteja, jotka t‰ll‰ pelaajalla on hallussaan. Keskell‰ olevasta alustasta ilmenee, mik‰ pelaaja on vuorossa ja h‰nen heitt‰m‰ns‰ nopan silm‰luku. Alemman alueen yl‰osassa ovat kulloinkin saatavilla olevat ohjainn‰pp‰imet.
+
+P‰‰n‰ytˆn yl‰osassa on Monopoli-lauta, jossa voit n‰hd‰ pelimerkkien liikkeet ja kunkin pelaajan omistamat tontit laudan reunassa olevien v‰ripalkkien ilmaisemina. 
+
+Tilan‰yttˆ
+
+Jos n‰p‰yt‰t p‰‰n‰ytˆn oikeassa laidassa olevaa Tila-painiketta, voit saada ruudulle useita pelin tilasta kertovia yksityiskohtia. Vasemmassa yl‰nurkassa on pelilaudan n‰ytt‰v‰ ruutu, joten voit jatkaa pelin pelaamista ja katselemista myˆs ollessasi t‰ss‰ n‰ytˆss‰. Lainhuudatustodistusten tilalla alhaalla vasemmalla on painikkeita, joiden avulla voit valita Pelaajan, Lainhuudatustodistuksen tai Pankin tilan. Voit j‰rjest‰‰ jokaisessa n‰iss‰ kolmessa luokassa olevat kohteet n‰p‰ytt‰m‰ll‰ alhaalla vasemmalla olevia painikkeita. Niiden yl‰puolella jokaisella pelaajalla on alue, josta n‰et mit‰ kukin omistaa. 
+
+Vaihtokauppa
+
+Jos n‰p‰yt‰t p‰‰n‰ytˆn vasemmalla puolella olevaa Vaihtokauppa-painiketta, sinulta kysyt‰‰n ensin, mink‰ pelaajan kanssa haluat vaihtaa, ja sitten voit n‰hd‰ pelilaudan keskell‰ ylh‰‰ll‰. Sin‰ olet vasemmalla, ja n‰ytˆlt‰ ilmenev‰t t‰ll‰ hetkell‰ omistuksessasi olevat tontit, raham‰‰r‰ ja varat. Tarjotaksesi n‰p‰yt‰ haluamaasi kohdetta ja se siirtyy sinun keskell‰ olevalle alueellesi. Pyyt‰‰ksesi jotain vaihtokaupassa n‰p‰yt‰ toisen pelaajan kohteiden kohdalla, ja ne siirtyv‰t keskell‰ olevalle alueelle. Kun olet valmistellut vaihtokaupan, paina Ehdota-n‰pp‰int‰. Toisen pelaajan, riippumatta siit‰ pelaako h‰n paikallisesti, verkon kautta tai onko h‰n tietokonevastustaja, on silloin painettava joko Hyv‰ksy tai Hylk‰‰-painiketta tai teht‰v‰ vastatarjous. Jos toinen pelaaja tekee vastatarjouksen, h‰n saa muuttaa olemassaolevaa vaihtokauppatilannetta ja ehdottaa uutta vaihtokauppaa.
+
+Tarjotaksesi tai pyyt‰‰ksesi vaihdossa jonkun tontin tulevaa vuokraa tai vuokravapautta, n‰p‰yt‰ Luo uusi-painiketta ja m‰‰rit‰ haluamasi tontti ja heittokertojen m‰‰r‰. Sinulta kysyt‰‰n ensin, kenelle tulevaisuus tai vuokravapaus annetaan, sitten mik‰ tontti on kyseess‰ ja heittokertojen m‰‰r‰. Kun tulevaisuus tai vuokravapaus on valmisteltu, se voidaan vaihtaa aivan kuten muutkin kohteet.
+
+Huutokauppa
+
+Jos p‰‰dyt vapaalle tontille, etk‰ halua ostaa sit‰, se voidaan huutokaupata ja kertyv‰t voitot p‰‰tyv‰t pankille. N‰p‰yt‰ rahatarjottimella olevia seteleit‰ nostaaksesi tarjoustasi. Huomaa: Herra Monopolin huutokaupan aikana sallimaa aikaviivett‰ voidaan s‰‰t‰‰ mukauttamalla s‰‰ntˆj‰ pelin alussa.
+
+Verkkopeli
+
+Aloittaaksesi verkkopelin joko l‰hiverkossa, Internetiss‰ tai k‰ytt‰en Microsoft Game Zonea seuraa Pelaa verkkopeli‰-kohdasta lˆytyvi‰ ohjeita aloittaessasi Monopolin pelaamisen. Yksityiskohtaista tietoa lˆyd‰t T‰ydest‰ Aputiedostosta.
+
+Verkkokeskustelu
+
+Verkkokeskustelu voidaan k‰‰nt‰‰ p‰‰lle tai pois painamalla sarkainn‰pp‰int‰ miss‰ tahansa pelin vaiheessa. Keskustelun p‰‰valintaikkunan kokoa voidaan muuttaa tarttumalla oikeassa alanurkassa olevaan kahvaan. Sit‰ voidaan siirt‰‰ n‰p‰ytt‰m‰ll‰ mihin tahansa tyhj‰‰n pintaan yl‰palkissa. Yl‰palkin painikkeet ovat seuraavat:
+
+V‰rilliset ruudut - pelaaja(t) jo(i)lle viesti l‰hetet‰‰n 
+Sateenkaari - kaikki pelaajat
+Vasara - keskustelun asetukset p‰‰lle/pois, vaihtoehdot ovat
+	Taustan l‰pin‰kyvyys
+	Tekstin l‰pin‰kyvyys
+	Tekstin kirjasinkoko
+Tekstisivu - avaa keskustelun nopeilla, valmiiksik‰‰nnetyill‰ viesteill‰. Luokat ovat
+	Tervehdykset
+	Yleiset vastaukset
+	Pelin kulku ja nopeus
+Vaihtokauppa
+Myˆnteiset kommentit
+Kielteiset kommentit
+Nuoli - saa aikaan valintaikkunan pudotusvalikon avautumisen/sulkeutumisen
+
+
+Usein kysyttyj‰ kysymyksi‰
+
+Mik‰ on vuokravapaus?
+Jos omistat tontin, voit tarjota muille pelaajille vapautusta vuokranmaksusta muutamana kertana heid‰n p‰‰tyess‰‰n tontillesi. N‰p‰yt‰ Luo uusi Vuokravapaus-painiketta ja seuraa toimenpiteit‰.
+
+Mik‰ on tulevaisuus?
+Jos omistat tontin, voit tarjota muille pelaajille tontista maksettavaa vuokraa, kun joku toinen pelaaja p‰‰tyy ko. tontille. Voit s‰‰t‰‰ kuinka monen heittokerran ajan t‰m‰ on voimassa.  N‰p‰yt‰ Luo uusi Tulevaisuus-painiketta ja seuraa toimenpiteit‰.
+
+Kuinka k‰yd‰‰n vaihtokauppaa?
+Jos sin‰ ehdotat ensin vaihtokauppaa, sin‰ olet vasemmalla. N‰p‰yt‰ omaisuutesi kohdalla tarjotaksesi sit‰. N‰p‰yt‰ sen vastapelaajan hallussa olevan omaisuuden kohdalla, jonka haluat itsellesi vaihtokaupassa. Paina sitten Ehdota-painiketta.
+
+Kuinka saan pelin toimimaan nopeammin?
+Valikkojen/Asetusten alta voit k‰‰nt‰‰ pois esim. bilineaarisen filtterˆinnin, ditheringin, valaistuksen jne.
+
+Kuinka pelaan internetiss‰?
+Suosittelemme, ett‰ k‰yt‰t ilmaista Microsoft Game Zonea. N‰p‰yt‰ Pelaa online-peli‰-painiketta ja seuraa asennustoimenpiteit‰ pelin alussa ottaaksesi yhteyden toiseen pelaajaan. Jokaisella pelaajalla on oltava Monopoli-peli-CD asetettuna CD-ROM-asemaansa.
+
+Katso CD:ll‰ olevasta LueMinut.txt-tiedostosta myˆh‰‰n tulleita uutisia.
